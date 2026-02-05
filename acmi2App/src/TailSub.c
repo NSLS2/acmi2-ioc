@@ -15,7 +15,7 @@
 #include <epicsExport.h>
 
 int TailSub(aSubRecord *precord) {
-    printf("Hello from TailSub....\n");
+    //printf("Hello from TailSub....\n");
     int i;
     int *Adc = (int *)precord->a;
     int delay = *(int *)precord->b;
@@ -45,7 +45,7 @@ int TailSub(aSubRecord *precord) {
             *(int *)precord->vald = count;
             *(int *)precord->vale = capture;
         }else{
-            printf("count = %d\n",count);
+            //printf("count = %d\n",count);
             for(i=0;i<2000;i++){
                 AvgTail[i] = (count*AvgTail[i] + Tail[i])/(count+1);
             }
@@ -68,7 +68,7 @@ int TailSub(aSubRecord *precord) {
         memcpy((int *)precord->valf,TP3Corrected,2000*sizeof(int));
     }
     
-    printf("delay=%d  capture=%d  apply=%d  startIndx=%d\n",delay,capture,apply,startIndx);
+    //printf("delay=%d  capture=%d  apply=%d  startIndx=%d\n",delay,capture,apply,startIndx);
     
     memcpy((int *)precord->vala,TP3Raw,2000*sizeof(int));
     memcpy((int *)precord->valb,Tail,2000*sizeof(int));

@@ -170,7 +170,7 @@ int ADCsub(aSubRecord *precord) {
     }
 // If a TP3 FAULT occurred on this trigger then update the TP3 Fault PVs...
     if((faults&0xFF0000)>0){
-        printf("Updating the TP3 Fault Waveform\n");
+        //printf("Updating the TP3 Fault Waveform\n");
         memcpy((int *)precord->valf,TP3,92*sizeof(int));
         memcpy((float *)precord->vall,STAT3,12*sizeof(float));
         memcpy((char *)precord->valp,tmstr,strlen(tmstr)*sizeof(char));
