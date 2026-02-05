@@ -17,7 +17,7 @@
 #define WMAX 1000
 
 int BMsub(aSubRecord *precord) {
-    printf("Hello from BMSub....\n");
+//    printf("Hello from BMSub....\n");
     int i;
 
     float *STAT = (float *)precord->a;
@@ -50,6 +50,7 @@ int BMsub(aSubRecord *precord) {
             AWFM[WMAX-1] = QACC;
             WLEN = WMAX;
         }
+        
 //        printf("Q=%5.3fnC  QACC=%8.3fnC\n",Q,QACC);
         *(float *)precord->vala = Q;
         *(float *)precord->valf = QACC;

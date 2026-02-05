@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-24 16:17:58 by diag-->
+<!--Saved on 2025-12-05 09:57:41 by diag-->
 <display version="2.0.0">
   <name>PM</name>
   <width>1100</width>
   <height>950</height>
   <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_97</name>
-    <x>862</x>
-    <y>593</y>
-    <width>232</width>
-    <height>80</height>
+    <name>Rectangle_101</name>
+    <y>446</y>
+    <width>283</width>
+    <height>454</height>
     <line_width>2</line_width>
     <line_color>
       <color name="Text" red="0" green="0" blue="0">
@@ -26,7 +25,7 @@
     <x>287</x>
     <y>38</y>
     <width>283</width>
-    <height>303</height>
+    <height>405</height>
     <line_width>2</line_width>
     <line_color>
       <color name="Text" red="0" green="0" blue="0">
@@ -42,7 +41,7 @@
     <name>Rectangle_68</name>
     <y>38</y>
     <width>283</width>
-    <height>329</height>
+    <height>405</height>
     <line_width>2</line_width>
     <line_color>
       <color name="Text" red="0" green="0" blue="0">
@@ -434,17 +433,6 @@
     <vertical_alignment>1</vertical_alignment>
     <border_width>1</border_width>
   </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_164</name>
-    <pv_name>$(P)BEAM:PM:intg-I</pv_name>
-    <x>59</x>
-    <y>316</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
   <widget type="label" version="2.0.0">
     <name>Label_201</name>
     <text>Peak</text>
@@ -543,17 +531,6 @@
     <vertical_alignment>1</vertical_alignment>
     <border_width>1</border_width>
   </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_168</name>
-    <pv_name>$(P)BEAM:PM:Q-I</pv_name>
-    <x>59</x>
-    <y>291</y>
-    <width>76</width>
-    <precision>3</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
   <widget type="label" version="2.0.0">
     <name>Label_211</name>
     <text>ARTIX Calculation</text>
@@ -593,150 +570,11 @@
     <border_width>1</border_width>
   </widget>
   <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_62</name>
-    <y>371</y>
-    <width>283</width>
-    <height>329</height>
-    <line_width>2</line_width>
-    <line_color>
-      <color name="Text" red="0" green="0" blue="0">
-      </color>
-    </line_color>
-    <background_color>
-      <color name="Grid" red="128" green="128" blue="128">
-      </color>
-    </background_color>
-    <transparent>true</transparent>
-  </widget>
-  <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_63</name>
-    <x>4</x>
-    <y>400</y>
-    <width>275</width>
-    <height>195</height>
-    <line_width>2</line_width>
-    <line_color>
-      <color name="Text" red="0" green="0" blue="0">
-      </color>
-    </line_color>
-    <background_color>
-      <color name="Grid" red="128" green="128" blue="128">
-      </color>
-    </background_color>
-    <transparent>true</transparent>
-  </widget>
-  <widget type="xyplot" version="3.0.0">
-    <name>X/Y Plot_13</name>
-    <x>6</x>
-    <y>404</y>
-    <width>270</width>
-    <height>188</height>
-    <show_legend>false</show_legend>
-    <x_axis>
-      <title>ADC Samples</title>
-      <autoscale>true</autoscale>
-      <log_scale>false</log_scale>
-      <minimum>0.0</minimum>
-      <maximum>100.0</maximum>
-      <show_grid>true</show_grid>
-      <title_font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </title_font>
-      <scale_font>
-        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
-        </font>
-      </scale_font>
-      <visible>true</visible>
-    </x_axis>
-    <y_axes>
-      <y_axis>
-        <title>ADC Counts</title>
-        <autoscale>true</autoscale>
-        <log_scale>false</log_scale>
-        <minimum>0.0</minimum>
-        <maximum>100.0</maximum>
-        <show_grid>true</show_grid>
-        <title_font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-          </font>
-        </title_font>
-        <scale_font>
-          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
-          </font>
-        </scale_font>
-        <on_right>false</on_right>
-        <visible>true</visible>
-        <color>
-          <color name="Text" red="0" green="0" blue="0">
-          </color>
-        </color>
-      </y_axis>
-    </y_axes>
-    <traces>
-      <trace>
-        <name></name>
-        <x_pv></x_pv>
-        <y_pv>$(P)TP1:PM-Wfm</y_pv>
-        <err_pv></err_pv>
-        <axis>0</axis>
-        <trace_type>1</trace_type>
-        <color>
-          <color red="0" green="0" blue="255">
-          </color>
-        </color>
-        <line_width>1</line_width>
-        <line_style>0</line_style>
-        <point_type>2</point_type>
-        <point_size>5</point_size>
-        <visible>true</visible>
-      </trace>
-    </traces>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_106</name>
-    <text>ARTIX Calculation</text>
-    <x>5</x>
-    <y>599</y>
-    <width>273</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_168</name>
-    <text>Post Mortem: Test Pulse 1 Readings</text>
-    <x>5</x>
-    <y>377</y>
-    <width>273</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="rectangle" version="2.0.0">
     <name>Rectangle_64</name>
     <x>287</x>
-    <y>371</y>
+    <y>446</y>
     <width>283</width>
-    <height>329</height>
+    <height>454</height>
     <line_width>2</line_width>
     <line_color>
       <color name="Text" red="0" green="0" blue="0">
@@ -751,7 +589,7 @@
   <widget type="rectangle" version="2.0.0">
     <name>Rectangle_65</name>
     <x>291</x>
-    <y>401</y>
+    <y>476</y>
     <width>275</width>
     <height>195</height>
     <line_width>2</line_width>
@@ -768,7 +606,7 @@
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_14</name>
     <x>294</x>
-    <y>405</y>
+    <y>480</y>
     <width>270</width>
     <height>188</height>
     <show_legend>false</show_legend>
@@ -834,29 +672,10 @@
     </traces>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_181</name>
-    <text>Post Mortem ARTIX Calculation</text>
-    <x>292</x>
-    <y>599</y>
-    <width>273</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
     <name>Label_183</name>
     <text>Post Mortem: Test Pulse 2 Readings</text>
     <x>292</x>
-    <y>377</y>
+    <y>452</y>
     <width>273</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
@@ -873,10 +692,10 @@
   </widget>
   <widget type="rectangle" version="2.0.0">
     <name>Rectangle_70</name>
-    <x>575</x>
+    <x>574</x>
     <y>38</y>
     <width>283</width>
-    <height>329</height>
+    <height>405</height>
     <line_width>2</line_width>
     <line_color>
       <color name="Text" red="0" green="0" blue="0">
@@ -890,7 +709,7 @@
   </widget>
   <widget type="rectangle" version="2.0.0">
     <name>Rectangle_71</name>
-    <x>579</x>
+    <x>578</x>
     <y>68</y>
     <width>275</width>
     <height>195</height>
@@ -907,7 +726,7 @@
   </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_17</name>
-    <x>582</x>
+    <x>581</x>
     <y>72</y>
     <width>270</width>
     <height>188</height>
@@ -976,7 +795,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_214</name>
     <text>Index</text>
-    <x>723</x>
+    <x>722</x>
     <y>316</y>
     <width>50</width>
     <font>
@@ -995,7 +814,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_175</name>
     <pv_name>$(P)COW:PM:indx-I</pv_name>
-    <x>777</x>
+    <x>776</x>
     <y>316</y>
     <width>76</width>
     <precision>0</precision>
@@ -1006,7 +825,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_215</name>
     <text>Intgrl</text>
-    <x>580</x>
+    <x>579</x>
     <y>316</y>
     <width>50</width>
     <font>
@@ -1025,7 +844,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_176</name>
     <pv_name>$(P)COW:PM:intg-I</pv_name>
-    <x>634</x>
+    <x>633</x>
     <y>316</y>
     <width>76</width>
     <precision>0</precision>
@@ -1036,7 +855,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_216</name>
     <text>Peak</text>
-    <x>580</x>
+    <x>579</x>
     <y>341</y>
     <width>50</width>
     <font>
@@ -1055,7 +874,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_217</name>
     <text>FWHM</text>
-    <x>723</x>
+    <x>722</x>
     <y>291</y>
     <width>50</width>
     <font>
@@ -1074,7 +893,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_177</name>
     <pv_name>$(P)COW:PM:peak-I</pv_name>
-    <x>634</x>
+    <x>633</x>
     <y>341</y>
     <width>76</width>
     <precision>0</precision>
@@ -1085,7 +904,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_178</name>
     <pv_name>$(P)COW:PM:fwhm-I</pv_name>
-    <x>777</x>
+    <x>776</x>
     <y>291</y>
     <width>76</width>
     <precision>0</precision>
@@ -1096,7 +915,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_218</name>
     <text>Base</text>
-    <x>723</x>
+    <x>722</x>
     <y>341</y>
     <width>50</width>
     <font>
@@ -1115,7 +934,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_179</name>
     <pv_name>$(P)COW:PM:base-I</pv_name>
-    <x>777</x>
+    <x>776</x>
     <y>341</y>
     <width>76</width>
     <precision>0</precision>
@@ -1126,7 +945,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_219</name>
     <text>Q</text>
-    <x>580</x>
+    <x>579</x>
     <y>291</y>
     <width>50</width>
     <font>
@@ -1145,7 +964,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_180</name>
     <pv_name>$(P)COW:PM:Q-I</pv_name>
-    <x>634</x>
+    <x>633</x>
     <y>291</y>
     <width>76</width>
     <precision>3</precision>
@@ -1156,7 +975,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_226</name>
     <text>Post Mortem ARTIX Calculation</text>
-    <x>580</x>
+    <x>579</x>
     <y>266</y>
     <width>273</width>
     <font>
@@ -1175,7 +994,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_228</name>
     <text>Post Mortem: COW Detection</text>
-    <x>580</x>
+    <x>579</x>
     <y>44</y>
     <width>273</width>
     <font>
@@ -1193,10 +1012,10 @@
   </widget>
   <widget type="rectangle" version="2.0.0">
     <name>Rectangle_66</name>
-    <x>575</x>
-    <y>371</y>
+    <x>574</x>
+    <y>446</y>
     <width>283</width>
-    <height>329</height>
+    <height>454</height>
     <line_width>2</line_width>
     <line_color>
       <color name="Text" red="0" green="0" blue="0">
@@ -1210,8 +1029,8 @@
   </widget>
   <widget type="rectangle" version="2.0.0">
     <name>Rectangle_67</name>
-    <x>579</x>
-    <y>401</y>
+    <x>578</x>
+    <y>476</y>
     <width>275</width>
     <height>195</height>
     <line_width>2</line_width>
@@ -1227,8 +1046,8 @@
   </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_15</name>
-    <x>582</x>
-    <y>405</y>
+    <x>581</x>
+    <y>480</y>
     <width>270</width>
     <height>188</height>
     <show_legend>false</show_legend>
@@ -1294,29 +1113,10 @@
     </traces>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_196</name>
-    <text>Post Mortem ARTIX Calculation</text>
-    <x>580</x>
-    <y>599</y>
-    <width>273</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
     <name>Label_198</name>
     <text>Post Mortem: Test Pulse 3 Readings</text>
-    <x>580</x>
-    <y>377</y>
+    <x>579</x>
+    <y>452</y>
     <width>273</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
@@ -1386,7 +1186,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_370</name>
-      <pv_name>$(P)PM:TS_Sec-I</pv_name>
+      <pv_name>$(P)PM:TS-S-I</pv_name>
       <x>129</x>
       <y>7</y>
       <width>97</width>
@@ -1447,7 +1247,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_371</name>
-      <pv_name>$(P)PM:TS_nSec-I</pv_name>
+      <pv_name>$(P)PM:TS-NS-I</pv_name>
       <x>129</x>
       <y>31</y>
       <width>97</width>
@@ -1506,7 +1306,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -1541,7 +1341,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -1576,7 +1376,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -1611,7 +1411,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -1646,7 +1446,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -1681,7 +1481,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -1716,7 +1516,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -1751,7 +1551,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -1786,7 +1586,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -1840,7 +1640,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -1875,7 +1675,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -1910,7 +1710,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -1945,7 +1745,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -1980,7 +1780,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2015,7 +1815,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2050,7 +1850,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2085,7 +1885,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2120,7 +1920,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2155,7 +1955,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2190,7 +1990,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2258,7 +2058,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_373</name>
-      <pv_name>$(P)PM:faults:live-I</pv_name>
+      <pv_name>$(P)PM:faults_live-I</pv_name>
       <x>136</x>
       <y>390</y>
       <width>90</width>
@@ -2270,7 +2070,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_374</name>
-      <pv_name>$(P)PM:faults:lat-I</pv_name>
+      <pv_name>$(P)PM:faults_lat-I</pv_name>
       <x>136</x>
       <y>414</y>
       <width>90</width>
@@ -2344,7 +2144,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2563,25 +2363,6 @@
       <border_width>1</border_width>
     </widget>
     <widget type="label" version="2.0.0">
-      <name>Label_366</name>
-      <text>Start Delay</text>
-      <x>56</x>
-      <y>318</y>
-      <width>120</width>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <background_color>
-        <color name="Button_Background" red="210" green="210" blue="210">
-        </color>
-      </background_color>
-      <transparent>false</transparent>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <border_width>1</border_width>
-    </widget>
-    <widget type="label" version="2.0.0">
       <name>Label_367</name>
       <text>No Clock</text>
       <x>56</x>
@@ -2645,7 +2426,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2680,7 +2461,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2715,7 +2496,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2750,7 +2531,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2785,7 +2566,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2820,7 +2601,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:lat-I</pv_name>
+          <pv_name>$(P)PM:faults_lat-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2855,7 +2636,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2890,7 +2671,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2925,7 +2706,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)PM:faults:live-I</pv_name>
+          <pv_name>$(P)PM:faults_live-I</pv_name>
         </rule>
       </rules>
       <border_width>2</border_width>
@@ -2933,6 +2714,36 @@
         <color red="102" green="102" blue="102">
         </color>
       </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_395</name>
+      <text>Start Delay</text>
+      <x>56</x>
+      <y>318</y>
+      <width>78</width>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="12.0">
+        </font>
+      </font>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_430</name>
+      <pv_name>$(P)PM:startup_cnt-I</pv_name>
+      <x>138</x>
+      <y>318</y>
+      <width>38</width>
+      <precision>0</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_width>1</border_width>
     </widget>
   </widget>
   <widget type="rectangle" version="2.0.0">
@@ -3004,7 +2815,7 @@
       <trace>
         <name></name>
         <x_pv></x_pv>
-        <y_pv>$(P)Accumulator:PM:Q-Wfm</y_pv>
+        <y_pv>$(P)ACC:PM:Q-Wfm</y_pv>
         <err_pv></err_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
@@ -3022,10 +2833,10 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_379</name>
-    <text>Intgrl</text>
+    <text>Accumulated Integral</text>
     <x>292</x>
-    <y>315</y>
-    <width>50</width>
+    <y>316</y>
+    <width>149</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -3041,9 +2852,9 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_377</name>
-    <pv_name>$(P)Accumulator:PM-I</pv_name>
-    <x>346</x>
-    <y>315</y>
+    <pv_name>$(P)ACC:PM:intg-I</pv_name>
+    <x>445</x>
+    <y>316</y>
     <width>120</width>
     <precision>0</precision>
     <horizontal_alignment>1</horizontal_alignment>
@@ -3052,10 +2863,10 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_383</name>
-    <text>Q</text>
+    <text>Accumulated Q (nC)</text>
     <x>292</x>
     <y>291</y>
-    <width>50</width>
+    <width>149</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
@@ -3071,8 +2882,8 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_381</name>
-    <pv_name>$(P)Accumulator:PM:Q-I</pv_name>
-    <x>346</x>
+    <pv_name>$(P)ACC:PM:Q-I</pv_name>
+    <x>445</x>
     <y>291</y>
     <width>120</width>
     <precision>3</precision>
@@ -3221,7 +3032,7 @@
   </widget>
   <widget type="rectangle" version="2.0.0">
     <name>Rectangle_89</name>
-    <x>713</x>
+    <x>712</x>
     <y>290</y>
     <width>7</width>
     <height>72</height>
@@ -3241,22 +3052,6 @@
     <y>290</y>
     <width>7</width>
     <height>72</height>
-    <line_width>1</line_width>
-    <line_color>
-      <color name="Text" red="0" green="0" blue="0">
-      </color>
-    </line_color>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-  </widget>
-  <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_91</name>
-    <x>469</x>
-    <y>290</y>
-    <width>7</width>
-    <height>46</height>
     <line_width>1</line_width>
     <line_color>
       <color name="Text" red="0" green="0" blue="0">
@@ -3367,1003 +3162,6 @@
       <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
     </widget>
   </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_277</name>
-    <text>Settings CRC</text>
-    <x>867</x>
-    <y>599</y>
-    <width>120</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="170" green="255" blue="170">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGcolor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv0!=pv1">
-          <value>
-            <color red="255" green="213" blue="138">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)PM:CRC:file-SP</pv_name>
-        <pv_name>$(P)PM:CRC:eeprom-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_375</name>
-    <pv_name>$(P)PM:CRC:eeprom-I</pv_name>
-    <x>991</x>
-    <y>623</y>
-    <width>98</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <format>4</format>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_278</name>
-    <text>EEPROM CRC</text>
-    <x>867</x>
-    <y>623</y>
-    <width>120</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="170" green="255" blue="170">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGcolor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pvInt0&amp;0x0040&gt;0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)PM:faults_live-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_376</name>
-    <pv_name>$(P)PM:CRC:artix-I</pv_name>
-    <x>991</x>
-    <y>647</y>
-    <width>98</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <format>4</format>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_279</name>
-    <text>ARTIX CRC</text>
-    <x>867</x>
-    <y>647</y>
-    <width>120</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="170" green="255" blue="170">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGcolor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv0!=pv1">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)PM:CRC:eeprom-I</pv_name>
-        <pv_name>$(P)PM:CRC:artix-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_98</name>
-    <x>138</x>
-    <y>623</y>
-    <width>7</width>
-    <height>72</height>
-    <line_width>1</line_width>
-    <line_color>
-      <color name="Text" red="0" green="0" blue="0">
-      </color>
-    </line_color>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-  </widget>
-  <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_99</name>
-    <x>425</x>
-    <y>623</y>
-    <width>7</width>
-    <height>72</height>
-    <line_width>1</line_width>
-    <line_color>
-      <color name="Text" red="0" green="0" blue="0">
-      </color>
-    </line_color>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_62</name>
-    <pv_name>$(P)TP2:PM:intg-I</pv_name>
-    <x>346</x>
-    <y>649</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP2:intgHL-I</pv_name>
-        <pv_name>$(P)EE:TP2:intgLL-I</pv_name>
-        <pv_name>$(P)TP2:PM:intg-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_93</name>
-    <text>Peak</text>
-    <x>292</x>
-    <y>674</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_94</name>
-    <text>FWHM</text>
-    <x>435</x>
-    <y>624</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_97</name>
-    <text>Base</text>
-    <x>435</x>
-    <y>674</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_100</name>
-    <text>Q</text>
-    <x>292</x>
-    <y>624</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_84</name>
-    <pv_name>$(P)TP2:PM:Q-I</pv_name>
-    <x>346</x>
-    <y>624</y>
-    <width>76</width>
-    <precision>3</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP2:intgHL-I</pv_name>
-        <pv_name>$(P)EE:TP2:intgLL-I</pv_name>
-        <pv_name>$(P)TP2:PM:intg-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_85</name>
-    <pv_name>$(P)TP2:PM:peak-I</pv_name>
-    <x>346</x>
-    <y>674</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP2:peakHL-I</pv_name>
-        <pv_name>$(P)EE:TP2:peakLL-I</pv_name>
-        <pv_name>$(P)TP2:PM:peak-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_86</name>
-    <pv_name>$(P)TP2:PM:fwhm-I</pv_name>
-    <x>489</x>
-    <y>624</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP2:fwhmHL-I</pv_name>
-        <pv_name>$(P)EE:TP2:fwhmLL-I</pv_name>
-        <pv_name>$(P)TP2:PM:fwhm-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_87</name>
-    <pv_name>$(P)TP2:PM:base-I</pv_name>
-    <x>489</x>
-    <y>674</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP2:baseHL-I</pv_name>
-        <pv_name>$(P)EE:TP2:baseLL-I</pv_name>
-        <pv_name>$(P)TP2:PM:base-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_101</name>
-    <text>Index</text>
-    <x>435</x>
-    <y>649</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_88</name>
-    <pv_name>$(P)TP2:PM:indx-I</pv_name>
-    <x>489</x>
-    <y>649</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_102</name>
-    <text>Intgrl</text>
-    <x>292</x>
-    <y>649</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_100</name>
-    <x>713</x>
-    <y>623</y>
-    <width>7</width>
-    <height>72</height>
-    <line_width>1</line_width>
-    <line_color>
-      <color name="Text" red="0" green="0" blue="0">
-      </color>
-    </line_color>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_89</name>
-    <pv_name>$(P)TP3:PM:intg-I</pv_name>
-    <x>634</x>
-    <y>649</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP3:intgHL-I</pv_name>
-        <pv_name>$(P)EE:TP3:intgLL-I</pv_name>
-        <pv_name>$(P)TP3:PM:intg-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_103</name>
-    <text>Peak</text>
-    <x>580</x>
-    <y>674</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_104</name>
-    <text>FWHM</text>
-    <x>723</x>
-    <y>624</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_105</name>
-    <text>Base</text>
-    <x>723</x>
-    <y>674</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_107</name>
-    <text>Q</text>
-    <x>580</x>
-    <y>624</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_90</name>
-    <pv_name>$(P)TP3:PM:Q-I</pv_name>
-    <x>634</x>
-    <y>624</y>
-    <width>76</width>
-    <precision>3</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP3:intgHL-I</pv_name>
-        <pv_name>$(P)EE:TP3:intgLL-I</pv_name>
-        <pv_name>$(P)TP3:PM:intg-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_91</name>
-    <pv_name>$(P)TP3:PM:peak-I</pv_name>
-    <x>634</x>
-    <y>674</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP3:peakHL-I</pv_name>
-        <pv_name>$(P)EE:TP3:peakLL-I</pv_name>
-        <pv_name>$(P)TP3:PM:peak-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_95</name>
-    <pv_name>$(P)TP3:PM:fwhm-I</pv_name>
-    <x>777</x>
-    <y>624</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP3:fwhmHL-I</pv_name>
-        <pv_name>$(P)EE:TP3:fwhmLL-I</pv_name>
-        <pv_name>$(P)TP3:PM:fwhm-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_96</name>
-    <pv_name>$(P)TP3:PM:base-I</pv_name>
-    <x>777</x>
-    <y>674</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP3:baseHL-I</pv_name>
-        <pv_name>$(P)EE:TP3:baseLL-I</pv_name>
-        <pv_name>$(P)TP3:PM:base-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_108</name>
-    <text>Index</text>
-    <x>723</x>
-    <y>649</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_97</name>
-    <pv_name>$(P)TP3:PM:indx-I</pv_name>
-    <x>777</x>
-    <y>649</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_109</name>
-    <text>Intgrl</text>
-    <x>580</x>
-    <y>649</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_110</name>
-    <text>Peak</text>
-    <x>5</x>
-    <y>674</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_111</name>
-    <text>FWHM</text>
-    <x>148</x>
-    <y>624</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_112</name>
-    <text>Base</text>
-    <x>148</x>
-    <y>674</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_113</name>
-    <text>Q</text>
-    <x>5</x>
-    <y>624</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_98</name>
-    <pv_name>$(P)TP1:PM:Q-I</pv_name>
-    <x>59</x>
-    <y>624</y>
-    <width>76</width>
-    <precision>3</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP1:intgHL-I</pv_name>
-        <pv_name>$(P)EE:TP1:intgLL-I</pv_name>
-        <pv_name>$(P)TP1:PM:intg-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_99</name>
-    <pv_name>$(P)TP1:PM:peak-I</pv_name>
-    <x>59</x>
-    <y>674</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP1:peakHL-I</pv_name>
-        <pv_name>$(P)EE:TP1:peakLL-I</pv_name>
-        <pv_name>$(P)TP1:PM:peak-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_100</name>
-    <pv_name>$(P)TP1:PM:fwhm-I</pv_name>
-    <x>202</x>
-    <y>624</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP1:fwhmHL-I</pv_name>
-        <pv_name>$(P)EE:TP1:fwhmLL-I</pv_name>
-        <pv_name>$(P)TP1:PM:fwhm-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_101</name>
-    <pv_name>$(P)TP1:PM:base-I</pv_name>
-    <x>202</x>
-    <y>674</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP1:baseHL-I</pv_name>
-        <pv_name>$(P)EE:TP1:baseLL-I</pv_name>
-        <pv_name>$(P)TP1:PM:base-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_114</name>
-    <text>Index</text>
-    <x>148</x>
-    <y>649</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_102</name>
-    <pv_name>$(P)TP1:PM:indx-I</pv_name>
-    <x>202</x>
-    <y>649</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_115</name>
-    <text>Intgrl</text>
-    <x>5</x>
-    <y>649</y>
-    <width>50</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_103</name>
-    <pv_name>$(P)TP1:PM:intg-I</pv_name>
-    <x>59</x>
-    <y>649</y>
-    <width>76</width>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGColor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv2&gt;pv0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <exp bool_exp="pv2&lt;pv1">
-          <value>
-            <color red="175" green="175" blue="240">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:TP1:intgHL-I</pv_name>
-        <pv_name>$(P)EE:TP1:intgLL-I</pv_name>
-        <pv_name>$(P)TP1:PM:intg-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_433</name>
     <pv_name>$(P)BEAM:PM:base-I</pv_name>
@@ -4387,25 +3185,2643 @@
             </color>
           </value>
         </exp>
-        <pv_name>$(P)EE:BEAM:baseHL-I</pv_name>
-        <pv_name>$(P)EE:BEAM:baseLL-I</pv_name>
+        <pv_name>$(P)BEAM:PM:base_HL-I</pv_name>
+        <pv_name>$(P)BEAM:PM:base_LL-I</pv_name>
+        <pv_name>$(P)BEAM:PM:base-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_98</name>
+    <x>138</x>
+    <y>698</y>
+    <width>7</width>
+    <height>72</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_173</name>
+    <text>Base</text>
+    <x>148</x>
+    <y>749</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_174</name>
+    <text>Q</text>
+    <x>5</x>
+    <y>699</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_175</name>
+    <text>Post Mortem ARTIX Calculation</text>
+    <x>5</x>
+    <y>674</y>
+    <width>273</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_94</name>
+    <pv_name>$(P)TP1:PM:Q-I</pv_name>
+    <x>59</x>
+    <y>699</y>
+    <width>76</width>
+    <precision>3</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP1:PM:intg_HL-I</pv_name>
+        <pv_name>$(P)TP1:PM:intg_LL-I</pv_name>
+        <pv_name>$(P)TP1:PM:intg-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_98</name>
+    <pv_name>$(P)TP1:PM:peak-I</pv_name>
+    <x>59</x>
+    <y>749</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP1:PM:peak_HL-I</pv_name>
+        <pv_name>$(P)TP1:PM:peak_LL-I</pv_name>
+        <pv_name>$(P)TP1:PM:peak-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_99</name>
+    <pv_name>$(P)TP1:PM:fwhm-I</pv_name>
+    <x>202</x>
+    <y>699</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP1:PM:fwhm_HL-I</pv_name>
+        <pv_name>$(P)TP1:PM:fwhm_LL-I</pv_name>
+        <pv_name>$(P)TP1:PM:fwhm-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_100</name>
+    <pv_name>$(P)TP1:PM:base-I</pv_name>
+    <x>202</x>
+    <y>749</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP1:PM:base_HL-I</pv_name>
+        <pv_name>$(P)TP1:PM:base_LL-I</pv_name>
+        <pv_name>$(P)TP1:PM:base-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_176</name>
+    <text>Post Mortem: Test Pulse 1 Readings</text>
+    <x>5</x>
+    <y>452</y>
+    <width>273</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_102</name>
+    <x>4</x>
+    <y>475</y>
+    <width>275</width>
+    <height>195</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="xyplot" version="3.0.0">
+    <name>X/Y Plot_19</name>
+    <x>6</x>
+    <y>479</y>
+    <width>270</width>
+    <height>188</height>
+    <show_legend>false</show_legend>
+    <x_axis>
+      <title>ADC Samples</title>
+      <autoscale>true</autoscale>
+      <log_scale>false</log_scale>
+      <minimum>0.0</minimum>
+      <maximum>100.0</maximum>
+      <show_grid>true</show_grid>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+      <visible>true</visible>
+    </x_axis>
+    <y_axes>
+      <y_axis>
+        <title>ADC Counts</title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <on_right>false</on_right>
+        <visible>true</visible>
+        <color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </color>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name></name>
+        <x_pv></x_pv>
+        <y_pv>$(P)TP1:PM-Wfm</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>2</point_type>
+        <point_size>5</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_177</name>
+    <text>Index</text>
+    <x>148</x>
+    <y>724</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_101</name>
+    <pv_name>$(P)TP1:PM:indx-I</pv_name>
+    <x>202</x>
+    <y>724</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_178</name>
+    <text>Intgrl</text>
+    <x>5</x>
+    <y>724</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_102</name>
+    <pv_name>$(P)TP1:PM:intg-I</pv_name>
+    <x>59</x>
+    <y>724</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP1:PM:intg_HL-I</pv_name>
+        <pv_name>$(P)TP1:PM:intg_LL-I</pv_name>
+        <pv_name>$(P)TP1:PM:intg-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_179</name>
+    <text>Peak</text>
+    <x>5</x>
+    <y>749</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_180</name>
+    <text>FWHM</text>
+    <x>148</x>
+    <y>699</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_103</name>
+    <x>862</x>
+    <y>592</y>
+    <width>232</width>
+    <height>65</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_367</name>
+    <pv_name>$(P)EE:crc_eeprom-I</pv_name>
+    <x>991</x>
+    <y>597</y>
+    <width>98</width>
+    <height>25</height>
+    <format>4</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_275</name>
+    <text>EEPROM CRC</text>
+    <x>867</x>
+    <y>597</y>
+    <width>120</width>
+    <height>25</height>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x0040&gt;0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_live-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_368</name>
+    <pv_name>$(P)crc_artix-I</pv_name>
+    <x>991</x>
+    <y>626</y>
+    <width>98</width>
+    <height>25</height>
+    <format>4</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_276</name>
+    <text>ARTIX CRC</text>
+    <x>867</x>
+    <y>626</y>
+    <width>120</width>
+    <height>25</height>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0!=pv1">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)EE:crc_eeprom-I</pv_name>
+        <pv_name>$(P)crc_artix-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_375</name>
+    <pv_name>$(P)TP1:PM:fwhm_HL-I</pv_name>
+    <x>202</x>
+    <y>799</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_376</name>
+    <pv_name>$(P)TP1:PM:peak_HL-I</pv_name>
+    <x>59</x>
+    <y>849</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_378</name>
+    <pv_name>$(P)TP1:PM:peak_LL-I</pv_name>
+    <x>59</x>
+    <y>874</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_277</name>
+    <text>TP1 EEPROM Fault Limits</text>
+    <x>5</x>
+    <y>774</y>
+    <width>273</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_278</name>
+    <text>Intg L</text>
+    <x>5</x>
+    <y>824</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x200&gt;0">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_279</name>
+    <text>peak L</text>
+    <x>5</x>
+    <y>874</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x2000&gt;0">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_280</name>
+    <text>peak H</text>
+    <x>5</x>
+    <y>849</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x1000&gt;0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_281</name>
+    <text>base L</text>
+    <x>148</x>
+    <y>874</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x800&gt;0">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_282</name>
+    <text>base H</text>
+    <x>148</x>
+    <y>849</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x400&gt;0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_283</name>
+    <text>fwhm L</text>
+    <x>148</x>
+    <y>824</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x8000&gt;0">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_284</name>
+    <text>fwhm H</text>
+    <x>148</x>
+    <y>799</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x4000&gt;0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_379</name>
+    <pv_name>$(P)TP1:PM:base_LL-I</pv_name>
+    <x>202</x>
+    <y>874</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_380</name>
+    <pv_name>$(P)TP1:PM:fwhm_LL-I</pv_name>
+    <x>202</x>
+    <y>824</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_382</name>
+    <pv_name>$(P)TP1:PM:base_HL-I</pv_name>
+    <x>202</x>
+    <y>849</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_285</name>
+    <text>Intg H</text>
+    <x>5</x>
+    <y>799</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x100 &gt; 0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_383</name>
+    <pv_name>$(P)TP1:PM:intg_HL-I</pv_name>
+    <x>59</x>
+    <y>799</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_384</name>
+    <pv_name>$(P)TP1:PM:intg_LL-I</pv_name>
+    <x>59</x>
+    <y>824</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_106</name>
+    <x>138</x>
+    <y>798</y>
+    <width>7</width>
+    <height>97</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_107</name>
+    <x>425</x>
+    <y>699</y>
+    <width>7</width>
+    <height>72</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_295</name>
+    <text>Base</text>
+    <x>435</x>
+    <y>750</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_296</name>
+    <text>Q</text>
+    <x>292</x>
+    <y>700</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_297</name>
+    <text>Post Mortem ARTIX Calculation</text>
+    <x>292</x>
+    <y>675</y>
+    <width>273</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_393</name>
+    <pv_name>$(P)TP2:PM:Q-I</pv_name>
+    <x>346</x>
+    <y>700</y>
+    <width>76</width>
+    <precision>3</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP2:PM:intg_HL-I</pv_name>
+        <pv_name>$(P)TP2:PM:intg_LL-I</pv_name>
+        <pv_name>$(P)TP2:PM:intg-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_394</name>
+    <pv_name>$(P)TP2:PM:peak-I</pv_name>
+    <x>346</x>
+    <y>750</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP2:PM:peak_HL-I</pv_name>
+        <pv_name>$(P)TP2:PM:peak_LL-I</pv_name>
+        <pv_name>$(P)TP2:PM:peak-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_395</name>
+    <pv_name>$(P)TP2:PM:fwhm-I</pv_name>
+    <x>489</x>
+    <y>700</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP2:PM:fwhm_HL-I</pv_name>
+        <pv_name>$(P)TP2:PM:fwhm_LL-I</pv_name>
+        <pv_name>$(P)TP2:PM:fwhm-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_396</name>
+    <pv_name>$(P)TP2:PM:base-I</pv_name>
+    <x>489</x>
+    <y>750</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP2:PM:base_HL-I</pv_name>
+        <pv_name>$(P)TP2:PM:base_LL-I</pv_name>
+        <pv_name>$(P)TP2:PM:base-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_298</name>
+    <text>Index</text>
+    <x>435</x>
+    <y>725</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_397</name>
+    <pv_name>$(P)TP2:PM:indx-I</pv_name>
+    <x>489</x>
+    <y>725</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_299</name>
+    <text>Intgrl</text>
+    <x>292</x>
+    <y>725</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_398</name>
+    <pv_name>$(P)TP2:PM:intg-I</pv_name>
+    <x>346</x>
+    <y>725</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP2:PM:intg_HL-I</pv_name>
+        <pv_name>$(P)TP2:PM:intg_LL-I</pv_name>
+        <pv_name>$(P)TP2:PM:intg-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_300</name>
+    <text>Peak</text>
+    <x>292</x>
+    <y>750</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_301</name>
+    <text>FWHM</text>
+    <x>435</x>
+    <y>700</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_399</name>
+    <pv_name>$(P)TP2:PM:fwhm_HL-I</pv_name>
+    <x>489</x>
+    <y>800</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_400</name>
+    <pv_name>$(P)TP2:PM:peak_HL-I</pv_name>
+    <x>346</x>
+    <y>850</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_401</name>
+    <pv_name>$(P)TP2:PM:peak_LL-I</pv_name>
+    <x>346</x>
+    <y>875</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_302</name>
+    <text>TP2 EEPROM Fault Limits</text>
+    <x>292</x>
+    <y>775</y>
+    <width>273</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_303</name>
+    <text>Intg L</text>
+    <x>292</x>
+    <y>825</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x200&gt;0">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_304</name>
+    <text>peak L</text>
+    <x>292</x>
+    <y>875</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x2000&gt;0">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_305</name>
+    <text>peak H</text>
+    <x>292</x>
+    <y>850</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x1000&gt;0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_306</name>
+    <text>base L</text>
+    <x>435</x>
+    <y>875</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x800&gt;0">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_307</name>
+    <text>base H</text>
+    <x>435</x>
+    <y>850</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x400&gt;0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_308</name>
+    <text>fwhm L</text>
+    <x>435</x>
+    <y>825</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x8000&gt;0">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_309</name>
+    <text>fwhm H</text>
+    <x>435</x>
+    <y>800</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x4000&gt;0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_402</name>
+    <pv_name>$(P)TP2:PM:base_LL-I</pv_name>
+    <x>489</x>
+    <y>875</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_403</name>
+    <pv_name>$(P)TP2:PM:fwhm_LL-I</pv_name>
+    <x>489</x>
+    <y>825</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_404</name>
+    <pv_name>$(P)TP2:PM:base_HL-I</pv_name>
+    <x>489</x>
+    <y>850</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_310</name>
+    <text>Intg H</text>
+    <x>292</x>
+    <y>800</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x100 &gt; 0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_405</name>
+    <pv_name>$(P)TP2:PM:intg_HL-I</pv_name>
+    <x>346</x>
+    <y>800</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_406</name>
+    <pv_name>$(P)TP2:PM:intg_LL-I</pv_name>
+    <x>346</x>
+    <y>825</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_108</name>
+    <x>425</x>
+    <y>799</y>
+    <width>7</width>
+    <height>97</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_109</name>
+    <x>712</x>
+    <y>699</y>
+    <width>7</width>
+    <height>72</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_311</name>
+    <text>Base</text>
+    <x>722</x>
+    <y>750</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_312</name>
+    <text>Q</text>
+    <x>579</x>
+    <y>700</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_313</name>
+    <text>Post Mortem ARTIX Calculation</text>
+    <x>579</x>
+    <y>675</y>
+    <width>273</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_407</name>
+    <pv_name>$(P)TP3:PM:Q-I</pv_name>
+    <x>633</x>
+    <y>700</y>
+    <width>76</width>
+    <precision>3</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP2:PM:intg_HL-I</pv_name>
+        <pv_name>$(P)TP2:PM:intg_LL-I</pv_name>
+        <pv_name>$(P)TP2:PM:intg-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_408</name>
+    <pv_name>$(P)TP3:PM:peak-I</pv_name>
+    <x>633</x>
+    <y>750</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP2:PM:peak_HL-I</pv_name>
+        <pv_name>$(P)TP2:PM:peak_LL-I</pv_name>
+        <pv_name>$(P)TP2:PM:peak-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_409</name>
+    <pv_name>$(P)TP3:PM:fwhm-I</pv_name>
+    <x>776</x>
+    <y>700</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP2:PM:fwhm_HL-I</pv_name>
+        <pv_name>$(P)TP2:PM:fwhm_LL-I</pv_name>
+        <pv_name>$(P)TP2:PM:fwhm-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_410</name>
+    <pv_name>$(P)TP3:PM:base-I</pv_name>
+    <x>776</x>
+    <y>750</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP2:PM:base_HL-I</pv_name>
+        <pv_name>$(P)TP2:PM:base_LL-I</pv_name>
+        <pv_name>$(P)TP2:PM:base-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_314</name>
+    <text>Index</text>
+    <x>722</x>
+    <y>725</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_411</name>
+    <pv_name>$(P)TP3:PM:indx-I</pv_name>
+    <x>776</x>
+    <y>725</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_315</name>
+    <text>Intgrl</text>
+    <x>579</x>
+    <y>725</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_412</name>
+    <pv_name>$(P)TP3:PM:intg-I</pv_name>
+    <x>633</x>
+    <y>725</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv2&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <exp bool_exp="pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)TP2:PM:intg_HL-I</pv_name>
+        <pv_name>$(P)TP2:PM:intg_LL-I</pv_name>
+        <pv_name>$(P)TP2:PM:intg-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_316</name>
+    <text>Peak</text>
+    <x>579</x>
+    <y>750</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_317</name>
+    <text>FWHM</text>
+    <x>722</x>
+    <y>700</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_413</name>
+    <pv_name>$(P)TP3:PM:fwhm_HL-I</pv_name>
+    <x>776</x>
+    <y>800</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_414</name>
+    <pv_name>$(P)TP3:PM:peak_HL-I</pv_name>
+    <x>633</x>
+    <y>850</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_415</name>
+    <pv_name>$(P)TP3:PM:peak_LL-I</pv_name>
+    <x>633</x>
+    <y>875</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_318</name>
+    <text>TP3 EEPROM Fault Limits</text>
+    <x>579</x>
+    <y>775</y>
+    <width>273</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_319</name>
+    <text>Intg L</text>
+    <x>579</x>
+    <y>825</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x200&gt;0">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_320</name>
+    <text>peak L</text>
+    <x>579</x>
+    <y>875</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x2000&gt;0">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_321</name>
+    <text>peak H</text>
+    <x>579</x>
+    <y>850</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x1000&gt;0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_322</name>
+    <text>base L</text>
+    <x>722</x>
+    <y>875</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x800&gt;0">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_323</name>
+    <text>base H</text>
+    <x>722</x>
+    <y>850</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x400&gt;0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_324</name>
+    <text>fwhm L</text>
+    <x>722</x>
+    <y>825</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x8000&gt;0">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_378</name>
+    <text>fwhm H</text>
+    <x>722</x>
+    <y>800</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x4000&gt;0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_416</name>
+    <pv_name>$(P)TP3:PM:base_LL-I</pv_name>
+    <x>776</x>
+    <y>875</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_417</name>
+    <pv_name>$(P)TP3:PM:fwhm_LL-I</pv_name>
+    <x>776</x>
+    <y>825</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_418</name>
+    <pv_name>$(P)TP3:PM:base_HL-I</pv_name>
+    <x>776</x>
+    <y>850</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_380</name>
+    <text>Intg H</text>
+    <x>579</x>
+    <y>800</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x100 &gt; 0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_tp-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_419</name>
+    <pv_name>$(P)TP3:PM:intg_HL-I</pv_name>
+    <x>633</x>
+    <y>800</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_420</name>
+    <pv_name>$(P)TP3:PM:intg_LL-I</pv_name>
+    <x>633</x>
+    <y>825</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_110</name>
+    <x>712</x>
+    <y>799</y>
+    <width>7</width>
+    <height>97</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_421</name>
+    <pv_name>$(P)BEAM:PM:intg_HL-I</pv_name>
+    <x>202</x>
+    <y>391</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_381</name>
+    <text>Beam EEPROM Fault Limits</text>
+    <x>5</x>
+    <y>366</y>
+    <width>273</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_382</name>
+    <text>base H</text>
+    <x>5</x>
+    <y>391</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;4&gt;0 and pv2&gt;pv1">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_live-I</pv_name>
+        <pv_name>$(P)BEAM:PM:base_HL-I</pv_name>
         <pv_name>$(P)BEAM:PM:base-I</pv_name>
       </rule>
     </rules>
     <border_width>1</border_width>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>Text Update_434</name>
-    <pv_name>$(P)PM:CRC:file-I</pv_name>
-    <x>991</x>
-    <y>599</y>
-    <width>98</width>
+    <name>Text Update_422</name>
+    <pv_name>$(P)BEAM:PM:base_LL-I</pv_name>
+    <x>59</x>
+    <y>416</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_423</name>
+    <pv_name>$(P)BEAM:PM:base_HL-I</pv_name>
+    <x>59</x>
+    <y>391</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_386</name>
+    <text>base L</text>
+    <x>5</x>
+    <y>416</y>
+    <width>50</width>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="12.0">
       </font>
     </font>
-    <format>4</format>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;4&gt;0 and pv2&lt;pv1">
+          <value>
+            <color red="175" green="175" blue="240">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_live-I</pv_name>
+        <pv_name>$(P)BEAM:PM:base_LL-I</pv_name>
+        <pv_name>$(P)BEAM:PM:base-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_387</name>
+    <text>Intg H</text>
+    <x>148</x>
+    <y>391</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;1&gt;0 ">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_live-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_112</name>
+    <x>138</x>
+    <y>390</y>
+    <width>7</width>
+    <height>47</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_424</name>
+    <pv_name>$(P)BEAM:PM:intg-I</pv_name>
+    <x>59</x>
+    <y>317</y>
+    <width>76</width>
     <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv1&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)BEAM:PM:intg_HL-I</pv_name>
+        <pv_name>$(P)BEAM:PM:intg-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_425</name>
+    <pv_name>$(P)BEAM:PM:Q-I</pv_name>
+    <x>59</x>
+    <y>291</y>
+    <width>76</width>
+    <precision>3</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGColor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv1&gt;pv0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)BEAM:PM:intg_HL-I</pv_name>
+        <pv_name>$(P)BEAM:PM:intg-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_388</name>
+    <text>Accumulator Fault Limits</text>
+    <x>292</x>
+    <y>341</y>
+    <width>273</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_426</name>
+    <pv_name>$(P)ACC:PM:intg_HL-I</pv_name>
+    <x>445</x>
+    <y>366</y>
+    <width>120</width>
+    <precision>0</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_389</name>
+    <text>Accum HL</text>
+    <x>292</x>
+    <y>366</y>
+    <width>149</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x0002&gt;0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_live-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_390</name>
+    <text>Accumulator Settings</text>
+    <x>292</x>
+    <y>391</y>
+    <width>273</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_427</name>
+    <pv_name>$(P)ACC:PM:qmin-I</pv_name>
+    <x>346</x>
+    <y>416</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_391</name>
+    <text>Qmin</text>
+    <x>292</x>
+    <y>416</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_428</name>
+    <pv_name>$(P)ACC:PM:len-I</pv_name>
+    <x>489</x>
+    <y>416</y>
+    <width>76</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_392</name>
+    <text>Len</text>
+    <x>435</x>
+    <y>416</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_114</name>
+    <x>425</x>
+    <y>415</y>
+    <width>7</width>
+    <height>22</height>
+    <line_width>1</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_393</name>
+    <text>COW Peak Threshold</text>
+    <x>579</x>
+    <y>391</y>
+    <width>149</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_429</name>
+    <pv_name>$(P)COW:PM:thresh-I</pv_name>
+    <x>732</x>
+    <y>391</y>
+    <width>120</width>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_394</name>
+    <text>COW Settings</text>
+    <x>579</x>
+    <y>366</y>
+    <width>273</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <border_width>1</border_width>

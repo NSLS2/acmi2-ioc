@@ -34,6 +34,13 @@ acmi2_SRCS += WriteFileSub.c
 acmi2_SRCS += LoadFileSub.c
 acmi2_SRCS += TPwriteSub.c
 acmi2_SRCS += BMwriteSub.c
+acmi2_SRCS += PMsub.c
+acmi2_SRCS += PMTP.c
+acmi2_SRCS += PMBM.c
+acmi2_SRCS += PMCOW.c
+acmi2_SRCS += PMwrite.c
+acmi2_SRCS += COWFiles.c
+acmi2_SRCS += TailSub.c
 
 # Build the main IOC entry point on workstation OSs.
 acmi2_SRCS_DEFAULT += acmi2Main.cpp

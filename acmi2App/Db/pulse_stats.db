@@ -213,8 +213,8 @@ record(ai,"$(P){ACMI:$(NO)}faults_lat-I") {
     field(DTYP, "PSC Reg")
     field(INP , "@PSC$(NO) 51 112")
     field(SCAN, "I/O Intr")
+    field(FLNK,"$(P){ACMI:$(NO)}PM:Fault-Wfm.PROC")
 }
-
 
 record(ai,"$(P){ACMI:$(NO)}TrigCnt-I") {
     field(DESC, "Trigger Count")

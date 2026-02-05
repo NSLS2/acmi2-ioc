@@ -27,6 +27,7 @@ dbLoadRecords("db/TP.db", "P=$(IOCNAME), NO=A, T=1")
 dbLoadRecords("db/TP.db", "P=$(IOCNAME), NO=A, T=2")
 dbLoadRecords("db/TP.db", "P=$(IOCNAME), NO=A, T=3")
 dbLoadRecords("db/Beam.db", "P=$(IOCNAME), NO=A")
+dbLoadRecords("db/Tail.db", "P=$(IOCNAME), NO=A")
 
 ## Load record instances for PSC1
 dbLoadRecords("db/lstats.db", "P=$(IOCNAME), NO=A")

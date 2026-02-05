@@ -18,7 +18,7 @@ record(waveform,"$(P){ACMI:$(NO)}TP$(T)-Wfm"){
 
 record(waveform,"$(P){ACMI:$(NO)}TP$(T):Fault-Wfm"){
   field(DTYP,"Soft Channel")
-  field(DESC,"72 Point Waveform for TP$(T)")
+  field(DESC,"92 Point Waveform for TP$(T)")
   field(NELM,"100")
   field(FTVL,"LONG")
 }
@@ -236,11 +236,66 @@ record(longin,"$(P){ACMI:$(NO)}TP$(T):PM:indx-I") {
   field(UDF,0)
 }
 
+record(longin,"$(P){ACMI:$(NO)}TP$(T):PM:base_HL-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}TP$(T):PM:peak_HL-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}TP$(T):PM:intg_HL-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}TP$(T):PM:fwhm_HL-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}TP$(T):PM:base_LL-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}TP$(T):PM:peak_LL-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}TP$(T):PM:intg_LL-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}TP$(T):PM:fwhm_LL-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
 record(ai,"$(P){ACMI:$(NO)}TP$(T):PM:Q-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
   field(EGU,"nC")
+}
+
+record(waveform,"$(P){ACMI:$(NO)}TP$(T):PM:Data-Wfm"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"19 Data Values for TP$(T)")
+  field(NELM,"19")
+  field(FTVL,"LONG")
 }
 
 record(waveform,"$(P){ACMI:$(NO)}TP$(T):PM-Wfm"){

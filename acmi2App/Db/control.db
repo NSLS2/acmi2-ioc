@@ -117,3 +117,94 @@ record(longout,"$(P){ACMI:$(NO)}File:Status-I") {
   field(UDF,0)
 }
 
+record(compress, "$(P){ACMI:$(NO)}PM:Fault-Wfm"){
+    field(INP,  "$(P){ACMI:$(NO)}faults_lat-I")     # source PV
+    field(ALG,  "Circular Buffer")  
+    field(NSAM, "2")             # buffer length = 2
+}
+
+record(longout,"$(P){ACMI:$(NO)}PM:Status-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longout,"$(P){ACMI:$(NO)}PM:Process-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+  field(FLNK,"$(P){ACMI:$(NO)}PM:TP1-Sub.PROC")
+}
+
+record(longin,"$(P){ACMI:$(NO)}PM:header-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}PM:crc_eeprom-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}PM:crc_artix-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}PM:faults_live-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}PM:faults_lat-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}PM:startup_cnt-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}PM:TS-S-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}PM:TS-NS-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}PM:TrigCnt-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}PM:EVR:TrigNo-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}PM:EVR:TrigDly-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(waveform,"$(P){ACMI:$(NO)}PM:Trig:Date-I"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"String for Trigger Date")
+  field(NELM,"40")
+  field(FTVL,"CHAR")
+}

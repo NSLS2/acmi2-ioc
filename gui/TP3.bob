@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-11-22 09:09:57 by diag-->
+<!--Saved on 2026-01-10 09:07:58 by diag-->
 <display version="2.0.0">
   <name>TP3</name>
   <width>1100</width>
   <height>850</height>
-  <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_96</name>
-    <x>864</x>
-    <y>695</y>
-    <width>232</width>
-    <height>80</height>
-    <line_width>2</line_width>
-    <line_color>
-      <color name="Text" red="0" green="0" blue="0">
-      </color>
-    </line_color>
-    <background_color>
-      <color name="Grid" red="128" green="128" blue="128">
-      </color>
-    </background_color>
-    <transparent>true</transparent>
-  </widget>
   <widget type="rectangle" version="2.0.0">
     <name>Rectangle_67</name>
     <x>3</x>
@@ -750,6 +733,22 @@
         </color>
       </background_color>
       <transparent>false</transparent>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_width>1</border_width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_375</name>
+      <pv_name>$(P)faults_tp-I</pv_name>
+      <x>16</x>
+      <y>192</y>
+      <height>30</height>
+      <font>
+        <font family="Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <format>4</format>
+      <precision>0</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
       <border_width>1</border_width>
@@ -3182,163 +3181,6 @@
     </widget>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_328</name>
-    <text>Settings CRC</text>
-    <x>869</x>
-    <y>701</y>
-    <width>120</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="170" green="255" blue="170">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGcolor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv0!=pv1">
-          <value>
-            <color red="255" green="213" blue="138">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)CRC:file-SP</pv_name>
-        <pv_name>$(P)CRC:eeprom-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry_109</name>
-    <pv_name>$(P)CRC:file-SP</pv_name>
-    <x>993</x>
-    <y>701</y>
-    <width>98</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <format>4</format>
-    <show_units>false</show_units>
-    <horizontal_alignment>1</horizontal_alignment>
-    <rules>
-      <rule name="BGcolor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv0!=pv1">
-          <value>
-            <color red="255" green="180" blue="180">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)CRC:file-SP</pv_name>
-        <pv_name>$(P)CRC:eeprom-I</pv_name>
-      </rule>
-      <rule name="Enable" prop_id="enabled" out_exp="false">
-        <exp bool_exp="pvInt0&amp;0x0400==0">
-          <value>false</value>
-        </exp>
-        <pv_name>$(P)faults_live-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_372</name>
-    <pv_name>$(P)EE:crc_eeprom-I</pv_name>
-    <x>993</x>
-    <y>725</y>
-    <width>98</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <format>4</format>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_329</name>
-    <text>EEPROM CRC</text>
-    <x>869</x>
-    <y>725</y>
-    <width>120</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="170" green="255" blue="170">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGcolor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pvInt0&amp;0x0040&gt;0">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)faults_live-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_373</name>
-    <pv_name>$(P)crc_artix-I</pv_name>
-    <x>993</x>
-    <y>749</y>
-    <width>98</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <format>4</format>
-    <precision>0</precision>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_330</name>
-    <text>ARTIX CRC</text>
-    <x>869</x>
-    <y>749</y>
-    <width>120</width>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="12.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="170" green="255" blue="170">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <rules>
-      <rule name="BGcolor" prop_id="background_color" out_exp="false">
-        <exp bool_exp="pv0!=pv1">
-          <value>
-            <color red="255" green="175" blue="175">
-            </color>
-          </value>
-        </exp>
-        <pv_name>$(P)EE:crc_eeprom-I</pv_name>
-        <pv_name>$(P)crc_artix-I</pv_name>
-      </rule>
-    </rules>
-    <border_width>1</border_width>
-  </widget>
-  <widget type="label" version="2.0.0">
     <name>Label_350</name>
     <text>Index</text>
     <x>152</x>
@@ -4129,5 +3971,152 @@
       </color>
     </background_color>
     <transparent>true</transparent>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_84</name>
+    <x>864</x>
+    <y>694</y>
+    <width>232</width>
+    <height>65</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_381</name>
+    <pv_name>$(P)EE:crc_eeprom-I</pv_name>
+    <x>993</x>
+    <y>699</y>
+    <width>98</width>
+    <height>25</height>
+    <format>4</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_386</name>
+    <text>EEPROM CRC</text>
+    <x>869</x>
+    <y>699</y>
+    <width>120</width>
+    <height>25</height>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x0040&gt;0">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_live-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_382</name>
+    <pv_name>$(P)crc_artix-I</pv_name>
+    <x>993</x>
+    <y>728</y>
+    <width>98</width>
+    <height>25</height>
+    <format>4</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_387</name>
+    <text>ARTIX CRC</text>
+    <x>869</x>
+    <y>728</y>
+    <width>120</width>
+    <height>25</height>
+    <background_color>
+      <color red="170" green="255" blue="170">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pv0!=pv1">
+          <value>
+            <color red="255" green="175" blue="175">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)EE:crc_eeprom-I</pv_name>
+        <pv_name>$(P)crc_artix-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group_30</name>
+    <x>683</x>
+    <width>72</width>
+    <height>35</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>Rectangle_100</name>
+      <width>72</width>
+      <height>35</height>
+      <line_width>2</line_width>
+      <line_color>
+        <color name="Text" red="0" green="0" blue="0">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="Grid" red="128" green="128" blue="128">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_55</name>
+      <actions>
+        <action type="open_display">
+          <file>Tail.bob</file>
+          <target>replace</target>
+          <description>Open Display</description>
+        </action>
+      </actions>
+      <text>Tail</text>
+      <x>3</x>
+      <y>3</y>
+      <width>66</width>
+      <height>29</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
+    </widget>
   </widget>
 </display>

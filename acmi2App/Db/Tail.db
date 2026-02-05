@@ -1,0 +1,97 @@
+record(waveform,"$(P){ACMI:$(NO)}TP3:Raw-Wfm"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"2000 Point Waveform for TP3")
+  field(NELM,"2000")
+  field(FTVL,"LONG")
+}
+
+record(waveform,"$(P){ACMI:$(NO)}TP3:Corrected-Wfm"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"2000 Point Waveform for TP3")
+  field(NELM,"2000")
+  field(FTVL,"LONG")
+}
+
+record(waveform,"$(P){ACMI:$(NO)}TP3:Tail-Wfm"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"2000 Point Waveform for TP3")
+  field(NELM,"2000")
+  field(FTVL,"LONG")
+}
+
+record(waveform,"$(P){ACMI:$(NO)}TP3:AvgTail-Wfm"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"2000 Point Waveform for TP3")
+  field(NELM,"2000")
+  field(FTVL,"LONG")
+}
+
+record(longout,"$(P){ACMI:$(NO)}TP3:StartIndx-SP") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longout,"$(P){ACMI:$(NO)}TP3:Capture-SP") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}TP3:Count-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longout,"$(P){ACMI:$(NO)}TP3:Apply-SP") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(aSub,"$(P){ACMI:$(NO)}Tail-Sub"){
+    field(SNAM,"TailSub")
+    field(SCAN,"1 second")
+
+    field(FTA,  "LONG")
+    field(NOA,  "16000")
+    field(INPA, "$(P){ACMI:$(NO)}ADC-Wfm")
+    field(FTB,  "LONG")
+    field(NOB,  "1")
+    field(INPB, "$(P){ACMI:$(NO)}EE:TP3_adc_delay-I")
+    field(FTC,  "LONG")
+    field(NOC,  "1")
+    field(INPC, "$(P){ACMI:$(NO)}TP3:Capture-SP")
+    field(FTD,  "LONG")
+    field(NOD,  "1")
+    field(INPD, "$(P){ACMI:$(NO)}TP3:Apply-SP")
+    field(FTE,  "LONG")
+    field(NOE,  "1")
+    field(INPE, "$(P){ACMI:$(NO)}TP3:StartIndx-SP")
+    field(FTF,  "LONG")
+    field(NOF,  "2000")
+    field(INPF, "$(P){ACMI:$(NO)}TP3:AvgTail-Wfm")
+    field(FTG,  "LONG")
+    field(NOG,  "1")
+    field(INPG, "$(P){ACMI:$(NO)}TP3:Count-I")
+    
+    field(FTVA, "LONG")
+    field(NOVA, "2000")
+    field(OUTA, "$(P){ACMI:$(NO)}TP3:Raw-Wfm PP")
+    field(FTVB, "LONG")
+    field(NOVB, "2000")
+    field(OUTB, "$(P){ACMI:$(NO)}TP3:Tail-Wfm PP")
+    field(FTVC, "LONG")
+    field(NOVC, "2000")
+    field(OUTC, "$(P){ACMI:$(NO)}TP3:AvgTail-Wfm PP")
+    field(FTVD, "LONG")
+    field(NOVD, "1")
+    field(OUTD, "$(P){ACMI:$(NO)}TP3:Count-I PP")
+    field(FTVE, "LONG")
+    field(NOVE, "1")
+    field(OUTE, "$(P){ACMI:$(NO)}TP3:Capture-SP PP")
+    field(FTVF, "LONG")
+    field(NOVF, "2000")
+    field(OUTF, "$(P){ACMI:$(NO)}TP3:Corrected-Wfm PP")
+}

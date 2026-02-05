@@ -138,7 +138,7 @@ record(waveform,"$(P){ACMI:$(NO)}COW:Fault-Wfm"){
   field(DTYP,"Soft Channel")
   field(DESC,"128 Point Waveform for COW Fault")
   field(NELM,"128")
-  field(FTVL,"LONG")
+  field(FTVL,"DOUBLE")
 }
 
 record(waveform,"$(P){ACMI:$(NO)}COW:Fault:Date-Wfm"){
@@ -189,6 +189,24 @@ record(longin,"$(P){ACMI:$(NO)}BEAM:PM:indx-I") {
   field(UDF,0)
 }
 
+record(longin,"$(P){ACMI:$(NO)}BEAM:PM:intg_HL-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}BEAM:PM:base_HL-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}BEAM:PM:base_LL-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
 record(ai,"$(P){ACMI:$(NO)}BEAM:PM:Q-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
@@ -198,46 +216,57 @@ record(ai,"$(P){ACMI:$(NO)}BEAM:PM:Q-I") {
 
 record(waveform,"$(P){ACMI:$(NO)}BEAM:PM-Wfm"){
   field(DTYP,"Soft Channel")
-  field(DESC,"72 Point Waveform for TP1")
+  field(DESC,"92 Point Waveform for BEAM")
   field(NELM,"100")
   field(FTVL,"LONG")
 }
 
-record(ai,"$(P){ACMI:$(NO)}Accumulator:PM:Q-I") {
+record(waveform,"$(P){ACMI:$(NO)}BEAM:PM:Data-Wfm"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"PM Data for BEAM and ACC")
+  field(NELM,"19")
+  field(FTVL,"LONG")
+}
+
+record(ai,"$(P){ACMI:$(NO)}ACC:PM:Q-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
   field(EGU,"nC")
 }
 
-record(longin,"$(P){ACMI:$(NO)}Accumulator:PM-I") {
+record(longin,"$(P){ACMI:$(NO)}ACC:PM:intg-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
   field(EGU,"nC")
 }
 
-record(longin,"$(P){ACMI:$(NO)}Accumulator:PM:Len-I") {
+record(longin,"$(P){ACMI:$(NO)}ACC:PM:len-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
 }
 
-record(longin,"$(P){ACMI:$(NO)}Accumulator:PM:QHL-I") {
+record(longin,"$(P){ACMI:$(NO)}ACC:PM:qmin-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}ACC:PM:intg_HL-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
   field(EGU,"nC")
 }
 
-record(waveform,"$(P){ACMI:$(NO)}Accumulator:PM:Q-Wfm"){
+record(waveform,"$(P){ACMI:$(NO)}ACC:PM:Q-Wfm"){
   field(DTYP,"Soft Channel")
   field(DESC,"Charge accumulation History")
   field(NELM,"7300")
   field(FTVL,"FLOAT")
 }
-
-
 
 record(longin,"$(P){ACMI:$(NO)}COW:PM:base-I") {
   field(DTYP,"Soft Channel")
@@ -276,9 +305,140 @@ record(ai,"$(P){ACMI:$(NO)}COW:PM:Q-I") {
   field(EGU,"nC")
 }
 
+record(longin,"$(P){ACMI:$(NO)}COW:PM:thresh-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
 record(waveform,"$(P){ACMI:$(NO)}COW:PM-Wfm"){
   field(DTYP,"Soft Channel")
   field(DESC,"128 Point Waveform for TP1")
-  field(NELM,"150")
+  field(NELM,"130")
   field(FTVL,"LONG")
+}
+
+record(waveform,"$(P){ACMI:$(NO)}COW:PM:Data-Wfm"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"PM Data for COW")
+  field(NELM,"18")
+  field(FTVL,"LONG")
+}
+
+record(waveform, "$(P){ACMI:$(NO)}COW:FileDates-Wfm"){
+    field(DESC, "Waveform of strings")
+    field(FTVL, "STRING")   # Field type = string
+    field(NELM, "100")      # Number of string elements
+}
+
+record(waveform, "$(P){ACMI:$(NO)}COW:FileNames-Wfm"){
+    field(DESC, "Waveform of strings")
+    field(FTVL, "STRING")
+    field(NELM, "100")
+}
+
+record(waveform, "$(P){ACMI:$(NO)}COW:FileIDs-Wfm"){
+    field(DESC, "Waveform of strings")
+    field(FTVL, "LONG")
+    field(NELM, "100")
+}
+
+record(longin,"$(P){ACMI:$(NO)}COW:NumFiles-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longout,"$(P){ACMI:$(NO)}COW:FileIndex-SP") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+  field(FLNK,"$(P){ACMI:$(NO)}COWFiles-Sub.PROC")
+}
+
+record(stringin,"$(P){ACMI:$(NO)}COW:FileName-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,"")
+  field(UDF,"")
+}
+
+record(waveform,"$(P){ACMI:$(NO)}COW:Hist-Wfm"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"128 Point Waveform for COW History Files")
+  field(NELM,"130")
+  field(FTVL,"LONG")
+}
+
+record(longin,"$(P){ACMI:$(NO)}COW:Hist:base-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}COW:Hist:peak-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}COW:Hist:intg-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}COW:Hist:fwhm-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}COW:Hist:indx-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ai,"$(P){ACMI:$(NO)}COW:Hist:Q-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+  field(EGU,"nC")
+}
+
+record(aSub,"$(P){ACMI:$(NO)}COWFiles-Sub"){
+    field(SNAM,"COWFiles")
+
+    field(FTA, "LONG")
+    field(NOA, "1")
+    field(INPA, "$(P){ACMI:$(NO)}COW:FileIndex-SP")
+    field(FTB, "LONG")
+    field(NOB, "100")
+    field(INPB, "$(P){ACMI:$(NO)}COW:FileIDs-Wfm")
+    
+    field(FTVA, "STRING")
+    field(NOVA, "1")
+    field(OUTA, "$(P){ACMI:$(NO)}COW:FileName-I PP")
+    field(FTVB, "LONG")
+    field(NOVB, "130")
+    field(OUTB, "$(P){ACMI:$(NO)}COW:Hist-Wfm PP")
+    field(FTVC, "FLOAT")
+    field(NOVC, "1")
+    field(OUTC, "$(P){ACMI:$(NO)}COW:Hist:Q-I PP")
+    field(FTVD, "LONG")
+    field(NOVD, "1")
+    field(OUTD, "$(P){ACMI:$(NO)}COW:Hist:intg-I PP")
+    field(FTVE, "LONG")
+    field(NOVE, "1")
+    field(OUTE, "$(P){ACMI:$(NO)}COW:Hist:peak-I PP")
+    field(FTVF, "LONG")
+    field(NOVF, "1")
+    field(OUTF, "$(P){ACMI:$(NO)}COW:Hist:fwhm-I PP")
+    field(FTVG, "LONG")
+    field(NOVG, "1")
+    field(OUTG, "$(P){ACMI:$(NO)}COW:Hist:indx-I PP")
+    field(FTVH, "LONG")
+    field(NOVH, "1")
+    field(OUTH, "$(P){ACMI:$(NO)}COW:Hist:base-I PP")
+        
 }
