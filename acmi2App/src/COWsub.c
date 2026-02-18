@@ -18,7 +18,7 @@
 #include <epicsString.h>
 
 int COWsub(aSubRecord *precord) {
-//   printf("Hello from COWSub....\n");
+    printf("Hello from COWSub....\n");
     int i,j,IMAX=0;
     float CFIT[128],CSUM=0,SCORE=0,PMAX=0;
     double *CWFM = (double *)precord->a;

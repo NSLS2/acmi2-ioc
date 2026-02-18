@@ -49,13 +49,13 @@ record(bo, "$(P){ACMI:$(NO)}KeepAlive-SP") {
 }
 
 # Triggered by EVR now, this is no longer supported
-#record(bo, "$(P){ACMI:$(NO)}Trig:Strig-SP") {
-#    field(DESC, "Soft Trigger by user")
-#    field(DTYP, "PSC Single U32")
-#    field(OUT , "@PSC$(NO) 1 50")
-#    field(SCAN, "1 second")   
-#    field(FLNK, "$(P){ACMI:$(NO)}GoRegSingleWrite")
-#}
+record(bo, "$(P){ACMI:$(NO)}FaultLatchReset-SP") {
+    field(DESC, "Soft Trigger by user")
+    field(DTYP, "PSC Single U32")
+    field(OUT , "@PSC$(NO) 1 8")
+    field(SCAN, "1 second")   
+    field(FLNK, "$(P){ACMI:$(NO)}GoRegSingleWrite")
+}
 
 record(bo, "$(P){ACMI:$(NO)}Trig:TrigSrc-SP") {
     field(DESC, "Trigger source")

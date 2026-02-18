@@ -17,7 +17,7 @@
 #define WMAX 1000
 
 int TPsub(aSubRecord *precord) {
-//    printf("Hello from TPSub....\n");
+    printf("Hello from TPSub....\n");
     int i;
 
     float *STAT = (float *)precord->d;

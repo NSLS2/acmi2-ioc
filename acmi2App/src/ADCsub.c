@@ -15,7 +15,7 @@
 #include <epicsExport.h>
 
 int ADCsub(aSubRecord *precord) {
-//    printf("Hello from ADCSub....\n");
+    printf("Hello from ADCSub....\n");
     int i,indx1,indx2,indx3,indxb,TP1[92],TP2[92],TP3[92],BM[92];
     int BLsum[4]={0},BL[4],pos1,pos2,pos3,neg1,neg2,neg3;
     int INTG[4]={0},PEAK[4]={0},FWHM[4],INDX[4]={0},faults;
@@ -66,13 +66,13 @@ int ADCsub(aSubRecord *precord) {
     BL[1] = round((float)BLsum[1]/32.0);
     BL[2] = round((float)BLsum[2]/32.0);
     BL[3] = round((float)BLsum[3]/32.0);
-//    printf("BLsum[3]=%d\n",BLsum[3]);
+    printf("BLsum[3]=%d\n",BLsum[3]);
 
     memcpy((int *)precord->vala,TP1,92*sizeof(int));
     memcpy((int *)precord->valb,TP2,92*sizeof(int));
     memcpy((int *)precord->valc,TP3,92*sizeof(int));
     memcpy((int *)precord->valq,BM,92*sizeof(int));
-
+    printf("Hello\n");
     for(i=32;i<92;i++){
         INTG[0] = INTG[0] + TP1[i] - BL[0];
         if(TP1[i]>PEAK[0]){
@@ -148,14 +148,14 @@ int ADCsub(aSubRecord *precord) {
     STATB[4] = (float)BL[3];
     STATB[5] = STATB[0]/qcal;
 
-//    printf("%s  %d\n",tmstr,strlen(tmstr));
+    printf("%s  %d\n",tmstr,strlen(tmstr));
     precord->nevm = strlen(tmstr);
     memcpy((float *)precord->valg,STAT1,12*sizeof(float));
     memcpy((float *)precord->valh,STAT2,12*sizeof(float));
     memcpy((float *)precord->vali,STAT3,12*sizeof(float));
     memcpy((float *)precord->valr,STATB,12*sizeof(float));
     memcpy((char *)precord->valm,tmstr,strlen(tmstr)*sizeof(char));
-//    printf("Faults_tp = 0x%x\n",faults);
+    printf("Faults_tp = 0x%x\n",faults);
 // If a TP1 FAULT occurred on this trigger then update the TP1 Fault PVs...
     if((faults&0x0000FF)>0){
         memcpy((int *)precord->vald,TP1,92*sizeof(int));
