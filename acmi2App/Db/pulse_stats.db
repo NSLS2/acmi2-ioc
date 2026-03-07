@@ -201,12 +201,22 @@ record(ai,"$(P){ACMI:$(NO)}COW:peak-index-I") {
     field(SCAN, "I/O Intr")
 }
 
-record(ai,"$(P){ACMI:$(NO)}faults_live-I") {
+record(ai,"$(P){ACMI:$(NO)}faults_live_raw-I") {
     field(DESC, "Faults Live")
     field(DTYP, "PSC Reg")
     field(INP , "@PSC$(NO) 51 108")
     field(SCAN, "I/O Intr")
 }
+
+record(calc, "$(P){ACMI:$(NO)}faults_live-I")
+{
+    field(INPA, "$(P){ACMI:$(NO)}faults_live_raw-I CP")
+    field(CALC, "A|1024")
+    field(PREC, "0")
+}
+
+
+
 
 record(ai,"$(P){ACMI:$(NO)}faults_lat-I") {
     field(DESC, "Faults Latched")
