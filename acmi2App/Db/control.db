@@ -53,7 +53,7 @@ record(bo, "$(P){ACMI:$(NO)}FaultLatchReset-SP") {
     field(DESC, "Soft Trigger by user")
     field(DTYP, "PSC Single U32")
     field(OUT , "@PSC$(NO) 1 8")
-    field(SCAN, "1 second")   
+    #field(SCAN, "1 second")   
     field(FLNK, "$(P){ACMI:$(NO)}GoRegSingleWrite")
 }
 

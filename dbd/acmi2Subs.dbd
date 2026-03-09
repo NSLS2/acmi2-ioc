@@ -15,4 +15,5 @@ function(PMCOW)
 function(PMwrite)
 function(COWFiles)
 function(TailSub)
+function(readADCcorrTable)
 

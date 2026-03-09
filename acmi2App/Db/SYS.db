@@ -55,7 +55,7 @@ record(longin,"$(P)TrigCnt-I") {
     field(DTYP, "PSC Reg")
     field(INP , "@Wfm 51 116")
     field(SCAN, "I/O Intr")
-    field(FLNK,"$(P)ADC-Sub")
+    #field(FLNK,"$(P)ADC-Sub")
 }
 
 record(longin,"$(P)Interlock-I") {

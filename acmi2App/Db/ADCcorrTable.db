@@ -1,0 +1,46 @@
+record(bo, "$(P){ACMI:$(NO)}ADCcorrTable-Read") {
+    field(DESC, "Trigger readFile aSub")
+    field(DTYP, "Soft Channel")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(VAL, "0")
+    field(FLNK, "$(P){ACMI:$(NO)}ADCcorrTable-ReadFile")
+    #field(HIGH,".01")    #500 ms after low   
+}
+
+record(stringin, "$(P){ACMI:$(NO)}ADCcorrTable-FilePath") {
+    field(DESC, "File path")
+    field(VAL, "/home/")      # default value
+}
+
+record(stringin, "$(P){ACMI:$(NO)}ADCcorrTable-FileName") {
+    field(DESC, "File name")
+    field(VAL, "data.txt")  # default value  
+}
+
+record(aSub, "$(P){ACMI:$(NO)}ADCcorrTable-ReadFile") {
+    field(DESC, "Read ADCcorrTable from file")
+    field(INPA, "$(P){ACMI:$(NO)}ADCcorrTable-FilePath PP")    
+    field(INPB, "$(P){ACMI:$(NO)}ADCcorrTable-FileName PP")   
+    field(INPC, "50000")        
+    field(FTA,  STRING)
+    field(FTB,  STRING)
+    field(FTC,  LONG)
+    field(FTVA, LONG)      
+    field(FTVB, LONG)       
+    field(NOVA, "16000")        
+    field(NEVA, "16000")    
+    field(SNAM, "readADCcorrTable")
+    field(OUTA, "$(P){ACMI:$(NO)}ADCcorrTable-Wfm PP MS")
+    field(OUTB, "$(P){ACMI:$(NO)}ADCcorrTableLen-SP PP MS")
+    field(FLNK, "$(P){ACMI:$(NO)}Waveform-Wfm.PROC")  
+}
+
+record(waveform, "$(P){ACMI:$(NO)}ADCcorrTable-Wfm") {
+    field(DESC, "Buffer to PSC")
+    field(DTYP, "PSC Block I32 Out")
+    field(INP , "@PSC$(NO) 3")   
+    field(FTVL, "DOUBLE")
+    field(NELM, "16000")
+    field(FLNK, "$(P){ACMI:$(NO)}send")
+}

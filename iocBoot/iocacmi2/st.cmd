@@ -8,7 +8,7 @@
 epicsEnvSet("IOCNAME", "lab")
 
 # PSC IP address
-epicsEnvSet("ACMI2_IP", "10.0.142.198"); 
+epicsEnvSet("ACMI2_IP", "10.0.142.197"); 
 
 
 #epicsEnvSet("BLEN",100000);        # Snapshot DMA Length
@@ -35,12 +35,14 @@ dbLoadRecords("db/control.db", "P=$(IOCNAME), NO=A")
 dbLoadRecords("db/pulse_stats.db", "P=$(IOCNAME), NO=A")
 dbLoadRecords("db/eeprom.db", "P=$(IOCNAME), NO=A")
 dbLoadRecords("db/adc_data.db", "P=$(IOCNAME), NO=A")
+dbLoadRecords("db/ADCcorrTable.db", "P=$(IOCNAME), NO=A")
 
-var(PSCDebug, 1)	#5 full debug
+
+var(PSCDebug, 2)	#5 full debug
 
 #psc1 Create the PSC
 createPSC("PSCA", $(ACMI2_IP), 3000, 0)
-#setPSCSendBlockSize("PSC1", 1100, 512)
+setPSCSendBlockSize("PSCA", 16000, 16000)
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit

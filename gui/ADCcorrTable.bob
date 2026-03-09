@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-03-09 08:16:21 by mead-->
+<display version="2.0.0">
+  <name>$(CHAN):$(PriSys)</name>
+  <width>1000</width>
+  <background_color>
+    <color red="200" green="215" blue="255">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>6</grid_step_x>
+  <grid_step_y>6</grid_step_y>
+  <widget type="led" version="2.0.0">
+    <name>LED_36</name>
+    <pv_name>$(PriSys){$(PSC)}$(CHAN):FaultsLive-I.B1</pv_name>
+    <x>2353</x>
+    <y>999</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_37</name>
+    <pv_name>$(PriSys){$(PSC)}$(CHAN):FaultsLive-I.B0</pv_name>
+    <x>2353</x>
+    <y>1019</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_38</name>
+    <pv_name>$(PriSys){$(PSC)}$(CHAN):FaultsLive-I.B2</pv_name>
+    <x>2353</x>
+    <y>979</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_39</name>
+    <pv_name>$(PriSys){$(PSC)}$(CHAN):FaultsLive-I.B4</pv_name>
+    <x>2353</x>
+    <y>939</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_40</name>
+    <pv_name>$(PriSys){$(PSC)}$(CHAN):FaultsLive-I.B3</pv_name>
+    <x>2353</x>
+    <y>959</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_41</name>
+    <pv_name>$(PriSys){$(PSC)}$(CHAN):FaultsLive-I.B5</pv_name>
+    <x>2353</x>
+    <y>919</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_42</name>
+    <pv_name>$(PriSys){$(PSC)}$(CHAN):FaultsLive-I.B7</pv_name>
+    <x>2353</x>
+    <y>879</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_43</name>
+    <pv_name>$(PriSys){$(PSC)}$(CHAN):FaultsLive-I.B6</pv_name>
+    <x>2353</x>
+    <y>899</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_44</name>
+    <pv_name>$(PriSys){$(PSC)}$(CHAN):FaultsLive-I.B8</pv_name>
+    <x>2353</x>
+    <y>859</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_45</name>
+    <pv_name>$(PriSys){$(PSC)}$(CHAN):FaultsLive-I.BA</pv_name>
+    <x>2353</x>
+    <y>819</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_46</name>
+    <pv_name>$(PriSys){$(PSC)}$(CHAN):FaultsLive-I.B9</pv_name>
+    <x>2353</x>
+    <y>839</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_47</name>
+    <pv_name>$(PriSys){$(PSC)}$(CHAN):FaultsLive-I.BB</pv_name>
+    <x>2353</x>
+    <y>799</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Update_150</name>
+    <pv_name>$(PriSys){$(PSC)}$(CHAN):FaultsLive-I</pv_name>
+    <x>2336</x>
+    <y>1050</y>
+    <width>53</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>4</format>
+    <precision>0</precision>
+    <show_units>false</show_units>
+    <horizontal_alignment>1</horizontal_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Text Input_1</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <text>${CHAN}</text>
+    <x>803</x>
+    <y>33</y>
+    <width>77</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="OpTitleBG" red="175" green="238" blue="175">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Text Input_2</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <text>${PSC}</text>
+    <x>725</x>
+    <y>33</y>
+    <width>77</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="OpTitleBG" red="175" green="238" blue="175">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Text Input</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <text>${PriSys}</text>
+    <x>641</x>
+    <y>33</y>
+    <width>77</width>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="OpTitleBG" red="175" green="238" blue="175">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="symbol" version="2.0.0">
+    <name>Symbol</name>
+    <x>1950</x>
+    <y>372</y>
+    <width>1</width>
+    <height>1</height>
+    <tooltip>$(pv_name)
+$(pv_value)
+$(actions)</tooltip>
+  </widget>
+  <widget type="tank" version="2.0.0">
+    <name>Tank</name>
+    <x>1086</x>
+    <y>384</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Ramp Table</name>
+    <x>42</x>
+    <y>66</y>
+    <width>894</width>
+    <height>492</height>
+    <style>1</style>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="65" green="105" blue="225">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_147</name>
+      <pv_name>$(P)ADCcorrTable-FilePath</pv_name>
+      <x>135</x>
+      <y>18</y>
+      <width>365</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <format>6</format>
+      <precision>6</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_195</name>
+      <pv_name>$(P)ADCcorrTable-FileName</pv_name>
+      <x>135</x>
+      <y>36</y>
+      <width>365</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <format>6</format>
+      <precision>6</precision>
+      <show_units>false</show_units>
+      <horizontal_alignment>1</horizontal_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_86</name>
+      <text>FilePath</text>
+      <x>57</x>
+      <y>17</y>
+      <width>72</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_87</name>
+      <text>FileName</text>
+      <x>53</x>
+      <y>35</y>
+      <width>72</width>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button_2</name>
+      <pv_name>$(P)ADCcorrTable-Read</pv_name>
+      <x>545</x>
+      <y>25</y>
+      <off_label>Load File</off_label>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
+      <on_label>Load File</on_label>
+      <on_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+    </widget>
+    <widget type="xyplot" version="3.0.0">
+      <name>XY Graph_86</name>
+      <x>68</x>
+      <y>90</y>
+      <width>747</width>
+      <height>285</height>
+      <title>ADC Correction Table Preview</title>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <show_legend>false</show_legend>
+      <actions>
+      </actions>
+      <scripts>
+        <script file="EmbeddedPy">
+          <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+#print 'Hello'
+widget.setPropertyValue('x_axis.maximum', PVUtil.getDouble(pvs[0])-1)]]></text>
+          <pv_name>$(PriSys){$(PSC)}$(CHAN):RampTableLen-SP</pv_name>
+        </script>
+      </scripts>
+      <x_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100000.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </x_axis>
+      <y_axes>
+        <y_axis>
+          <title>Amps</title>
+          <autoscale>true</autoscale>
+          <log_scale>false</log_scale>
+          <minimum>0.0</minimum>
+          <maximum>100000.0</maximum>
+          <show_grid>true</show_grid>
+          <title_font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </title_font>
+          <scale_font>
+            <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+            </font>
+          </scale_font>
+          <on_right>false</on_right>
+          <visible>true</visible>
+          <color>
+            <color name="Text" red="0" green="0" blue="0">
+            </color>
+          </color>
+        </y_axis>
+      </y_axes>
+      <traces>
+        <trace>
+          <name></name>
+          <x_pv></x_pv>
+          <y_pv>$(P)ADCcorrTable-Wfm</y_pv>
+          <err_pv></err_pv>
+          <axis>0</axis>
+          <trace_type>1</trace_type>
+          <color>
+            <color red="21" green="21" blue="196">
+            </color>
+          </color>
+          <line_width>1</line_width>
+          <line_style>0</line_style>
+          <point_type>0</point_type>
+          <point_size>4</point_size>
+          <visible>true</visible>
+        </trace>
+      </traces>
+    </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_168</name>
+    <text>ADC Correction Table</text>
+    <x>204</x>
+    <y>15</y>
+    <width>234</width>
+    <height>37</height>
+    <font>
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>

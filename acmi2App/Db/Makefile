@@ -16,6 +16,7 @@ DB += TP.db
 DB += ADC.db
 DB += Beam.db
 DB += Tail.db
+DB += ADCcorrTable.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
