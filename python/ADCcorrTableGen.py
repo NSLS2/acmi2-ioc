@@ -10,7 +10,10 @@ if len(sys.argv) > 1:
 n = 16000
 
 with open(filename, "w") as f:
-    for _ in range(n):
-        f.write("0\n")
+    for i in range(n):
+        if 1500 <= i <= 1700:
+            f.write("1000\n")
+        else:
+            f.write("0\n")
 
-print(f"Wrote {n} zeros to {filename}")
+print(f"Wrote {n} values to {filename}")

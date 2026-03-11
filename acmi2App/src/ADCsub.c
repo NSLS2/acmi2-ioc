@@ -175,6 +175,8 @@ int ADCsub(aSubRecord *precord) {
         memcpy((float *)precord->vall,STAT3,12*sizeof(float));
         memcpy((char *)precord->valp,tmstr,strlen(tmstr)*sizeof(char));
     }
+    
+    printf("Goodbyte from ADCSub....\n");
     return(0);
 }
 // Note the function must be registered at the end!

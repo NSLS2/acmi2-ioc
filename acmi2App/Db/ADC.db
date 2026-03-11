@@ -418,7 +418,7 @@ record(aSub,"$(P){ACMI:$(NO)}COW-Sub"){
 
 record(aSub,"$(P){ACMI:$(NO)}PM-Sub"){
     field(SNAM,"PMsub")
-#    field(FLNK,"$(P){ACMI:$(NO)}PM:TP1-Sub")
+    field(FLNK,"$(P){ACMI:$(NO)}PM:TP1-Sub")
 
     field(FTA,  "DOUBLE")
     field(NOA,  "2")

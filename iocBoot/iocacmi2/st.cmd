@@ -8,7 +8,7 @@
 epicsEnvSet("IOCNAME", "lab")
 
 # PSC IP address
-epicsEnvSet("ACMI2_IP", "10.0.142.197"); 
+epicsEnvSet("ACMI2_IP", "10.0.142.198"); 
 
 
 #epicsEnvSet("BLEN",100000);        # Snapshot DMA Length
@@ -42,7 +42,7 @@ var(PSCDebug, 2)	#5 full debug
 
 #psc1 Create the PSC
 createPSC("PSCA", $(ACMI2_IP), 3000, 0)
-setPSCSendBlockSize("PSCA", 16000, 16000)
+setPSCSendBlockSize("PSCA", 70000, 70000)
 
 cd "${TOP}/iocBoot/${IOC}"
 iocInit

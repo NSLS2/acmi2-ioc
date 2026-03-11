@@ -231,7 +231,7 @@ record(ai,"$(P){ACMI:$(NO)}TrigCnt-I") {
     field(DTYP, "PSC Reg")
     field(INP , "@PSC$(NO) 51 116")
     field(SCAN, "I/O Intr")
-    #field(FLNK,"$(P){ACMI:$(NO)}ADC-Sub.PROC")
+    field(FLNK,"$(P){ACMI:$(NO)}ADC-Sub.PROC")
 }
 
 record(ai,"$(P){ACMI:$(NO)}accum-I") {
