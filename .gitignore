@@ -10,6 +10,8 @@
 /lib/
 /templates/
 /db
+/PM
+/COW
 
 # Local configuration files
 /configure/*.local
