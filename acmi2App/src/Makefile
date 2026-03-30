@@ -40,8 +40,11 @@ acmi2_SRCS += PMBM.c
 acmi2_SRCS += PMCOW.c
 acmi2_SRCS += PMwrite.c
 acmi2_SRCS += COWFiles.c
-acmi2_SRCS += TailSub.c
+acmi2_SRCS += TailSub2.c
 acmi2_SRCS += readADCcorrTable.c
+acmi2_SRCS += MakeTable.c
+acmi2_SRCS += EmptyTable.c
+acmi2_SRCS += LoadTable.c
 
 # Build the main IOC entry point on workstation OSs.
 acmi2_SRCS_DEFAULT += acmi2Main.cpp

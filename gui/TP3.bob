@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-10 09:07:58 by diag-->
+<!--Saved on 2026-03-25 14:54:30 by diag-->
 <display version="2.0.0">
   <name>TP3</name>
   <width>1100</width>
@@ -432,7 +432,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>$(P)TP3:IOC:fwhm-I</pv_name>
+          <pv_name>$(P)TP3:Stats-Wfm.VAL[2]</pv_name>
           <pv_name trigger="false">$(P)TP3:fwhm-I</pv_name>
         </rule>
       </rules>
@@ -4072,7 +4072,7 @@
   </widget>
   <widget type="group" version="3.0.0">
     <name>Group_30</name>
-    <x>683</x>
+    <x>682</x>
     <width>72</width>
     <height>35</height>
     <style>3</style>

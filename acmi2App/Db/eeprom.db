@@ -1030,6 +1030,9 @@ record(aSub,"$(P){ACMI:$(NO)}WriteFile-Sub"){
     field(FTD,  "LONG")
     field(NOD,  "11")
     field(INPD, "$(P){ACMI:$(NO)}EE:BM-Wfm")
+    field(FTE,  "CHAR")
+    field(NOE,  "128")
+    field(INPE, "$(P){ACMI:$(NO)}Settings:File-SP")
 }
 
 record(aSub,"$(P){ACMI:$(NO)}LoadFile-Sub"){

@@ -208,3 +208,12 @@ record(waveform,"$(P){ACMI:$(NO)}PM:Trig:Date-I"){
   field(NELM,"40")
   field(FTVL,"CHAR")
 }
+
+#######  File Paths ############################################3
+
+record(waveform,"$(P){ACMI:$(NO)}COW:DirPath-SP"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"String COW Directory Path")
+  field(NELM,"60")
+  field(FTVL,"CHAR")
+}

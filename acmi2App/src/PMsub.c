@@ -15,7 +15,7 @@
 #include <epicsExport.h>
 
 int PMsub(aSubRecord *precord) {
-    //printf("Hello from PMSub....\n");
+//    printf("Hello from PMSub....\n");
 
     int armed = *(int *)precord->b;
     int process=0;

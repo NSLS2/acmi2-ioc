@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-10 11:50:55 by diag-->
+<!--Saved on 2026-03-28 10:33:07 by diag-->
 <display version="2.0.0">
-  <name>Display</name>
+  <name>Tail.bob</name>
   <width>1100</width>
   <height>1100</height>
   <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_26</name>
-    <y>40</y>
-    <width>392</width>
-    <height>570</height>
+    <name>Rectangle_120</name>
+    <x>870</x>
+    <y>764</y>
+    <width>181</width>
+    <height>170</height>
     <line_width>2</line_width>
     <line_color>
       <color name="Text" red="0" green="0" blue="0">
@@ -20,73 +21,56 @@
     </background_color>
     <transparent>true</transparent>
   </widget>
-  <widget type="xyplot" version="3.0.0">
-    <name>X/Y Plot_6</name>
-    <x>5</x>
-    <y>47</y>
-    <width>381</width>
-    <height>553</height>
-    <show_legend>false</show_legend>
-    <x_axis>
-      <title>ADC Samples</title>
-      <autoscale>true</autoscale>
-      <log_scale>false</log_scale>
-      <minimum>0.0</minimum>
-      <maximum>100.0</maximum>
-      <show_grid>true</show_grid>
-      <title_font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </title_font>
-      <scale_font>
-        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
-        </font>
-      </scale_font>
-      <visible>true</visible>
-    </x_axis>
-    <y_axes>
-      <y_axis>
-        <title>ADC Counts</title>
-        <autoscale>true</autoscale>
-        <log_scale>false</log_scale>
-        <minimum>0.0</minimum>
-        <maximum>100.0</maximum>
-        <show_grid>true</show_grid>
-        <title_font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-          </font>
-        </title_font>
-        <scale_font>
-          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
-          </font>
-        </scale_font>
-        <on_right>false</on_right>
-        <visible>true</visible>
-        <color>
-          <color name="Text" red="0" green="0" blue="0">
-          </color>
-        </color>
-      </y_axis>
-    </y_axes>
-    <traces>
-      <trace>
-        <name></name>
-        <x_pv></x_pv>
-        <y_pv>$(P)TP3:Raw-Wfm</y_pv>
-        <err_pv></err_pv>
-        <axis>0</axis>
-        <trace_type>1</trace_type>
-        <color>
-          <color red="0" green="0" blue="255">
-          </color>
-        </color>
-        <line_width>1</line_width>
-        <line_style>0</line_style>
-        <point_type>2</point_type>
-        <point_size>5</point_size>
-        <visible>true</visible>
-      </trace>
-    </traces>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_123</name>
+    <x>10</x>
+    <y>623</y>
+    <width>850</width>
+    <height>285</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_122</name>
+    <x>10</x>
+    <y>333</y>
+    <width>850</width>
+    <height>285</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_121</name>
+    <x>10</x>
+    <y>43</y>
+    <width>850</width>
+    <height>285</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
   </widget>
   <widget type="group" version="3.0.0">
     <name>Group_29</name>
@@ -497,7 +481,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_378</name>
     <text>EVR: Event Num</text>
-    <x>876</x>
+    <x>875</x>
     <y>177</y>
     <width>148</width>
     <height>30</height>
@@ -517,7 +501,7 @@
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_110</name>
     <pv_name>$(P)EVR:TrigNo-SP</pv_name>
-    <x>1028</x>
+    <x>1027</x>
     <y>177</y>
     <width>69</width>
     <height>30</height>
@@ -534,7 +518,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_382</name>
     <text>Event Delay</text>
-    <x>876</x>
+    <x>875</x>
     <y>211</y>
     <width>119</width>
     <height>30</height>
@@ -554,7 +538,7 @@
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_111</name>
     <pv_name>$(P)EVR:TrigDly-SP</pv_name>
-    <x>999</x>
+    <x>998</x>
     <y>211</y>
     <width>98</width>
     <height>30</height>
@@ -570,7 +554,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_369</name>
     <pv_name>$(P)TrigCnt-I</pv_name>
-    <x>999</x>
+    <x>998</x>
     <y>153</y>
     <width>97</width>
     <precision>0</precision>
@@ -581,7 +565,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_383</name>
     <text>Trigger Count</text>
-    <x>876</x>
+    <x>875</x>
     <y>153</y>
     <width>119</width>
     <font>
@@ -600,7 +584,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_370</name>
     <pv_name>$(P)TS-S-I</pv_name>
-    <x>999</x>
+    <x>998</x>
     <y>81</y>
     <width>97</width>
     <precision>0</precision>
@@ -611,7 +595,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_371</name>
     <pv_name>$(P)TS-NS-I</pv_name>
-    <x>999</x>
+    <x>998</x>
     <y>105</y>
     <width>97</width>
     <precision>0</precision>
@@ -622,7 +606,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_384</name>
     <text>Epoch (Secs)</text>
-    <x>876</x>
+    <x>875</x>
     <y>81</y>
     <width>119</width>
     <font>
@@ -641,7 +625,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_385</name>
     <text>Trig (NSecs)</text>
-    <x>876</x>
+    <x>875</x>
     <y>105</y>
     <width>119</width>
     <font>
@@ -660,7 +644,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_374</name>
     <pv_name>$(P)Trig:Date-I</pv_name>
-    <x>876</x>
+    <x>875</x>
     <y>129</y>
     <width>220</width>
     <format>6</format>
@@ -910,76 +894,6 @@
       <rules>
         <rule name="BGcolor" prop_id="background_color" out_exp="false">
           <exp bool_exp="pvInt0&amp;0x0004&gt;0">
-            <value>
-              <color name="MAJOR" red="255" green="0" blue="0">
-              </color>
-            </value>
-          </exp>
-          <pv_name>$(P)faults_lat-I</pv_name>
-        </rule>
-      </rules>
-      <border_width>2</border_width>
-      <border_color>
-        <color red="102" green="102" blue="102">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_392</name>
-      <text></text>
-      <x>181</x>
-      <y>55</y>
-      <width>44</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="40" green="0" blue="0">
-        </color>
-      </background_color>
-      <transparent>false</transparent>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="BGcolor" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pvInt0&amp;0x0002&gt;0">
-            <value>
-              <color name="MAJOR" red="255" green="0" blue="0">
-              </color>
-            </value>
-          </exp>
-          <pv_name>$(P)faults_lat-I</pv_name>
-        </rule>
-      </rules>
-      <border_width>2</border_width>
-      <border_color>
-        <color red="102" green="102" blue="102">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_393</name>
-      <text></text>
-      <x>181</x>
-      <y>31</y>
-      <width>44</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="40" green="0" blue="0">
-        </color>
-      </background_color>
-      <transparent>false</transparent>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="BGcolor" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pvInt0&amp;0x0001&gt;0">
             <value>
               <color name="MAJOR" red="255" green="0" blue="0">
               </color>
@@ -1608,63 +1522,6 @@
         </color>
       </border_color>
     </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_412</name>
-      <text>Fault Summary</text>
-      <x>56</x>
-      <y>6</y>
-      <width>120</width>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <background_color>
-        <color name="Button_Background" red="210" green="210" blue="210">
-        </color>
-      </background_color>
-      <transparent>false</transparent>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <border_width>1</border_width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_413</name>
-      <text>Live</text>
-      <x>6</x>
-      <y>6</y>
-      <width>46</width>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <background_color>
-        <color name="Button_Background" red="210" green="210" blue="210">
-        </color>
-      </background_color>
-      <transparent>false</transparent>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <border_width>1</border_width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_414</name>
-      <text>Latch</text>
-      <x>180</x>
-      <y>6</y>
-      <width>46</width>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <background_color>
-        <color name="Button_Background" red="210" green="210" blue="210">
-        </color>
-      </background_color>
-      <transparent>false</transparent>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <border_width>1</border_width>
-    </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_383</name>
       <pv_name>$(P)faults_live-I</pv_name>
@@ -1776,44 +1633,6 @@
         </color>
       </background_color>
       <transparent>true</transparent>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_418</name>
-      <text>Beam Q HI</text>
-      <x>56</x>
-      <y>30</y>
-      <width>120</width>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <background_color>
-        <color name="Button_Background" red="210" green="210" blue="210">
-        </color>
-      </background_color>
-      <transparent>false</transparent>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <border_width>1</border_width>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_419</name>
-      <text>Accumulator HI</text>
-      <x>56</x>
-      <y>54</y>
-      <width>120</width>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <background_color>
-        <color name="Button_Background" red="210" green="210" blue="210">
-        </color>
-      </background_color>
-      <transparent>false</transparent>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <border_width>1</border_width>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_420</name>
@@ -2265,76 +2084,6 @@
       </border_color>
     </widget>
     <widget type="label" version="2.0.0">
-      <name>Label_438</name>
-      <text></text>
-      <x>7</x>
-      <y>31</y>
-      <width>44</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="40" green="0" blue="0">
-        </color>
-      </background_color>
-      <transparent>false</transparent>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="BGcolor" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pvInt0&amp;0x0001&gt;0">
-            <value>
-              <color name="MAJOR" red="255" green="0" blue="0">
-              </color>
-            </value>
-          </exp>
-          <pv_name>$(P)faults_live-I</pv_name>
-        </rule>
-      </rules>
-      <border_width>2</border_width>
-      <border_color>
-        <color red="102" green="102" blue="102">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_439</name>
-      <text></text>
-      <x>7</x>
-      <y>55</y>
-      <width>44</width>
-      <height>18</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="12.0">
-        </font>
-      </font>
-      <background_color>
-        <color red="40" green="0" blue="0">
-        </color>
-      </background_color>
-      <transparent>false</transparent>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <rules>
-        <rule name="BGcolor" prop_id="background_color" out_exp="false">
-          <exp bool_exp="pvInt0&amp;0x0002&gt;0">
-            <value>
-              <color name="MAJOR" red="255" green="0" blue="0">
-              </color>
-            </value>
-          </exp>
-          <pv_name>$(P)faults_live-I</pv_name>
-        </rule>
-      </rules>
-      <border_width>2</border_width>
-      <border_color>
-        <color red="102" green="102" blue="102">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="label" version="2.0.0">
       <name>Label_440</name>
       <text></text>
       <x>7</x>
@@ -2466,113 +2215,12 @@
       <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
     </widget>
   </widget>
-  <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_114</name>
-    <x>395</x>
-    <y>40</y>
-    <width>392</width>
-    <height>570</height>
-    <line_width>2</line_width>
-    <line_color>
-      <color name="Text" red="0" green="0" blue="0">
-      </color>
-    </line_color>
-    <background_color>
-      <color name="Grid" red="128" green="128" blue="128">
-      </color>
-    </background_color>
-    <transparent>true</transparent>
-  </widget>
-  <widget type="xyplot" version="3.0.0">
-    <name>X/Y Plot_7</name>
-    <x>400</x>
-    <y>47</y>
-    <width>381</width>
-    <height>553</height>
-    <show_legend>false</show_legend>
-    <x_axis>
-      <title>ADC Samples</title>
-      <autoscale>true</autoscale>
-      <log_scale>false</log_scale>
-      <minimum>0.0</minimum>
-      <maximum>100.0</maximum>
-      <show_grid>true</show_grid>
-      <title_font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </title_font>
-      <scale_font>
-        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
-        </font>
-      </scale_font>
-      <visible>true</visible>
-    </x_axis>
-    <y_axes>
-      <y_axis>
-        <title>ADC Counts</title>
-        <autoscale>true</autoscale>
-        <log_scale>false</log_scale>
-        <minimum>0.0</minimum>
-        <maximum>100.0</maximum>
-        <show_grid>true</show_grid>
-        <title_font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-          </font>
-        </title_font>
-        <scale_font>
-          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
-          </font>
-        </scale_font>
-        <on_right>false</on_right>
-        <visible>true</visible>
-        <color>
-          <color name="Text" red="0" green="0" blue="0">
-          </color>
-        </color>
-      </y_axis>
-    </y_axes>
-    <traces>
-      <trace>
-        <name></name>
-        <x_pv></x_pv>
-        <y_pv>$(P)TP3:Corrected-Wfm</y_pv>
-        <err_pv></err_pv>
-        <axis>0</axis>
-        <trace_type>1</trace_type>
-        <color>
-          <color red="0" green="0" blue="255">
-          </color>
-        </color>
-        <line_width>1</line_width>
-        <line_style>0</line_style>
-        <point_type>2</point_type>
-        <point_size>5</point_size>
-        <visible>true</visible>
-      </trace>
-    </traces>
-  </widget>
-  <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_115</name>
-    <y>613</y>
-    <width>680</width>
-    <height>230</height>
-    <line_width>2</line_width>
-    <line_color>
-      <color name="Text" red="0" green="0" blue="0">
-      </color>
-    </line_color>
-    <background_color>
-      <color name="Grid" red="128" green="128" blue="128">
-      </color>
-    </background_color>
-    <transparent>true</transparent>
-  </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_8</name>
-    <x>5</x>
-    <y>620</y>
-    <width>669</width>
-    <height>213</height>
+    <x>20</x>
+    <y>341</y>
+    <width>830</width>
+    <height>270</height>
     <show_legend>false</show_legend>
     <x_axis>
       <title>ADC Samples</title>
@@ -2593,7 +2241,7 @@
     </x_axis>
     <y_axes>
       <y_axis>
-        <title>ADC Counts</title>
+        <title>ADC Capture Counts</title>
         <autoscale>true</autoscale>
         <log_scale>false</log_scale>
         <minimum>0.0</minimum>
@@ -2619,7 +2267,7 @@
       <trace>
         <name></name>
         <x_pv></x_pv>
-        <y_pv>$(P)TP3:Tail-Wfm</y_pv>
+        <y_pv>$(P)ADC:Avg-Wfm</y_pv>
         <err_pv></err_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
@@ -2634,48 +2282,12 @@
         <visible>true</visible>
       </trace>
     </traces>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_441</name>
-    <text>Start Indx</text>
-    <x>686</x>
-    <y>653</y>
-    <width>83</width>
-    <height>30</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </background_color>
-    <transparent>false</transparent>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <border_width>2</border_width>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry_112</name>
-    <pv_name>$(P)TP3:StartIndx-SP</pv_name>
-    <x>775</x>
-    <y>653</y>
-    <width>80</width>
-    <height>30</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <precision>0</precision>
-    <show_units>false</show_units>
-    <horizontal_alignment>1</horizontal_alignment>
-    <border_width>2</border_width>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_386</name>
-    <pv_name>$(P)TP3:Count-I</pv_name>
-    <x>785</x>
-    <y>615</y>
+    <pv_name>$(P)ADC:Baseline-I</pv_name>
+    <x>975</x>
+    <y>813</y>
     <width>70</width>
     <height>31</height>
     <font>
@@ -2688,9 +2300,230 @@
     <border_width>2</border_width>
   </widget>
   <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_118</name>
+    <x>874</x>
+    <y>853</y>
+    <width>97</width>
+    <height>35</height>
+    <line_width>2</line_width>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_1</name>
+    <pv_name>$(P)ADC:Capture-SP</pv_name>
+    <x>877</x>
+    <y>856</y>
+    <width>91</width>
+    <height>29</height>
+    <off_label>Capture</off_label>
+    <off_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </off_color>
+    <on_label>Capture</on_label>
+    <on_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <rules>
+      <rule name="New Rule" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&gt;0">
+          <value>
+            <color red="255" green="225" blue="0">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)ADC:Count-I</pv_name>
+      </rule>
+    </rules>
+    <mode>1</mode>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_387</name>
+    <pv_name>$(P)ADC:Count-I</pv_name>
+    <x>975</x>
+    <y>855</y>
+    <width>70</width>
+    <height>31</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>2</border_width>
+  </widget>
+  <widget type="xyplot" version="3.0.0">
+    <name>X/Y Plot_9</name>
+    <x>20</x>
+    <y>50</y>
+    <width>830</width>
+    <height>270</height>
+    <show_legend>false</show_legend>
+    <x_axis>
+      <title>ADC Samples</title>
+      <autoscale>true</autoscale>
+      <log_scale>false</log_scale>
+      <minimum>0.0</minimum>
+      <maximum>100.0</maximum>
+      <show_grid>true</show_grid>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+      <visible>true</visible>
+    </x_axis>
+    <y_axes>
+      <y_axis>
+        <title>ADC Raw Counts</title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <on_right>false</on_right>
+        <visible>true</visible>
+        <color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </color>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name></name>
+        <x_pv></x_pv>
+        <y_pv>$(P)ADC-Wfm</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>2</point_type>
+        <point_size>5</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="xyplot" version="3.0.0">
+    <name>X/Y Plot_10</name>
+    <x>20</x>
+    <y>631</y>
+    <width>830</width>
+    <height>270</height>
+    <show_legend>false</show_legend>
+    <x_axis>
+      <title>ADC Samples</title>
+      <autoscale>true</autoscale>
+      <log_scale>false</log_scale>
+      <minimum>0.0</minimum>
+      <maximum>100.0</maximum>
+      <show_grid>true</show_grid>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+      <visible>true</visible>
+    </x_axis>
+    <y_axes>
+      <y_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <on_right>false</on_right>
+        <visible>true</visible>
+        <color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </color>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>Calculated ADC Correction</name>
+        <x_pv></x_pv>
+        <y_pv>$(P)ADC:Corr-Wfm</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>2</point_type>
+        <point_size>5</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>Applied ADC Correction</name>
+        <x_pv></x_pv>
+        <y_pv>$(P)ADCcorrTable-Wfm</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="255" green="0" blue="0">
+          </color>
+        </color>
+        <line_width>2</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
     <name>Rectangle_117</name>
-    <x>684</x>
-    <y>688</y>
+    <x>874</x>
+    <y>895</y>
     <width>173</width>
     <height>35</height>
     <line_width>2</line_width>
@@ -2706,9 +2539,9 @@
   </widget>
   <widget type="bool_button" version="2.0.0">
     <name>Boolean Button</name>
-    <pv_name>$(P)TP3:Apply-SP</pv_name>
-    <x>687</x>
-    <y>691</y>
+    <pv_name>$(P)ADC:Apply-SP</pv_name>
+    <x>877</x>
+    <y>898</y>
     <width>167</width>
     <height>29</height>
     <off_label>Apply</off_label>
@@ -2726,12 +2559,33 @@
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
     </font>
+    <mode>1</mode>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_441</name>
+    <text>Baseline</text>
+    <x>876</x>
+    <y>813</y>
+    <width>93</width>
+    <height>31</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>2</border_width>
   </widget>
   <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_118</name>
-    <x>684</x>
-    <y>613</y>
-    <width>97</width>
+    <name>Rectangle_119</name>
+    <x>874</x>
+    <y>769</y>
+    <width>173</width>
     <height>35</height>
     <line_width>2</line_width>
     <line_color>
@@ -2745,18 +2599,18 @@
     <transparent>true</transparent>
   </widget>
   <widget type="bool_button" version="2.0.0">
-    <name>Boolean Button_1</name>
-    <pv_name>$(P)TP3:Capture-SP</pv_name>
-    <x>687</x>
-    <y>616</y>
-    <width>91</width>
+    <name>Boolean Button_2</name>
+    <pv_name>$(P)ADC:Reset-SP</pv_name>
+    <x>877</x>
+    <y>772</y>
+    <width>167</width>
     <height>29</height>
-    <off_label>Capture</off_label>
+    <off_label>Reset</off_label>
     <off_color>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </off_color>
-    <on_label>Capture</on_label>
+    <on_label>Reset</on_label>
     <on_color>
       <color red="255" green="207" blue="73">
       </color>
@@ -2766,89 +2620,274 @@
       <font family="Liberation Sans" style="REGULAR" size="16.0">
       </font>
     </font>
+    <mode>1</mode>
   </widget>
-  <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_119</name>
-    <y>846</y>
-    <width>680</width>
-    <height>230</height>
-    <line_width>2</line_width>
-    <line_color>
-      <color name="Text" red="0" green="0" blue="0">
-      </color>
-    </line_color>
+  <widget type="label" version="2.0.0">
+    <name>Label_442</name>
+    <text>Saved As:</text>
+    <x>224</x>
+    <y>913</y>
+    <width>120</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
     <background_color>
-      <color name="Grid" red="128" green="128" blue="128">
+      <color name="Button_Background" red="210" green="210" blue="210">
       </color>
     </background_color>
-    <transparent>true</transparent>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>2</border_width>
   </widget>
-  <widget type="xyplot" version="3.0.0">
-    <name>X/Y Plot_9</name>
-    <x>5</x>
-    <y>853</y>
-    <width>669</width>
-    <height>213</height>
-    <show_legend>false</show_legend>
-    <x_axis>
-      <title>ADC Samples</title>
-      <autoscale>true</autoscale>
-      <log_scale>false</log_scale>
-      <minimum>0.0</minimum>
-      <maximum>100.0</maximum>
-      <show_grid>true</show_grid>
-      <title_font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </title_font>
-      <scale_font>
-        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
-        </font>
-      </scale_font>
-      <visible>true</visible>
-    </x_axis>
-    <y_axes>
-      <y_axis>
-        <title>ADC Counts</title>
-        <autoscale>true</autoscale>
-        <log_scale>false</log_scale>
-        <minimum>0.0</minimum>
-        <maximum>100.0</maximum>
-        <show_grid>true</show_grid>
-        <title_font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-          </font>
-        </title_font>
-        <scale_font>
-          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
-          </font>
-        </scale_font>
-        <on_right>false</on_right>
-        <visible>true</visible>
-        <color>
-          <color name="Text" red="0" green="0" blue="0">
-          </color>
-        </color>
-      </y_axis>
-    </y_axes>
-    <traces>
-      <trace>
-        <name></name>
-        <x_pv></x_pv>
-        <y_pv>$(P)TP3:AvgTail-Wfm</y_pv>
-        <err_pv></err_pv>
-        <axis>0</axis>
-        <trace_type>1</trace_type>
-        <color>
-          <color red="0" green="0" blue="255">
-          </color>
-        </color>
-        <line_width>1</line_width>
-        <line_style>0</line_style>
-        <point_type>2</point_type>
-        <point_size>5</point_size>
-        <visible>true</visible>
-      </trace>
-    </traces>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_388</name>
+    <pv_name>$(P)ADC:Corr:Filename-SP</pv_name>
+    <x>350</x>
+    <y>913</y>
+    <width>508</width>
+    <height>30</height>
+    <format>6</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>2</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_418</name>
+    <text>Beam Q HI</text>
+    <x>925</x>
+    <y>280</y>
+    <width>120</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_419</name>
+    <text>Accumulator HI</text>
+    <x>925</x>
+    <y>304</y>
+    <width>120</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_438</name>
+    <text></text>
+    <x>876</x>
+    <y>281</y>
+    <width>44</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="40" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x0001&gt;0">
+          <value>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_live-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>2</border_width>
+    <border_color>
+      <color red="102" green="102" blue="102">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_439</name>
+    <text></text>
+    <x>876</x>
+    <y>305</y>
+    <width>44</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="40" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x0002&gt;0">
+          <value>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_live-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>2</border_width>
+    <border_color>
+      <color red="102" green="102" blue="102">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_392</name>
+    <text></text>
+    <x>1050</x>
+    <y>305</y>
+    <width>44</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="40" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x0002&gt;0">
+          <value>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_lat-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>2</border_width>
+    <border_color>
+      <color red="102" green="102" blue="102">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_393</name>
+    <text></text>
+    <x>1050</x>
+    <y>281</y>
+    <width>44</width>
+    <height>18</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color red="40" green="0" blue="0">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <rules>
+      <rule name="BGcolor" prop_id="background_color" out_exp="false">
+        <exp bool_exp="pvInt0&amp;0x0001&gt;0">
+          <value>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </value>
+        </exp>
+        <pv_name>$(P)faults_lat-I</pv_name>
+      </rule>
+    </rules>
+    <border_width>2</border_width>
+    <border_color>
+      <color red="102" green="102" blue="102">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_412</name>
+    <text>Fault Summary</text>
+    <x>925</x>
+    <y>256</y>
+    <width>120</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_413</name>
+    <text>Live</text>
+    <x>875</x>
+    <y>256</y>
+    <width>46</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_414</name>
+    <text>Latch</text>
+    <x>1049</x>
+    <y>256</y>
+    <width>46</width>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
   </widget>
 </display>

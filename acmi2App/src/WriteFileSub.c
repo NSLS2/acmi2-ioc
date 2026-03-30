@@ -37,13 +37,16 @@ int WriteFileSub(aSubRecord *precord) {
     uint32_t crc= CRC32_INIT;
     unsigned char byteval;
     char names[50][40];
+    
+    char *fname = (char *)precord->e;
+    printf("fname = %s\n",fname);
 
     int *TP1 = (int *)precord->a;
     int *TP2 = (int *)precord->b;
     int *TP3 = (int *)precord->c;
     int *BM = (int *)precord->d;
     
-    FILE *fout = fopen("/home/diag/acmi2/settings/settings.txt","w");
+    FILE *fout = fopen(fname,"w");
 
     Set[0] = BM[9];		strcpy(names[0],"Settings Header");
     Set[1] = TP1[0];	strcpy(names[1],"TP1 Pulse Delay");

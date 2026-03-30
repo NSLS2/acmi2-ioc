@@ -11,7 +11,7 @@ n = 16000
 
 with open(filename, "w") as f:
     for i in range(n):
-        if 1500 <= i <= 1700:
+        if 0<= i <= n:
             f.write("0\n")
         else:
             f.write("0\n")

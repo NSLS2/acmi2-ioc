@@ -15,8 +15,16 @@
 #include <epicsExport.h>
 
 int LoadFileSub(aSubRecord *precord)
+// This routine will open the desired settings file and place them into Arrays
+// for further processing.  There are arrays for TP1, TP2, TP3 and Beam.  This
+// subroutine is run whenever the user presses the "Load Setting from file"
+// button on the "Settings" tab for the ACMI-2 Phoebus Gui.
+
+// This subroutine is referenced in the "eeprom.db" EPICS database file.  The
+// PV that uses this subroutine is "$(P){ACMI:$(NO)}LoadFile-Sub".
 {
-    printf("Hello from LoadFileSub....\n");
+    printf("Hello from LoadFileSub....\n");  //for debugging
+
     int i,fr,Set[55],TP1[13],TP2[13],TP3[13],BM[11],zero=0,stat;
     int err;
     char buff[2000],*a, *line[50];
@@ -56,6 +64,8 @@ int LoadFileSub(aSubRecord *precord)
         TP1[10] = Set[24]; TP2[10] = Set[26]; TP3[10] = Set[28];  BM[10] = Set[49];
         TP1[11] = Set[31]; TP2[11] = Set[33]; TP3[11] = Set[35];
         TP1[12] = Set[30]; TP2[12] = Set[32]; TP3[12] = Set[34];
+        
+        printf("BM[10] = %d   0x%x\n",BM[10],BM[10]);
     
         precord->neva = 13;
         precord->nevb = 13;

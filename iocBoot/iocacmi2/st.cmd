@@ -5,13 +5,13 @@
 
 < envPaths
 
-epicsEnvSet("IOCNAME", "lab")
+epicsEnvSet("IOCNAME","lab")
+epicsEnvSet("UNIT","A")
+epicsEnvSet("IOCDIR","/home/diag/acmi2/acmi2-ioc/")
 
 # PSC IP address
 #epicsEnvSet("ACMI2_IP", "10.0.142.198"); 
 epicsEnvSet("ACMI2_IP", "10.0.142.128"); 
-
-
 
 #epicsEnvSet("BLEN",100000);        # Snapshot DMA Length
 
@@ -24,23 +24,21 @@ dbLoadDatabase "dbd/acmi2Subs.dbd"
 acmi2_registerRecordDeviceDriver pdbbase
 
 ## Non-PSC database files:
-dbLoadRecords("db/ADC.db", "P=$(IOCNAME), NO=A")
-dbLoadRecords("db/TP.db", "P=$(IOCNAME), NO=A, T=1")
-dbLoadRecords("db/TP.db", "P=$(IOCNAME), NO=A, T=2")
-dbLoadRecords("db/TP.db", "P=$(IOCNAME), NO=A, T=3")
-dbLoadRecords("db/Beam.db", "P=$(IOCNAME), NO=A")
-dbLoadRecords("db/Tail.db", "P=$(IOCNAME), NO=A")
+dbLoadRecords("db/ADC.db", "P=$(IOCNAME), NO=$(UNIT)")
+dbLoadRecords("db/TP.db", "P=$(IOCNAME), NO=$(UNIT), T=1")
+dbLoadRecords("db/TP.db", "P=$(IOCNAME), NO=$(UNIT), T=2")
+dbLoadRecords("db/TP.db", "P=$(IOCNAME), NO=$(UNIT), T=3")
+dbLoadRecords("db/Beam.db", "P=$(IOCNAME), NO=$(UNIT)")
+dbLoadRecords("db/Tail2.db", "P=$(IOCNAME), NO=$(UNIT)")
 
 ## Load record instances for PSC1
-dbLoadRecords("db/lstats.db", "P=$(IOCNAME), NO=A")
-dbLoadRecords("db/control.db", "P=$(IOCNAME), NO=A")
-dbLoadRecords("db/pulse_stats.db", "P=$(IOCNAME), NO=A")
-dbLoadRecords("db/eeprom.db", "P=$(IOCNAME), NO=A")
-dbLoadRecords("db/adc_data.db", "P=$(IOCNAME), NO=A")
-dbLoadRecords("db/ADCcorrTable.db", "P=$(IOCNAME), NO=A")
+dbLoadRecords("db/lstats.db", "P=$(IOCNAME), NO=$(UNIT)")
+dbLoadRecords("db/control.db", "P=$(IOCNAME), NO=$(UNIT)")
+dbLoadRecords("db/pulse_stats.db", "P=$(IOCNAME), NO=$(UNIT)")
+dbLoadRecords("db/eeprom.db", "P=$(IOCNAME), NO=$(UNIT)")
+dbLoadRecords("db/adc_data.db", "P=$(IOCNAME), NO=$(UNIT)")
 
-
-var(PSCDebug, 2)	#5 full debug
+var(PSCDebug, 1)	#5 full debug
 
 #psc1 Create the PSC
 createPSC("PSCA", $(ACMI2_IP), 3000, 0)
@@ -54,6 +52,9 @@ iocInit
 
 epicsThreadSleep(1.0)
 
-dbpf lab{ACMI:A}EVR:TrigNo-SP 32
-dbpf lab{ACMI:A}EVR:TrigDly-SP 1
-dbpf lab{ACMI:A}Settings:File-SP /home/diag/acmi2/settings/settings.txt
+dbpf $(IOCNAME){ACMI:$(UNIT)}EVR:TrigNo-SP 32
+dbpf $(IOCNAME){ACMI:$(UNIT)}EVR:TrigDly-SP 1
+dbpf $(IOCNAME){ACMI:$(UNIT)}Settings:File-SP $(IOCDIR)settings/settings.txt
+dbpf $(IOCNAME){ACMI:$(UNIT)}COW:DirPath-SP $(IOCDIR)COW/
+dbpf $(IOCNAME){ACMI:$(UNIT)}ADC:Corr:DirPath-SP $(IOCDIR)Correction/
+dbpf $(IOCNAME){ACMI:$(UNIT)}ADC:UpdatePV-SP $(IOCNAME){ACMI:$(UNIT)}ADC:UpdateTable-SP

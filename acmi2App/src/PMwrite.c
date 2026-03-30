@@ -15,11 +15,12 @@
 #include <epicsExport.h>
 
 int PMwrite(aSubRecord *precord) {
-    //printf("Hello from PMwrite....\n");
+//    printf("Hello from PMwrite....\n");
     
     int process = *(int *)precord->l;
     
     if(process==1){
+//        printf("PM Write Process = %d\n",process);
         int i,j;
         char fname[80];
         int *TP1data = (int *)precord->a;
@@ -34,7 +35,7 @@ int PMwrite(aSubRecord *precord) {
         int *COWwfm = (int *)precord->j;
         float *ACCwfm = (float *)precord->k;
         
-        sprintf(fname,"/home/diag/acmi2/PM/PM%d.txt",COWdata[13]);
+        sprintf(fname,"/home/diag/acmi2/acmi2-ioc/PM/PM%d.txt",COWdata[13]);
     
         FILE *fout = fopen(fname,"w");
     

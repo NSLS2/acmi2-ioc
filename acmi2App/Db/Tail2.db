@@ -1,0 +1,184 @@
+record(waveform, "$(P){ACMI:$(NO)}ADCcorrTable-Wfm") {
+    field(DESC, "Buffer to PSC")
+    field(DTYP, "PSC Block I32 Out")
+    field(INP , "@PSC$(NO) 3")   
+    field(FTVL, "DOUBLE")
+    field(NELM, "70000")
+    field(FLNK, "$(P){ACMI:$(NO)}send")
+}
+
+record(waveform,"$(P){ACMI:$(NO)}ADC:Corr:Filename-SP"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"Tail Correction Filename Wfm String")
+  field(NELM,"100")
+  field(FTVL,"CHAR")
+}
+
+record(waveform,"$(P){ACMI:$(NO)}ADC:Corr:DirPath-SP"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"Path to ADC Correction Files")
+  field(NELM,"100")
+  field(FTVL,"CHAR")
+}
+
+# START button for capturing ADC correction data
+record(bo, "$(P){ACMI:$(NO)}ADC:Capture-SP") {
+    field(ZNAM, "Idle")
+    field(ONAM, "Reset")
+    field(VAL,0)
+    field(UDF,0)
+    field(FLNK, "$(P){ACMI:$(NO)}ADC:Capture_TRIG-I")
+}
+
+record(calcout, "$(P){ACMI:$(NO)}ADC:Capture_TRIG-I") {
+    field(INPA, "$(P){ACMI:$(NO)}ADC:Capture-SP NPP")
+    field(CALC, "A")
+    field(OOPT, "When Non-zero")
+    field(OUT, "$(P){ACMI:$(NO)}ADC:MakeTable-Sub.PROC")
+}
+
+record(longin,"$(P){ACMI:$(NO)}ADC:Baseline-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+# RUN flag
+record(longout, "$(P){ACMI:$(NO)}RUN") {
+    field(VAL, "0")
+}
+
+# COUNT
+record(longout, "$(P){ACMI:$(NO)}ADC:Count-I") {
+    field(VAL, "0")
+}
+
+# Counting aSub
+record(aSub, "$(P){ACMI:$(NO)}ADC:MakeTable-Sub") {
+    field(SNAM, "MakeTable")
+
+    # Input: START
+    field(FTA, "LONG")
+    field(NOA, "1")
+    field(INPA, "$(P){ACMI:$(NO)}ADC:Capture-SP NPP NMS")
+    field(FTB,  "LONG")
+    field(NOB,  "16000")
+    field(INPB, "$(P){ACMI:$(NO)}ADC-Wfm NPP NMS")
+    field(FTC,  "LONG")
+    field(NOC,  "1")
+    field(INPC, "$(P){ACMI:$(NO)}EE:TP1_adc_delay-I NPP NMS")
+    field(FTD,  "LONG")
+    field(NOD,  "1")
+    field(INPD, "$(P){ACMI:$(NO)}EE:TP2_adc_delay-I NPP NMS")
+    field(FTE,  "LONG")
+    field(NOE,  "1")
+    field(INPE, "$(P){ACMI:$(NO)}EE:TP3_adc_delay-I NPP NMS")
+    field(FTF,  "FLOAT")
+    field(NOF,  "16000")
+    field(INPF, "$(P){ACMI:$(NO)}ADC:Avg-Wfm NPP NMS")
+
+    field(FTVA, "LONG")
+    field(NOVA, "1")
+    field(OUTA, "$(P){ACMI:$(NO)}ADC:Count-I PP")
+    field(FTVB, "LONG")
+    field(NOVB, "1")
+    field(OUTB, "$(P){ACMI:$(NO)}RUN PP")
+    field(FTVC, "LONG")
+    field(NOVC, "1")
+    field(OUTC, "$(P){ACMI:$(NO)}ADC:Baseline-I PP")
+    field(FTVD,  "FLOAT")
+    field(NOVD,  "16000")
+    field(OUTD, "$(P){ACMI:$(NO)}ADC:Avg-Wfm PP")
+    field(FTVE,  "FLOAT")
+    field(NOVE,  "16000")
+    field(OUTE, "$(P){ACMI:$(NO)}ADC:Corr-Wfm PP")
+}
+
+record(waveform,"$(P){ACMI:$(NO)}ADC:Corr-Wfm"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"16000 Point Waveform for ADC Correction")
+  field(NELM,"16000")
+  field(FTVL,"LONG")
+}
+
+record(waveform,"$(P){ACMI:$(NO)}ADC:Avg-Wfm"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"16000 Point Waveform for ADC Avg")
+  field(NELM,"16000")
+  field(FTVL,"FLOAT")
+}
+
+record(bo, "$(P){ACMI:$(NO)}ADC:Apply-SP") {
+    field(ZNAM, "Idle")
+    field(ONAM, "Apply")
+    field(VAL,0)
+    field(UDF,0)
+    field(FLNK, "$(P){ACMI:$(NO)}ADC:Apply_TRIG-I")
+}
+
+record(calcout, "$(P){ACMI:$(NO)}ADC:Apply_TRIG-I") {
+    field(INPA, "$(P){ACMI:$(NO)}ADC:Apply-SP NPP")
+    field(CALC, "A")
+    field(OOPT, "When Non-zero")
+    field(OUT, "$(P){ACMI:$(NO)}ADC:LoadTable-Sub.PROC")
+}
+
+record(aSub,"$(P){ACMI:$(NO)}ADC:LoadTable-Sub"){
+    field(SNAM,"LoadTable")
+
+    field(FTA,  "LONG")
+    field(NOA,  "16000")
+    field(INPA, "$(P){ACMI:$(NO)}ADC:Corr-Wfm")
+    field(FTB,  "LONG")
+    field(NOB,  "1")
+    field(INPB, "$(P){ACMI:$(NO)}TS-S-I")
+    field(FTC, "CHAR")
+    field(NOC, "60")
+    field(INPC, "$(P){ACMI:$(NO)}ADC:Corr:DirPath-SP")
+    field(FTD,  "LONG")
+    field(NOD,  "1")
+    field(INPD, "$(P){ACMI:$(NO)}ADC:Apply-SP")
+    
+    field(FTVA,  "LONG")
+    field(NOVA,  "16000")
+    field(OUTA,  "$(P){ACMI:$(NO)}ADCcorrTable-Wfm PP")
+    field(FTVB,  "CHAR")
+    field(NOVB,  "100")
+    field(OUTB,  "$(P){ACMI:$(NO)}ADC:Corr:Filename-SP PP")
+}
+
+record(bo, "$(P){ACMI:$(NO)}ADC:Reset-SP") {
+    field(ZNAM, "Idle")
+    field(ONAM, "Reset")
+    field(VAL,0)
+    field(UDF,0)
+    field(FLNK, "$(P){ACMI:$(NO)}ADC:Reset_TRIG-I")
+}
+
+record(calcout, "$(P){ACMI:$(NO)}ADC:Reset_TRIG-I") {
+    field(INPA, "$(P){ACMI:$(NO)}ADC:Reset-SP NPP")
+    field(CALC, "A")
+    field(OOPT, "When Non-zero")
+    field(OUT, "$(P){ACMI:$(NO)}ADC:EmptyTable-Sub.PROC")
+}
+
+record(aSub,"$(P){ACMI:$(NO)}ADC:EmptyTable-Sub"){
+    field(SNAM,"EmptyTable")
+    
+    field(FTA,  "LONG")
+    field(NOA,  "1")
+    field(INPA, "$(P){ACMI:$(NO)}TS-S-I")
+    
+    field(FTVA,  "LONG")
+    field(NOVA,  "16000")
+    field(OUTA,  "$(P){ACMI:$(NO)}ADCcorrTable-Wfm PP")
+    field(FTVB,  "LONG")
+    field(NOVB,  "16000")
+    field(OUTB,  "$(P){ACMI:$(NO)}ADC:Corr-Wfm PP")
+    field(FTVC,  "CHAR")
+    field(NOVC,  "100")
+    field(OUTC,  "$(P){ACMI:$(NO)}ADC:Corr:Filename-SP PP")
+}
+
+
+

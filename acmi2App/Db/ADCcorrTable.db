@@ -10,7 +10,7 @@ record(bo, "$(P){ACMI:$(NO)}ADCcorrTable-Read") {
 
 record(stringin, "$(P){ACMI:$(NO)}ADCcorrTable-FilePath") {
     field(DESC, "File path")
-    field(VAL, "/home/mead/acmi/acmi2/acmi2-ioc/python")      # default value
+    field(VAL, "/home/diag/acmi2/acmi2-ioc/python")      # default value
 }
 
 record(stringin, "$(P){ACMI:$(NO)}ADCcorrTable-FileName") {

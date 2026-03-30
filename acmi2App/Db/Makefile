@@ -15,7 +15,7 @@ DB += adc_data.db
 DB += TP.db
 DB += ADC.db
 DB += Beam.db
-DB += Tail.db
+DB += Tail2.db
 DB += ADCcorrTable.db
 
 #----------------------------------------------------

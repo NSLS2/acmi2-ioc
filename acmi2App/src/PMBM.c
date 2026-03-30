@@ -15,11 +15,12 @@
 #include <epicsExport.h>
 
 int PMBM(aSubRecord *precord) {
-    //printf("Hello from PMBM....*****\n");
+//    printf("Hello from PMBM....*****\n");
     
     int process = *(int *)precord->p;  
 
     if(process==1){
+//        printf("PM BM Process = %d\n",process);
         int A[19]={0};
         int *B = (int *)precord->j;
         float *C = (float *)precord->s;

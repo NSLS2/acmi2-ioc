@@ -36,7 +36,7 @@ record(aSub,"$(P){ACMI:$(NO)}ADC-Sub"){
 
     field(FTK,  "LONG")
     field(NOK,  "1")
-    field(INPK, "$(P){ACMI:$(NO)}faults_tp-I CP")
+    field(INPK, "$(P){ACMI:$(NO)}faults_tp-I")
     field(FTL,  "LONG")
     field(NOL,  "1")
     field(INPL, "$(P){ACMI:$(NO)}EE:charge_cal-I")
@@ -371,6 +371,9 @@ record(aSub,"$(P){ACMI:$(NO)}COW-Sub"){
     field(FTH,  "LONG")
     field(NOH,  "1")
     field(INPH, "$(P){ACMI:$(NO)}TS-S-I")
+    field(FTI,  "CHAR")
+    field(NOI,  "60")
+    field(INPI, "$(P){ACMI:$(NO)}COW:DirPath-SP")    
     
     field(FTVA, "FLOAT")
     field(NOVA, "1")

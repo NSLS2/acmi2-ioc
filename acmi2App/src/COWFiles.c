@@ -18,7 +18,9 @@
 #include <epicsExport.h>
 
 int COWFiles(aSubRecord *precord){
-    printf("Hello from COWFiles....\n");
+//    printf("Hello from COWFiles....\n");
+    
+    char *COWpath = (char *)precord->c;  //COWpath is the path to the directory of COW Wfm files
     
     char fname[80];
 
@@ -27,17 +29,17 @@ int COWFiles(aSubRecord *precord){
     sprintf(fname,"COW%d.txt",FileID[index]);
     
     char *out = (char *)precord->vala;
-    snprintf(out, 40,"%s",fname);
+    snprintf(out, 80,"%s",fname);
     
     char line[80],lines[17][80];
     char fullname[80];
-    snprintf(fullname,23+strlen(fname),"/home/diag/acmi2/COW/%s",fname);
-
+    snprintf(fullname,33+strlen(fname),"%s%s",COWpath,fname);
+//    printf("COWFiles: fullname = %s\n",fullname);
     FILE *fp = fopen(fullname,"r");
     
     int lnum = 0;
     if(!fp){
-        printf("Error opening %s\n",fname);
+        printf("COWFiles: Error opening %s\n",fname);
     }else{
         while (fgets(line, sizeof(line), fp) != NULL) {
             strncpy(lines[lnum], line, sizeof(lines[lnum]));

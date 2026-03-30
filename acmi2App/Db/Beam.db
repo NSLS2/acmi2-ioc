@@ -415,7 +415,10 @@ record(aSub,"$(P){ACMI:$(NO)}COWFiles-Sub"){
     field(FTB, "LONG")
     field(NOB, "100")
     field(INPB, "$(P){ACMI:$(NO)}COW:FileIDs-Wfm")
-    
+    field(FTC, "CHAR")
+    field(NOC, "60")
+    field(INPC, "$(P){ACMI:$(NO)}COW:DirPath-SP")
+        
     field(FTVA, "STRING")
     field(NOVA, "1")
     field(OUTA, "$(P){ACMI:$(NO)}COW:FileName-I PP")
