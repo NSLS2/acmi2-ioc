@@ -30,7 +30,7 @@ def putLED(x,y,l,w,c):
 def LoadFile(event):
     print("Load File!")
     filepath = filedialog.askopenfilename(
-    	initialdir="/home/diag/acmi2/PM",title="Select PM File",
+    	initialdir="/home/psctest/acmi2/acmi2-ioc/PM",title="Select PM File",
     	filetypes=[("Text files", "*.txt"), ("All files", "*.*")])
     if filepath:
         print("Selected:", filepath)

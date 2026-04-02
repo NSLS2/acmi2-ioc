@@ -127,6 +127,49 @@ record(waveform,"$(P){ACMI:$(NO)}BEAM:base-Wfm"){
   field(FTVL,"LONG")
 }
 
+record(waveform,"$(P){ACMI:$(NO)}BEAM:GT300pC-Wfm"){
+  field(DTYP,"Soft Channel")
+  field(DESC,"72 Point Waveform for Beam")
+  field(NELM,"100")
+  field(FTVL,"LONG")
+}
+
+record(longin,"$(P){ACMI:$(NO)}BEAM:GT300pC:peak-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(ai,"$(P){ACMI:$(NO)}BEAM:GT300pC:Q-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}BEAM:GT300pC:Intg-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}BEAM:GT300pC:fwhm-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}BEAM:GT300pC:index-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(longin,"$(P){ACMI:$(NO)}BEAM:GT300pC:base-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
 record(waveform,"$(P){ACMI:$(NO)}Accumulator:Q-Wfm"){
   field(DTYP,"Soft Channel")
   field(DESC,"Charge accumulation History")

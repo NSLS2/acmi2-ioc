@@ -12,6 +12,7 @@
 /db
 /PM
 /COW
+/Correction
 
 # Local configuration files
 /configure/*.local

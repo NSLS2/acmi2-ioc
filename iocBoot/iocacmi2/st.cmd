@@ -7,7 +7,7 @@
 
 epicsEnvSet("IOCNAME","lab")
 epicsEnvSet("UNIT","A")
-epicsEnvSet("IOCDIR","/home/diag/acmi2/acmi2-ioc/")
+epicsEnvSet("IOCDIR","/home/psctest/acmi2/acmi2-ioc/")
 
 # PSC IP address
 #epicsEnvSet("ACMI2_IP", "10.0.142.198"); 

@@ -59,6 +59,9 @@ record(aSub,"$(P){ACMI:$(NO)}ADC-Sub"){
     field(FTR,  "FLOAT")
     field(NOR,  "12")
     field(INPR, "$(P){ACMI:$(NO)}BEAM:Stats-Wfm")
+    field(FTS,  "LONG")
+    field(NOS,  "1")
+    field(INPS, "$(P){ACMI:$(NO)}BEAM:integral-I")
 
     field(FTVA,  "LONG")
     field(NOVA,  "92")
@@ -115,6 +118,9 @@ record(aSub,"$(P){ACMI:$(NO)}ADC-Sub"){
     field(FTVR,  "FLOAT")
     field(NOVR,  "12")
     field(OUTR, "$(P){ACMI:$(NO)}BEAM:Stats-Wfm PP")
+    field(FTVS,  "LONG")
+    field(NOVS,  "92")
+    field(OUTS, "$(P){ACMI:$(NO)}BEAM:GT300pC-Wfm PP")
 }
 
 record(aSub,"$(P){ACMI:$(NO)}TP1-Sub"){
@@ -319,6 +325,22 @@ record(aSub,"$(P){ACMI:$(NO)}BEAM-Sub"){
     field(FTH,  "FLOAT")
     field(NOH,  "10000")
     field(INPH, "$(P){ACMI:$(NO)}Accumulator:Q-Wfm")
+    
+    field(FTI,  "FLOAT")
+    field(NOI,  "1")
+    field(INPI, "$(P){ACMI:$(NO)}BEAM:Q-I")
+    field(FTJ,  "LONG")
+    field(NOJ,  "1")
+    field(INPJ, "$(P){ACMI:$(NO)}BEAM:peak-I")
+    field(FTK,  "LONG")
+    field(NOK,  "1")
+    field(INPK, "$(P){ACMI:$(NO)}BEAM:fwhm-I")
+    field(FTL,  "LONG")
+    field(NOL,  "1")
+    field(INPL, "$(P){ACMI:$(NO)}BEAM:baseline-I")
+    field(FTM,  "LONG")
+    field(NOM,  "1")
+    field(INPM, "$(P){ACMI:$(NO)}BEAM:peak-index-I")
 
     field(FTVA,  "FLOAT")
     field(NOVA,  "1")
@@ -341,6 +363,25 @@ record(aSub,"$(P){ACMI:$(NO)}BEAM-Sub"){
     field(FTVG,  "FLOAT")
     field(NOVG,  "10000")
     field(OUTG, "$(P){ACMI:$(NO)}Accumulator:Q-Wfm PP")
+
+    field(FTVI,  "FLOAT")
+    field(NOVI,  "1")
+    field(OUTI,  "$(P){ACMI:$(NO)}BEAM:GT300pC:Q-I PP")
+    field(FTVJ,  "LONG")
+    field(NOVJ,  "1")
+    field(OUTJ,  "$(P){ACMI:$(NO)}BEAM:GT300pC:peak-I PP")
+    field(FTVK,  "LONG")
+    field(NOVK,  "1")
+    field(OUTK,  "$(P){ACMI:$(NO)}BEAM:GT300pC:fwhm-I PP")
+    field(FTVL,  "LONG")
+    field(NOVL,  "1")
+    field(OUTL,  "$(P){ACMI:$(NO)}BEAM:GT300pC:base-I PP")
+    field(FTVM,  "LONG")
+    field(NOVM,  "1")
+    field(OUTM,  "$(P){ACMI:$(NO)}BEAM:GT300pC:index-I PP")
+    field(FTVO,  "LONG")
+    field(NOVO,  "1")
+    field(OUTO,  "$(P){ACMI:$(NO)}BEAM:GT300pC:Intg-I PP")
 }
 
 record(aSub,"$(P){ACMI:$(NO)}COW-Sub"){

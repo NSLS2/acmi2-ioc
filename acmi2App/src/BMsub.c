@@ -14,7 +14,7 @@
 #include <registryFunction.h>
 #include <epicsExport.h>
 
-#define WMAX 1000
+#define WMAX 2000
 
 int BMsub(aSubRecord *precord) {
 //    printf("Hello from BMSub....\n");
@@ -29,6 +29,12 @@ int BMsub(aSubRecord *precord) {
     int WLEN = *(int *)precord->e;
     int QCAL = *(int *)precord->f;
     int ACCU = *(int *)precord->g;
+
+    int PEAK = *(int *)precord->j;
+    int FWHM = *(int *)precord->k;
+    int BASE = *(int *)precord->l;
+    int INDX = *(int *)precord->m;
+    float BMQ = *(float *)precord->i;
 
     if(RESET>0){
         WLEN = 0;
@@ -77,6 +83,15 @@ int BMsub(aSubRecord *precord) {
     memcpy((float *)precord->valg,AWFM,WLEN*sizeof(float));
     memcpy((float *)precord->valc,STAT,12*sizeof(float));
 
+//  Added to capture BM events where Q>0.3nC:
+    if(BMQ>0.6){
+        *(float *)precord->vali = BMQ;
+        *(int *)precord->valj = PEAK;
+        *(int *)precord->valk = FWHM;
+        *(int *)precord->vall = BASE;
+        *(int *)precord->valm = INDX;
+        *(int *)precord->valo = INTG;
+    }
     return(0);
 }
 // Note the function must be registered at the end!

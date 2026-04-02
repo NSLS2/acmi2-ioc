@@ -21,7 +21,7 @@ int ADCsub(aSubRecord *precord) {
     int BLsum[4]={0},BL[4],pos1,pos2,pos3,neg1,neg2,neg3;
     int INTG[4]={0},PEAK[4]={0},FWHM[4],INDX[4]={0},faults;
     int FWLO[4]={0},FWHI[4]={0};
-    int qcal,tmsec;
+    int qcal,tmsec,BMintg;
 
     time_t trigTime;
     struct tm ts;
@@ -46,6 +46,7 @@ int ADCsub(aSubRecord *precord) {
     qcal = *(int *)precord->l;
     tmsec = *(int *)precord->m;
     indxb = *(int *)precord->q;
+    BMintg = *(int *)precord->s;
 
     trigTime = (time_t)tmsec;
     ts = *localtime(&trigTime);
@@ -73,6 +74,10 @@ int ADCsub(aSubRecord *precord) {
     memcpy((int *)precord->valb,TP2,92*sizeof(int));
     memcpy((int *)precord->valc,TP3,92*sizeof(int));
     memcpy((int *)precord->valq,BM,92*sizeof(int));
+    float BMQ = (float)BMintg/qcal;
+    if(BMQ>0.6){
+        memcpy((int *)precord->vals,BM,92*sizeof(int));
+    }
 //    printf("Hello\n");
     for(i=32;i<92;i++){
         INTG[0] = INTG[0] + TP1[i] - BL[0];
