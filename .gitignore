@@ -13,6 +13,7 @@
 /PM
 /COW
 /Correction
+/dbd
 
 # Local configuration files
 /configure/*.local
