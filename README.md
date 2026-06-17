@@ -40,7 +40,17 @@ This repository contains the **IOC software, configuration, and support files** 
 
 ---
 
+## How to build this IOC
+
+In the directory `configure`, create a new file `RELEASE.local` (instead of modifying `RELEASE`) to define two variables for two external support moduels, EPICS base and [PSC Driver](https://github.com/mdavidsaver/pscdrv), something like this:
+```
+PSCDRV = /epics/modules/pscdrv
+EPICS_BASE = /usr/lib/epics
+```
+
+---
+
 ## Contact
 
-For questions related to ACMI-2 operation, configuration, or safety role, contact Tony Caracappa.
+For questions related to ACMI-2 operation, configuration, or safety role, contact Joe Mead.
 
