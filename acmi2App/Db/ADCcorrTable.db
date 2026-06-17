@@ -1,27 +1,27 @@
-record(bo, "$(P){ACMI:$(NO)}ADCcorrTable-Read") {
+record(bo, "$(P){ACMI2:$(NO)}ADCcorrTable-Read") {
     field(DESC, "Trigger readFile aSub")
     field(DTYP, "Soft Channel")
     field(ZNAM, "Off")
     field(ONAM, "On")
     field(VAL, "0")
-    field(FLNK, "$(P){ACMI:$(NO)}ADCcorrTable-ReadFile")
+    field(FLNK, "$(P){ACMI2:$(NO)}ADCcorrTable-ReadFile")
     #field(HIGH,".01")    #500 ms after low   
 }
 
-record(stringin, "$(P){ACMI:$(NO)}ADCcorrTable-FilePath") {
+record(stringin, "$(P){ACMI2:$(NO)}ADCcorrTable-FilePath") {
     field(DESC, "File path")
     field(VAL, "/home/diag/acmi2/acmi2-ioc/python")      # default value
 }
 
-record(stringin, "$(P){ACMI:$(NO)}ADCcorrTable-FileName") {
+record(stringin, "$(P){ACMI2:$(NO)}ADCcorrTable-FileName") {
     field(DESC, "File name")
     field(VAL, "test.txt")  # default value  
 }
 
-record(aSub, "$(P){ACMI:$(NO)}ADCcorrTable-ReadFile") {
+record(aSub, "$(P){ACMI2:$(NO)}ADCcorrTable-ReadFile") {
     field(DESC, "Read ADCcorrTable from file")
-    field(INPA, "$(P){ACMI:$(NO)}ADCcorrTable-FilePath PP")    
-    field(INPB, "$(P){ACMI:$(NO)}ADCcorrTable-FileName PP")   
+    field(INPA, "$(P){ACMI2:$(NO)}ADCcorrTable-FilePath PP")    
+    field(INPB, "$(P){ACMI2:$(NO)}ADCcorrTable-FileName PP")   
     field(INPC, "70000")        
     field(FTA,  STRING)
     field(FTB,  STRING)
@@ -31,16 +31,16 @@ record(aSub, "$(P){ACMI:$(NO)}ADCcorrTable-ReadFile") {
     field(NOVA, "16000")        
     field(NEVA, "16000")    
     field(SNAM, "readADCcorrTable")
-    field(OUTA, "$(P){ACMI:$(NO)}ADCcorrTable-Wfm PP MS")
-    field(OUTB, "$(P){ACMI:$(NO)}ADCcorrTableLen-SP PP MS")
-    field(FLNK, "$(P){ACMI:$(NO)}Waveform-Wfm.PROC")  
+    field(OUTA, "$(P){ACMI2:$(NO)}ADCcorrTable-Wfm PP MS")
+    field(OUTB, "$(P){ACMI2:$(NO)}ADCcorrTableLen-SP PP MS")
+    field(FLNK, "$(P){ACMI2:$(NO)}Waveform-Wfm.PROC")  
 }
 
-record(waveform, "$(P){ACMI:$(NO)}ADCcorrTable-Wfm") {
+record(waveform, "$(P){ACMI2:$(NO)}ADCcorrTable-Wfm") {
     field(DESC, "Buffer to PSC")
     field(DTYP, "PSC Block I32 Out")
     field(INP , "@PSC$(NO) 3")   
     field(FTVL, "DOUBLE")
     field(NELM, "70000")
-    field(FLNK, "$(P){ACMI:$(NO)}send")
+    field(FLNK, "$(P){ACMI2:$(NO)}send")
 }

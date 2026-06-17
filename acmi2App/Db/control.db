@@ -6,7 +6,7 @@
 #############################################################
 
 # Flush reg to socket buffer, trigger send to send all socket buffer to PSC 
-record(bo, "$(P){ACMI:$(NO)}send") { 
+record(bo, "$(P){ACMI2:$(NO)}send") { 
     field(DTYP, "PSC Ctrl Send All") 
     field(OUT , "@PSC$(NO)") 
     field(ZNAM, "Send") 
@@ -14,195 +14,195 @@ record(bo, "$(P){ACMI:$(NO)}send") {
 } 
  
 # Write a single register
-record(longout, "$(P){ACMI:$(NO)}GoRegSingleWrite") {
+record(longout, "$(P){ACMI2:$(NO)}GoRegSingleWrite") {
     field(DTYP, "PSC Ctrl Send")
     field(OUT , "@PSC$(NO)")
     field(VAL , "1") 
-    field(FLNK, "$(P){ACMI:$(NO)}send")
+    field(FLNK, "$(P){ACMI2:$(NO)}send")
 }
 
 # Write a single register
-record(longout, "$(P){ACMI:$(NO)}GoRegSingleWrite2") {
+record(longout, "$(P){ACMI2:$(NO)}GoRegSingleWrite2") {
     field(DTYP, "PSC Ctrl Send")
     field(OUT , "@PSC$(NO)")
     field(VAL , "2") 
-    field(FLNK, "$(P){ACMI:$(NO)}send")
+    field(FLNK, "$(P){ACMI2:$(NO)}send")
 }
 
 # Write a single register
-record(longout, "$(P){ACMI:$(NO)}GoRegSingleWrite5") {
+record(longout, "$(P){ACMI2:$(NO)}GoRegSingleWrite5") {
     field(DTYP, "PSC Ctrl Send")
     field(OUT , "@PSC$(NO)")
     field(VAL , "5") 
-    field(FLNK, "$(P){ACMI:$(NO)}send")
+    field(FLNK, "$(P){ACMI2:$(NO)}send")
 }
 
 
 ############# Control PV's ##########################################
 
-record(bo, "$(P){ACMI:$(NO)}KeepAlive-SP") {
+record(bo, "$(P){ACMI2:$(NO)}KeepAlive-SP") {
     field(DESC, "Keeps the socket active")
     field(DTYP, "PSC Single U32")
     field(OUT , "@PSC$(NO) 5 100")
     field(SCAN, "1 second")
-    field(FLNK, "$(P){ACMI:$(NO)}GoRegSingleWrite5")
+    field(FLNK, "$(P){ACMI2:$(NO)}GoRegSingleWrite5")
 }
 
 # Triggered by EVR now, this is no longer supported
-record(bo, "$(P){ACMI:$(NO)}FaultLatchReset-SP") {
+record(bo, "$(P){ACMI2:$(NO)}FaultLatchReset-SP") {
     field(DESC, "Soft Trigger by user")
     field(DTYP, "PSC Single U32")
     field(OUT , "@PSC$(NO) 1 8")
     #field(SCAN, "1 second")   
-    field(FLNK, "$(P){ACMI:$(NO)}GoRegSingleWrite")
+    field(FLNK, "$(P){ACMI2:$(NO)}GoRegSingleWrite")
 }
 
-record(bo, "$(P){ACMI:$(NO)}Trig:TrigSrc-SP") {
+record(bo, "$(P){ACMI2:$(NO)}Trig:TrigSrc-SP") {
     field(DESC, "Trigger source")
     field(DTYP, "PSC Single U32")
     field(OUT , "@PSC$(NO) 1 52")
     field(ZNAM,"EXT")
     field(ONAM,"INT")
     info(autosaveFields, "VAL")
-    field(FLNK, "$(P){ACMI:$(NO)}GoRegSingleWrite")
+    field(FLNK, "$(P){ACMI2:$(NO)}GoRegSingleWrite")
 }
 
-record(longout, "$(P){ACMI:$(NO)}EVR:TrigNo-SP") {
+record(longout, "$(P){ACMI2:$(NO)}EVR:TrigNo-SP") {
     field(DESC, "EVR Trigger Number")
     field(DTYP, "PSC Single I32")
     field(OUT , "@PSC$(NO) 1 0")
     info(autosaveFields, "VAL")
-    field(FLNK, "$(P){ACMI:$(NO)}GoRegSingleWrite")
+    field(FLNK, "$(P){ACMI2:$(NO)}GoRegSingleWrite")
 }
 
-record(longout, "$(P){ACMI:$(NO)}EVR:TrigDly-SP") {
+record(longout, "$(P){ACMI2:$(NO)}EVR:TrigDly-SP") {
     field(DESC, "EVR Trigger Delay")
     field(DTYP, "PSC Single I32")
     field(OUT , "@PSC$(NO) 1 4")
     info(autosaveFields, "VAL")
-    field(FLNK, "$(P){ACMI:$(NO)}GoRegSingleWrite")
+    field(FLNK, "$(P){ACMI2:$(NO)}GoRegSingleWrite")
 }
 
-record(ai,"$(P){ACMI:$(NO)}TS-S-I") {
+record(ai,"$(P){ACMI2:$(NO)}TS-S-I") {
     field(DESC, "EVR Timestamp (s)")
     field(DTYP, "PSC Reg")
     field(INP , "@PSC$(NO) 55 0 ")
     field(SCAN, "I/O Intr")
 }
 
-record(ai,"$(P){ACMI:$(NO)}TS-NS-I") {
+record(ai,"$(P){ACMI2:$(NO)}TS-NS-I") {
     field(DESC, "EVR Timestamp (ns)")
     field(DTYP, "PSC Reg")
     field(INP , "@PSC$(NO) 55 4 ")
     field(SCAN, "I/O Intr")
 }
 
-record(waveform,"$(P){ACMI:$(NO)}Trig:Date-I"){
+record(waveform,"$(P){ACMI2:$(NO)}Trig:Date-I"){
   field(DTYP,"Soft Channel")
   field(DESC,"String for Trigger Date")
   field(NELM,"40")
   field(FTVL,"CHAR")
 }
 
-record(waveform,"$(P){ACMI:$(NO)}Settings:File-SP"){
+record(waveform,"$(P){ACMI2:$(NO)}Settings:File-SP"){
   field(DTYP,"Soft Channel")
   field(DESC,"String for Trigger Date")
   field(NELM,"128")
   field(FTVL,"CHAR")
 }
 
-record(longout,"$(P){ACMI:$(NO)}File:Status-I") {
+record(longout,"$(P){ACMI2:$(NO)}File:Status-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
 }
 
-record(compress, "$(P){ACMI:$(NO)}PM:Fault-Wfm"){
-    field(INP,  "$(P){ACMI:$(NO)}faults_lat-I")     # source PV
+record(compress, "$(P){ACMI2:$(NO)}PM:Fault-Wfm"){
+    field(INP,  "$(P){ACMI2:$(NO)}faults_lat-I")     # source PV
     field(ALG,  "Circular Buffer")  
     field(NSAM, "2")             # buffer length = 2
 }
 
-record(longout,"$(P){ACMI:$(NO)}PM:Status-I") {
+record(longout,"$(P){ACMI2:$(NO)}PM:Status-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
 }
 
-record(longout,"$(P){ACMI:$(NO)}PM:Process-I") {
+record(longout,"$(P){ACMI2:$(NO)}PM:Process-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
-  field(FLNK,"$(P){ACMI:$(NO)}PM:TP1-Sub.PROC")
+  field(FLNK,"$(P){ACMI2:$(NO)}PM:TP1-Sub.PROC")
 }
 
-record(longin,"$(P){ACMI:$(NO)}PM:header-I") {
-  field(DTYP,"Soft Channel")
-  field(VAL,0)
-  field(UDF,0)
-}
-
-record(longin,"$(P){ACMI:$(NO)}PM:crc_eeprom-I") {
+record(longin,"$(P){ACMI2:$(NO)}PM:header-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
 }
 
-record(longin,"$(P){ACMI:$(NO)}PM:crc_artix-I") {
+record(longin,"$(P){ACMI2:$(NO)}PM:crc_eeprom-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
 }
 
-record(longin,"$(P){ACMI:$(NO)}PM:faults_live-I") {
+record(longin,"$(P){ACMI2:$(NO)}PM:crc_artix-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
 }
 
-record(longin,"$(P){ACMI:$(NO)}PM:faults_lat-I") {
+record(longin,"$(P){ACMI2:$(NO)}PM:faults_live-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
 }
 
-record(longin,"$(P){ACMI:$(NO)}PM:startup_cnt-I") {
+record(longin,"$(P){ACMI2:$(NO)}PM:faults_lat-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
 }
 
-record(longin,"$(P){ACMI:$(NO)}PM:TS-S-I") {
+record(longin,"$(P){ACMI2:$(NO)}PM:startup_cnt-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
 }
 
-record(longin,"$(P){ACMI:$(NO)}PM:TS-NS-I") {
+record(longin,"$(P){ACMI2:$(NO)}PM:TS-S-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
 }
 
-record(longin,"$(P){ACMI:$(NO)}PM:TrigCnt-I") {
+record(longin,"$(P){ACMI2:$(NO)}PM:TS-NS-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
 }
 
-record(longin,"$(P){ACMI:$(NO)}PM:EVR:TrigNo-I") {
+record(longin,"$(P){ACMI2:$(NO)}PM:TrigCnt-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
 }
 
-record(longin,"$(P){ACMI:$(NO)}PM:EVR:TrigDly-I") {
+record(longin,"$(P){ACMI2:$(NO)}PM:EVR:TrigNo-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
 }
 
-record(waveform,"$(P){ACMI:$(NO)}PM:Trig:Date-I"){
+record(longin,"$(P){ACMI2:$(NO)}PM:EVR:TrigDly-I") {
+  field(DTYP,"Soft Channel")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(waveform,"$(P){ACMI2:$(NO)}PM:Trig:Date-I"){
   field(DTYP,"Soft Channel")
   field(DESC,"String for Trigger Date")
   field(NELM,"40")
@@ -211,7 +211,7 @@ record(waveform,"$(P){ACMI:$(NO)}PM:Trig:Date-I"){
 
 #######  File Paths ############################################3
 
-record(waveform,"$(P){ACMI:$(NO)}COW:DirPath-SP"){
+record(waveform,"$(P){ACMI2:$(NO)}COW:DirPath-SP"){
   field(DTYP,"Soft Channel")
   field(DESC,"String COW Directory Path")
   field(NELM,"60")
