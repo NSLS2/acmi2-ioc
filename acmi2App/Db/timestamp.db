@@ -7,14 +7,14 @@
 
 ############# Waveform PV's (MSG ID 55) #########################
 
-record(ai,"$(P){ACMI:$(NO)}TS-S-I") {
+record(ai,"$(P){ACMI2:$(NO)}TS-S-I") {
     field(DESC, "EVR Timestamp (s)")
     field(DTYP, "PSC Reg")
     field(INP , "@PSC$(NO) 55 0 ")
     field(SCAN, "I/O Intr")
 }
 
-record(ai,"$(P){ACMI:$(NO)}TS-NS-I") {
+record(ai,"$(P){ACMI2:$(NO)}TS-NS-I") {
     field(DESC, "EVR Timestamp (ns)")
     field(DTYP, "PSC Reg")
     field(INP , "@PSC$(NO) 55 4 ")

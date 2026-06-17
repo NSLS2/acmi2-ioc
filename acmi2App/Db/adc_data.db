@@ -10,7 +10,7 @@
 #############################
 ### Beam OOW Waveform 
 #############################
-record(waveform,"$(P){ACMI:$(NO)}COW-Wfm") {
+record(waveform,"$(P){ACMI2:$(NO)}COW-Wfm") {
     field(DTYP, "PSC Block I16 In")
     field(INP , "@PSC$(NO) 53 0")
     field(SCAN,"I/O Intr")
@@ -24,7 +24,7 @@ record(waveform,"$(P){ACMI:$(NO)}COW-Wfm") {
 #############################
 ### ADC Waveform
 #############################
-record(waveform,"$(P){ACMI:$(NO)}ADC-Wfm") {
+record(waveform,"$(P){ACMI2:$(NO)}ADC-Wfm") {
     field(DTYP, "PSC Block I16 In")
     field(INP , "@PSC$(NO) 54 0")
     field(SCAN,"I/O Intr")
