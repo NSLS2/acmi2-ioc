@@ -11,7 +11,7 @@ epicsEnvSet("IOCDIR","/home/psctest/acmi2/acmi2-ioc/")
 
 # PSC IP address
 #epicsEnvSet("ACMI2_IP", "10.0.142.198"); 
-epicsEnvSet("ACMI2_IP", "10.0.142.128"); 
+epicsEnvSet("ACMI2_IP", "10.70.7.25"); 
 
 #epicsEnvSet("BLEN",100000);        # Snapshot DMA Length
 
@@ -19,8 +19,6 @@ cd "${TOP}"
 
 ## Register all support components
 dbLoadDatabase "dbd/acmi2.dbd"
-dbLoadDatabase "dbd/acmi2Subs.dbd"
-
 acmi2_registerRecordDeviceDriver pdbbase
 
 ## Non-PSC database files:
