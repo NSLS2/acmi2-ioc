@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-10-23 14:11:48 by diag-->
 <display version="2.0.0">
   <name>Startup</name>
   <width>600</width>
@@ -47,12 +46,12 @@
     <name>Action Button</name>
     <actions>
       <action type="open_display">
+        <description>Open Display</description>
         <file>Summary.bob</file>
         <macros>
-          <P>lab{ACMI:A}</P>
+          <P>lab{ACMI2:A}</P>
         </macros>
         <target>tab</target>
-        <description>Open Display</description>
       </action>
     </actions>
     <text>Open ACMI-A GUI</text>
