@@ -17,6 +17,65 @@
 #include <epicsExport.h>
 #include <epicsString.h>
 
+static int scanCOWDirectory(const char *COWpath, int *numfiles, char files[35][40], char dates[35][40], int fileID[35]) {
+    DIR *dir;
+    struct dirent *entry;
+    time_t timestamp;
+    struct tm tm_info;
+
+    *numfiles = 0;
+    dir = opendir(COWpath);
+    if (dir == NULL) {
+        perror("opendir");
+        return 1;
+    }
+
+    while ((entry = readdir(dir)) != NULL) {
+        long long tsll;
+        if ((strcmp(entry->d_name, ".") == 0) || (strcmp(entry->d_name, "..") == 0)) {
+            continue;
+        }
+        if (sscanf(entry->d_name, "COW%lld.txt", &tsll) != 1) {
+            continue;
+        }
+        if (*numfiles >= 35) {
+            break;
+        }
+        strncpy(files[*numfiles], entry->d_name, sizeof(files[*numfiles]));
+        files[*numfiles][sizeof(files[*numfiles]) - 1] = '\0';
+        timestamp = (time_t)tsll;
+        localtime_r(&timestamp, &tm_info);
+        strftime(dates[*numfiles], 40, "%a %d %b %Y %H:%M:%S %Z", &tm_info);
+        fileID[*numfiles] = (int)tsll;
+        (*numfiles)++;
+    }
+    closedir(dir);
+
+    // Sort from newest timestamp to oldest.
+    for (int i = 0; i < *numfiles - 1; i++) {
+        for (int j = i + 1; j < *numfiles; j++) {
+            if (fileID[i] < fileID[j]) {
+                int tmpID;
+                char tmpFile[40], tmpDate[40];
+                tmpID = fileID[i];
+                fileID[i] = fileID[j];
+                fileID[j] = tmpID;
+                snprintf(tmpFile, sizeof(tmpFile), "%s", files[i]);
+                snprintf(files[i], sizeof(files[i]), "%s", files[j]);
+                snprintf(files[j], sizeof(files[j]), "%s", tmpFile);
+                snprintf(tmpDate, sizeof(tmpDate), "%s", dates[i]);
+                snprintf(dates[i], sizeof(dates[i]), "%s", dates[j]);
+                snprintf(dates[j], sizeof(dates[j]), "%s", tmpDate);
+            }
+        }
+    }
+
+    if (*numfiles > 32) {
+        *numfiles = 32;
+    }
+    return 0;
+}
+
 int COWsub(aSubRecord *precord) {
 //    printf("Hello from COWSub....\n");
     int i,j,IMAX=0;
@@ -25,14 +84,10 @@ int COWsub(aSubRecord *precord) {
     char *COWpath = (char *)precord->i;  //COWpath is the path to the directory of COW Wfm files
     
 //  Added for COW waveform directory management (12/30/2025):
-    int Ival,fileID[35];
-    DIR *dir;
-    struct dirent *entry;
-    char *token,*end,tmstr[40];
+    int fileID[35], numfiles = 0;
+    char tmstr[40];
     char files[35][40]={{0}};
     char dates[35][40]={{0}};
-    time_t timestamp;
-    struct tm tm_info;
     
     int INTG = *(int *)precord->b;
     int PEAK = *(int *)precord->c;
@@ -41,13 +96,16 @@ int COWsub(aSubRecord *precord) {
     int BASE = *(int *)precord->f;
     int QCAL = *(int *)precord->g;
     int tmsec = *(int *)precord->h;
-    char fname[80], fn[80];
+    char fname[80];
     
   //  printf("COW: tmsec from ARTIX =%d   INTG=%d\n",tmsec,INTG);
     
     
 
-    float Q = (float)INTG/QCAL;
+    float Q = 0.0f;
+    if (QCAL != 0) {
+        Q = (float)INTG/QCAL;
+    }
     *(float *)precord->vala = Q;
     
     time_t trigTime;
@@ -84,88 +142,11 @@ int COWsub(aSubRecord *precord) {
         SCORE = sqrt(CSUM)/PEAK;
    //     printf("CSUM = %8.2f  Score = %8.4f\n",CSUM,SCORE);
    //     printf("COW Integral = %d\n",INTG);
-// Write waveform to file:
-        // Check COW waveform directory for exisiting files:
-        dir = opendir(COWpath);
-        if (dir == NULL) {
-            perror("opendir");
+        FILE *fout = fopen(fname,"w");
+        if (fout == NULL) {
+            perror("fopen");
             return 1;
         }
-        // read all file names and identifiers into arrays:
-        //Add the new file to the first element of the arrays:
-        int numfiles = 0;
-        sprintf(fn,"COW%d.txt",tmsec);
-   //     printf("COW: fn=%s\n",fn);
-        strncpy(files[numfiles], fn, sizeof(files[numfiles]));
-        files[numfiles][sizeof(files[numfiles])-1] = '\0';
-    //    printf("COW: tmstr = %s\n",tmstr);
-        strncpy(dates[numfiles], tmstr, sizeof(dates[numfiles]));
-        dates[numfiles][sizeof(dates[numfiles])-1] = '\0';
-        fileID[numfiles] = (int)tmsec;
-        numfiles++;
-        while ((entry = readdir(dir)) != NULL) {
-            if (strcmp(entry->d_name, ".") == 0 ||
-                strcmp(entry->d_name, "..") == 0) {
-                continue;
-            }
-            char nameCopy[80];
-            strncpy(files[numfiles], entry->d_name, sizeof(files[numfiles]));
-            files[numfiles][sizeof(files[numfiles])-1] = '\0';
-            strncpy(nameCopy, entry->d_name, sizeof(nameCopy)-1);
-            nameCopy[sizeof(nameCopy)-1] = '\0';
-            token = strtok(nameCopy,"W");
-            token = strtok(NULL,".");
-            timestamp = (time_t)strtoll(token, NULL, 10);
-            localtime_r(&timestamp,&tm_info);
-            strftime(tmstr,sizeof(tmstr), "%a %d %b %Y %H:%M:%S %Z", &tm_info);
-            strncpy(dates[numfiles], tmstr, sizeof(dates[numfiles]));
-            dates[numfiles][sizeof(dates[numfiles])-1] = '\0';
-            Ival = strtol(token,&end,10);
-            fileID[numfiles] = Ival;
-            numfiles++;
-        }
-        // Sort the arrays from newest timestamp to oldest:
-        char tmpFile[40],tmpDate[40];
-        int tmp;
-        for (int i = 0; i < numfiles - 1; i++) {
-            for (int j = i + 1; j < numfiles; j++) {
-                if (fileID[i] < fileID[j]) {
-                    tmp = fileID[i];
-                    fileID[i] = fileID[j];
-                    fileID[j] = tmp;
-                    snprintf(tmpFile, sizeof(tmpFile), "%s", files[i]);
-                    snprintf(files[i], sizeof(files[i]), "%s", files[j]);
-                    snprintf(files[j], sizeof(files[j]), "%s", tmpFile);
-
-                    snprintf(tmpDate, sizeof(tmpDate), "%s", dates[i]);
-                    snprintf(dates[i], sizeof(dates[i]), "%s", dates[j]);
-                    snprintf(dates[j], sizeof(dates[j]), "%s", tmpDate);
-                }
-            }
-        }
-//        for(int i=0;i<numfiles;i=i+1){
-//            printf("fileID[%d] = %d    files[%d] = %s    dates[%d] = %s\n",i,fileID[i],i,files[i],i,dates[i]);
-//        }
-        for(int i=numfiles;i<32;i=i+1){
-            fileID[i] = 0;
-            files[i][0] = '\0';
-            dates[i][0] = '\0';
-        }
-        // if numfiles==33 then delete the oldest COW waveform file:
-        char fdel[80];
-        if(numfiles==33){
-            strcpy(fdel,COWpath);
-            if(remove(strcat(fdel,files[32]))!=0){
-                printf("ERROR deleting %s\n",fdel);
-            }else{
-//                printf("Deleted file: %s\n",fdel);
-                files[32][0] = '\0';
-                dates[32][0] = '\0';
-                numfiles = numfiles - 1;
-            }
-        }
-
-        FILE *fout = fopen(fname,"w");
 //        printf("COW: Opening new file: %s\n",fname);
     
         for(i=0;i<16;i=i+1){
@@ -183,26 +164,30 @@ int COWsub(aSubRecord *precord) {
 //        printf("COW: File Written...\n");
 
         memcpy((double *)precord->valb,CWFM,128*sizeof(double));
-        *(int *)precord->valk = numfiles;
-        precord->novl = numfiles;
-        precord->novm = numfiles;
-        char (*fnam)[40] = precord->vall;
-        char (*fdat)[40] = precord->valm;
-        
-//        printf("Hello 1\n");
-        for(i=0;i<32;i++){
-      //      printf("COW: fnam[%d]=%s   fdat[%d]=%s\n",i,fnam[i],i,fdat[i]);
-            //memset(fnam[i], 0, 40);                 //Initialize the string to all zeros
-            snprintf(fnam[i], 40, "%s", files[i]);  //Now copy the file names into the waveform
-            //memset(fdat[i], 0, 40);
-            snprintf(fdat[i], 40, "%s", dates[i]);  //Copy the file dates into the other waveform
-        }
-//        printf("File Shift Ended...\n");
-        memset(fnam[numfiles], 0, 40); 
-        memset(fdat[numfiles], 0, 40); 
-        precord->nevn = numfiles;
-        memcpy((int *)precord->valn,fileID,32*sizeof(int));
     }
+
+    if (scanCOWDirectory(COWpath, &numfiles, files, dates, fileID) != 0) {
+        return 1;
+    }
+
+    *(int *)precord->valk = numfiles;
+    precord->novl = numfiles;
+    precord->novm = numfiles;
+    precord->novn = numfiles;
+    char (*fnam)[40] = precord->vall;
+    char (*fdat)[40] = precord->valm;
+
+    for(i=0;i<32;i++){
+        snprintf(fnam[i], 40, "%s", files[i]);
+        snprintf(fdat[i], 40, "%s", dates[i]);
+    }
+    if (numfiles < 32) {
+        memset(fnam[numfiles], 0, 40);
+        memset(fdat[numfiles], 0, 40);
+    }
+    precord->nevn = numfiles;
+    memcpy((int *)precord->valn,fileID,32*sizeof(int));
+
 //    printf("End of COWsub\n");
     return(0);
 }
