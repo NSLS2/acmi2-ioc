@@ -1,55 +1,70 @@
-from cothread.catools import caget, caput
+from cothread.catools import caget
 import matplotlib.pyplot as plt
+from matplotlib.widgets import Button
 import numpy as np
 from time import sleep
+import csv
 
 plt.ion()
-f,ax = plt.subplots(figsize=(10,5))
+fig, ax = plt.subplots(figsize=(10,5))
+plt.subplots_adjust(bottom=0.2)
+
+latest_frame = None
+
+# -------------------------
+# Save button callback (CSV)
+# -------------------------
+def save_data(event):
+    global latest_frame
+
+    if latest_frame is None:
+        print("No data yet.")
+        return
+
+    freqs, amps = latest_frame
+
+    with open("fft_data.csv", "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["freq_khz", "amplitude"])  # header
+
+        for f_khz, amp in zip(freqs, amps):
+            writer.writerow([f_khz, amp])
+
+    print("Saved latest FFT to fft_data.csv")
+
+# -------------------------
+# Button
+# -------------------------
+ax_save = plt.axes([0.8, 0.05, 0.1, 0.075])
+btn_save = Button(ax_save, 'Save')
+btn_save.on_clicked(save_data)
+
+# -------------------------
+# Main loop
+# -------------------------
 while True:
-    ADCpv = "lab{ACMI:A}ADC-Wfm"
+    A = caget("LN-BI{ACMI2:A}ADC-Wfm")
 
-    A = caget(ADCpv)
-
-# Sampling interval
-    dt_ms = 0.000005          # milliseconds
-    dt = dt_ms * 1e-3         # convert ms to seconds
-
-# Number of samples
+    dt = 0.000005 * 1e-3
     n = len(A)
 
-# Sampling frequency
-    fs = 1 / dt               # Hz
-
-# Compute FFT (real FFT since input is real)
     fft_values = np.fft.rfft(A)
-
-# Amplitude
     amplitude = np.abs(fft_values)
 
-# Frequency axis in Hz
-    freqs = np.fft.rfftfreq(n, d=dt)
-
-# Convert to kHz
-    freqs_khz = freqs / 1000
-
-# Print results
-    print("Frequencies (kHz):")
-    print(freqs_khz)
-#    caput("lab{ACMI:A}ADC:FFT:Freq-Wfm", freqs_khz[0:8000])
+    freqs = np.fft.rfftfreq(n, d=dt) / 1000
 
     amplitude[0] = 0
     amplitude[1] = 0
-    print("Length",len(amplitude))
-#    caput("lab{ACMI:A}ADC:FFT:Ampl-Wfm", amplitude[0:8000])
-# Plot
+
+    latest_frame = (freqs, amplitude)
+
     ax.clear()
-    ax.plot(freqs_khz, amplitude)
-    ax.set_xlim(0,20000)
+    ax.plot(freqs, amplitude, color='blue')
+    ax.set_xlim(0, 20000)
     ax.set_xlabel("Frequency (kHz)")
     ax.set_ylabel("Amplitude")
     ax.set_title("FFT Amplitude Spectrum")
     ax.grid(True)
+
     plt.pause(0.01)
     sleep(1)
-plt.show()
-
