@@ -12,6 +12,8 @@
 #include <time.h>
 #include <dirent.h>
 
+#define MAX_COW_FILES 32
+
 #include <aSubRecord.h>
 #include <registryFunction.h>
 #include <epicsExport.h>
@@ -70,9 +72,55 @@ static int scanCOWDirectory(const char *COWpath, int *numfiles, char files[35][4
         }
     }
 
-    if (*numfiles > 32) {
-        *numfiles = 32;
+    if (*numfiles > MAX_COW_FILES) {
+        *numfiles = MAX_COW_FILES;
     }
+    return 0;
+}
+
+static int pruneOldestCOWFile(const char *COWpath, int maxFiles) {
+    DIR *dir;
+    struct dirent *entry;
+    int count = 0;
+    long long oldestTs = 0;
+    char oldestName[256] = {0};
+
+    dir = opendir(COWpath);
+    if (dir == NULL) {
+        perror("opendir");
+        return 1;
+    }
+
+    while ((entry = readdir(dir)) != NULL) {
+        long long tsll;
+        if (sscanf(entry->d_name, "COW%lld.txt", &tsll) != 1) {
+            continue;
+        }
+        count++;
+        if ((oldestName[0] == '\0') || (tsll < oldestTs)) {
+            oldestTs = tsll;
+            snprintf(oldestName, sizeof(oldestName), "%s", entry->d_name);
+        }
+    }
+    closedir(dir);
+
+    if (count <= maxFiles || oldestName[0] == '\0') {
+        return 0;
+    }
+
+    char oldestPath[512];
+    size_t plen = strlen(COWpath);
+    if (plen > 0 && COWpath[plen - 1] == '/') {
+        snprintf(oldestPath, sizeof(oldestPath), "%s%s", COWpath, oldestName);
+    } else {
+        snprintf(oldestPath, sizeof(oldestPath), "%s/%s", COWpath, oldestName);
+    }
+
+    if (remove(oldestPath) != 0) {
+        perror("remove");
+        return 1;
+    }
+
     return 0;
 }
 
@@ -160,6 +208,10 @@ int COWsub(aSubRecord *precord) {
         fprintf(fout,"%d,%d,%d,%d,%d,%d,%d\n",(int)(1000*Q),INTG,PEAK,FWHM,INDX,BASE,tmsec);
         //printf("%d,%d,%d,%d,%d,%d,%d\n",(int)(1000*Q),INTG,PEAK,FWHM,INDX,BASE,tmsec);
         fclose(fout);  
+
+        if (pruneOldestCOWFile(COWpath, MAX_COW_FILES) != 0) {
+            fprintf(stderr, "COW: failed to prune oldest file after writing new COW\n");
+        }
         
 //        printf("COW: File Written...\n");
 
@@ -177,16 +229,16 @@ int COWsub(aSubRecord *precord) {
     char (*fnam)[40] = precord->vall;
     char (*fdat)[40] = precord->valm;
 
-    for(i=0;i<32;i++){
+    for(i=0;i<MAX_COW_FILES;i++){
         snprintf(fnam[i], 40, "%s", files[i]);
         snprintf(fdat[i], 40, "%s", dates[i]);
     }
-    if (numfiles < 32) {
+    if (numfiles < MAX_COW_FILES) {
         memset(fnam[numfiles], 0, 40);
         memset(fdat[numfiles], 0, 40);
     }
     precord->nevn = numfiles;
-    memcpy((int *)precord->valn,fileID,32*sizeof(int));
+    memcpy((int *)precord->valn,fileID,MAX_COW_FILES*sizeof(int));
 
 //    printf("End of COWsub\n");
     return(0);

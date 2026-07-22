@@ -20,16 +20,15 @@ int PMsub(aSubRecord *precord) {
     int armed = *(int *)precord->b;
     int process=0;
     double *PM = (double *)precord->a;
-    //printf("PM: old=%5.0f, new=%5.0f\n",PM[0],PM[1]);
-    if(PM[1]==0 && PM[0]!=0){
+    // PM:Fault-Wfm is a 2-sample circular buffer; sample order can vary.
+    // Trigger once when faults transition from clear to asserted.
+    int faultAsserted = ((PM[0] != 0.0) || (PM[1] != 0.0));
+
+    if (!faultAsserted) {
         armed = 1;
-        //printf("PM Armed.\n");
-    }else{
-        if(PM[1]!=0 && PM[0]==0){ 
-            armed = 0;
-            process = 1;
-            //printf("Generate a PM Report\n");
-        }
+    } else if (armed) {
+        armed = 0;
+        process = 1;
     }
     
     *(int *)precord->vala = armed;

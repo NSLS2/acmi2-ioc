@@ -50,8 +50,8 @@ iocInit
 
 epicsThreadSleep(1.0)
 
-dbpf $(IOCNAME){ACMI2:$(UNIT)}EVR:TrigNo-SP 32
-dbpf $(IOCNAME){ACMI2:$(UNIT)}EVR:TrigDly-SP 1
+dbpf $(IOCNAME){ACMI2:$(UNIT)}EVR:TrigNo-SP 15
+dbpf $(IOCNAME){ACMI2:$(UNIT)}EVR:TrigDly-SP 1248000
 dbpf $(IOCNAME){ACMI2:$(UNIT)}Settings:File-SP $(IOCDIR)settings/settings.txt
 dbpf $(IOCNAME){ACMI2:$(UNIT)}COW:DirPath-SP $(IOCDIR)COW/
 dbpf $(IOCNAME){ACMI2:$(UNIT)}ADC:Corr:DirPath-SP $(IOCDIR)Correction/

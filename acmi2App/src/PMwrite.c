@@ -10,6 +10,8 @@
 #include <unistd.h>
 #include <math.h>
 #include <time.h>
+#include <errno.h>
+#include <sys/stat.h>
 #include <aSubRecord.h>
 #include <registryFunction.h>
 #include <epicsExport.h>
@@ -35,9 +37,21 @@ int PMwrite(aSubRecord *precord) {
         int *COWwfm = (int *)precord->j;
         float *ACCwfm = (float *)precord->k;
         
-        sprintf(fname,"/home/diag/acmi2/acmi2-ioc/PM/PM%d.txt",COWdata[13]);
+        snprintf(fname, sizeof(fname), "PM/PM%d.txt", COWdata[13]);
     
         FILE *fout = fopen(fname,"w");
+        if (fout == NULL) {
+            if (mkdir("PM", 0775) != 0 && errno != EEXIST) {
+                perror("PMwrite mkdir");
+                return 0;
+            }
+
+            fout = fopen(fname, "w");
+            if (fout == NULL) {
+                perror("PMwrite fopen");
+                return 0;
+            }
+        }
     
         for(i=0;i<18;i=i+1){
             fprintf(fout,"%d,%d,%d,%d,%d\n",TP1data[i],TP2data[i],TP3data[i],BMdata[i],COWdata[i]);
