@@ -24,7 +24,7 @@ int PMwrite(aSubRecord *precord) {
     if(process==1){
 //        printf("PM Write Process = %d\n",process);
         int i,j;
-        char fname[80];
+        char fname[128];
         int *TP1data = (int *)precord->a;
         int *TP2data = (int *)precord->b;
         int *TP3data = (int *)precord->c;
@@ -37,11 +37,11 @@ int PMwrite(aSubRecord *precord) {
         int *COWwfm = (int *)precord->j;
         float *ACCwfm = (float *)precord->k;
         
-        snprintf(fname, sizeof(fname), "PM/PM%d.txt", COWdata[13]);
+        snprintf(fname, sizeof(fname), "../../PM/PM%d.txt", COWdata[13]);
     
         FILE *fout = fopen(fname,"w");
         if (fout == NULL) {
-            if (mkdir("PM", 0775) != 0 && errno != EEXIST) {
+            if (mkdir("../../PM", 0775) != 0 && errno != EEXIST) {
                 perror("PMwrite mkdir");
                 return 0;
             }
