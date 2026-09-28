@@ -462,14 +462,20 @@ record(aSub,"$(P){ACMI2:$(NO)}COW-Sub"){
 
 record(aSub,"$(P){ACMI2:$(NO)}PM-Sub"){
     field(SNAM,"PMsub")
-    field(FLNK,"$(P){ACMI2:$(NO)}PM:TP1-Sub")
+    field(SCAN,".5 second")
 
     field(FTA,  "DOUBLE")
     field(NOA,  "2")
-    field(INPA, "$(P){ACMI2:$(NO)}PM:Fault-Wfm")
+    field(INPA, "$(P){ACMI2:$(NO)}PM:Fault-Wfm PP")
     field(FTB,  "LONG")
     field(NOB,  "1")
     field(INPB, "$(P){ACMI2:$(NO)}PM:Status-I PP")
+    field(FTC,  "LONG")
+    field(NOC,  "1")
+    field(INPC, "$(P){ACMI2:$(NO)}faults_lat-I PP")
+    field(FTD,  "LONG")
+    field(NOD,  "1")
+    field(INPD, "$(P){ACMI2:$(NO)}PM:Triggered-I PP")
     
     field(FTVA, "LONG")
     field(NOVA, "1")
@@ -477,6 +483,9 @@ record(aSub,"$(P){ACMI2:$(NO)}PM-Sub"){
     field(FTVB, "LONG")
     field(NOVB, "1")
     field(OUTB, "$(P){ACMI2:$(NO)}PM:Process-I PP")
+    field(FTVC, "LONG")
+    field(NOVC, "1")
+    field(OUTC, "$(P){ACMI2:$(NO)}PM:Triggered-I PP")
 }
 
 record(aSub,"$(P){ACMI2:$(NO)}PM:TP1-Sub"){

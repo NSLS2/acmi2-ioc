@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-03-25 14:54:30 by diag-->
 <display version="2.0.0">
   <name>TP3</name>
   <width>1100</width>
@@ -964,12 +963,12 @@
       <name>Action Button_49</name>
       <actions>
         <action type="open_display">
+          <description>Open Display</description>
           <file>Summary.bob</file>
           <macros>
             <BE>LN-BI{ACMI:BE}</BE>
           </macros>
           <target>replace</target>
-          <description>Open Display</description>
         </action>
       </actions>
       <text>Summary</text>
@@ -994,9 +993,9 @@
     <name>Action Button_40</name>
     <actions>
       <action type="open_display">
+        <description>Open Display</description>
         <file>Beam.bob</file>
         <target>replace</target>
-        <description>Open Display</description>
       </action>
     </actions>
     <text>BEAM</text>
@@ -1041,12 +1040,12 @@
     <name>Action Button_47</name>
     <actions>
       <action type="open_display">
+        <description>Open Display</description>
         <file>TP2.bob</file>
         <macros>
           <BE>LN-BI{ACMI:BE}</BE>
         </macros>
         <target>replace</target>
-        <description>Open Display</description>
       </action>
     </actions>
     <text>TP2</text>
@@ -3001,12 +3000,12 @@
       <name>Action Button_50</name>
       <actions>
         <action type="open_display">
+          <description>Open Display</description>
           <file>TP1.bob</file>
           <macros>
             <BE>LN-BI{ACMI:BE}</BE>
           </macros>
           <target>replace</target>
-          <description>Open Display</description>
         </action>
       </actions>
       <text>TP1</text>
@@ -3053,12 +3052,12 @@
       <name>Action Button_57</name>
       <actions>
         <action type="open_display">
+          <description>Open Display</description>
           <file>Settings.bob</file>
           <macros>
             <BE>LN-BI{ACMI:BE}</BE>
           </macros>
           <target>replace</target>
-          <description>Open Display</description>
         </action>
       </actions>
       <text>Settings</text>
@@ -3105,9 +3104,9 @@
       <name>Action Button_41</name>
       <actions>
         <action type="open_display">
+          <description>Open Display</description>
           <file>COW.bob</file>
           <target>replace</target>
-          <description>Open Display</description>
         </action>
       </actions>
       <text>COW</text>
@@ -3154,12 +3153,12 @@
       <name>Action Button_42</name>
       <actions>
         <action type="open_display">
+          <description>Open Display</description>
           <file>System.bob</file>
           <macros>
             <M>LN-BI{ACMI:BE}</M>
           </macros>
           <target>replace</target>
-          <description>Open Display</description>
         </action>
       </actions>
       <text>System</text>
@@ -3651,9 +3650,9 @@
       <name>Action Button_54</name>
       <actions>
         <action type="open_display">
+          <description>Open Display</description>
           <file>PM.bob</file>
           <target>replace</target>
-          <description>Open Display</description>
         </action>
       </actions>
       <text>PM</text>
@@ -3740,14 +3739,14 @@
       <name>Action Button_19</name>
       <actions execute_as_one="true">
         <action type="write_pv">
+          <description>WritePV</description>
           <pv_name>$(P)TP3:Reset-SP</pv_name>
           <value>1</value>
-          <description>WritePV</description>
         </action>
         <action type="write_pv">
+          <description>WritePV</description>
           <pv_name>$(P)TP3:WfmLen-I</pv_name>
           <value>0</value>
-          <description>WritePV</description>
         </action>
       </actions>
       <text>RESET</text>
@@ -4096,9 +4095,9 @@
       <name>Action Button_55</name>
       <actions>
         <action type="open_display">
+          <description>Open Display</description>
           <file>Tail.bob</file>
           <target>replace</target>
-          <description>Open Display</description>
         </action>
       </actions>
       <text>Tail</text>

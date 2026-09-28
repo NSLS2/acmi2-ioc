@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-10-23 09:41:08 by diag-->
 <display version="2.0.0">
   <name>System</name>
   <widget type="rectangle" version="2.0.0">
@@ -18,393 +17,6 @@
       </color>
     </background_color>
     <transparent>true</transparent>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>Group_8</name>
-    <x>164</x>
-    <width>72</width>
-    <height>35</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="rectangle" version="2.0.0">
-      <name>Rectangle_70</name>
-      <width>72</width>
-      <height>35</height>
-      <line_width>2</line_width>
-      <line_color>
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </line_color>
-      <background_color>
-        <color name="Grid" red="128" green="128" blue="128">
-        </color>
-      </background_color>
-      <transparent>true</transparent>
-    </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>Group_9</name>
-    <x>534</x>
-    <width>72</width>
-    <height>35</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="rectangle" version="2.0.0">
-      <name>Rectangle_71</name>
-      <width>72</width>
-      <height>35</height>
-      <line_width>2</line_width>
-      <line_color>
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </line_color>
-      <background_color>
-        <color name="Grid" red="128" green="128" blue="128">
-        </color>
-      </background_color>
-      <transparent>true</transparent>
-    </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>Group_16</name>
-    <x>312</x>
-    <width>72</width>
-    <height>35</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="rectangle" version="2.0.0">
-      <name>Rectangle_72</name>
-      <width>72</width>
-      <height>35</height>
-      <line_width>2</line_width>
-      <line_color>
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </line_color>
-      <background_color>
-        <color name="Grid" red="128" green="128" blue="128">
-        </color>
-      </background_color>
-      <transparent>true</transparent>
-    </widget>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_61</name>
-    <actions>
-      <action type="open_display">
-        <file>Beam.bob</file>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>BEAM</text>
-    <x>167</x>
-    <y>3</y>
-    <width>66</width>
-    <height>29</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <tooltip>$(actions)</tooltip>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-    <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_62</name>
-    <actions>
-    </actions>
-    <text>System</text>
-    <x>537</x>
-    <y>3</y>
-    <width>66</width>
-    <height>29</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color red="255" green="216" blue="0">
-      </color>
-    </background_color>
-    <tooltip>$(actions)</tooltip>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-    <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_63</name>
-    <actions>
-      <action type="open_display">
-        <file>TP2.bob</file>
-        <macros>
-          <BE>LN-BI{ACMI:BE}</BE>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>TP2</text>
-    <x>315</x>
-    <y>3</y>
-    <width>66</width>
-    <height>29</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <tooltip>$(actions)</tooltip>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-    <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>Group_18</name>
-    <x>386</x>
-    <width>72</width>
-    <height>35</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="rectangle" version="2.0.0">
-      <name>Rectangle_74</name>
-      <width>72</width>
-      <height>35</height>
-      <line_width>2</line_width>
-      <line_color>
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </line_color>
-      <background_color>
-        <color name="Grid" red="128" green="128" blue="128">
-        </color>
-      </background_color>
-      <transparent>true</transparent>
-    </widget>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_65</name>
-    <actions>
-      <action type="open_display">
-        <file>TP3.bob</file>
-        <macros>
-          <BE>LN-BI{ACMI:BE}</BE>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>TP3</text>
-    <x>389</x>
-    <y>3</y>
-    <width>66</width>
-    <height>29</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <tooltip>$(actions)</tooltip>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-    <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>Group_27</name>
-    <x>460</x>
-    <width>72</width>
-    <height>35</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="rectangle" version="2.0.0">
-      <name>Rectangle_88</name>
-      <width>72</width>
-      <height>35</height>
-      <line_width>2</line_width>
-      <line_color>
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </line_color>
-      <background_color>
-        <color name="Grid" red="128" green="128" blue="128">
-        </color>
-      </background_color>
-      <transparent>true</transparent>
-    </widget>
-    <widget type="action_button" version="3.0.0">
-      <name>Action Button_66</name>
-      <actions>
-        <action type="open_display">
-          <file>COW.bob</file>
-          <target>replace</target>
-          <description>Open Display</description>
-        </action>
-      </actions>
-      <text>COW</text>
-      <x>3</x>
-      <y>3</y>
-      <width>66</width>
-      <height>29</height>
-      <font>
-        <font family="Liberation Sans" style="REGULAR" size="16.0">
-        </font>
-      </font>
-      <background_color>
-        <color name="Write_Background" red="128" green="255" blue="255">
-        </color>
-      </background_color>
-      <tooltip>$(actions)</tooltip>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-      <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
-    </widget>
-  </widget>
-  <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_83</name>
-    <x>82</x>
-    <width>80</width>
-    <height>35</height>
-    <line_width>2</line_width>
-    <line_color>
-      <color name="Text" red="0" green="0" blue="0">
-      </color>
-    </line_color>
-    <background_color>
-      <color name="Grid" red="128" green="128" blue="128">
-      </color>
-    </background_color>
-    <transparent>true</transparent>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_64</name>
-    <actions>
-      <action type="open_display">
-        <file>Settings.bob</file>
-        <macros>
-          <BE>LN-BI{ACMI:BE}</BE>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Settings</text>
-    <x>85</x>
-    <y>3</y>
-    <width>74</width>
-    <height>29</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <tooltip>$(actions)</tooltip>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-    <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
-  </widget>
-  <widget type="rectangle" version="2.0.0">
-    <name>Rectangle_73</name>
-    <width>80</width>
-    <height>35</height>
-    <line_width>2</line_width>
-    <line_color>
-      <color name="Text" red="0" green="0" blue="0">
-      </color>
-    </line_color>
-    <background_color>
-      <color name="Grid" red="128" green="128" blue="128">
-      </color>
-    </background_color>
-    <transparent>true</transparent>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_60</name>
-    <actions>
-      <action type="open_display">
-        <file>Summary.bob</file>
-        <macros>
-          <BE>LN-BI{ACMI:BE}</BE>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Summary</text>
-    <x>3</x>
-    <y>3</y>
-    <width>74</width>
-    <height>29</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <tooltip>$(actions)</tooltip>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-    <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>Group_28</name>
-    <x>238</x>
-    <width>72</width>
-    <height>35</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="rectangle" version="2.0.0">
-      <name>Rectangle_89</name>
-      <width>72</width>
-      <height>35</height>
-      <line_width>2</line_width>
-      <line_color>
-        <color name="Text" red="0" green="0" blue="0">
-        </color>
-      </line_color>
-      <background_color>
-        <color name="Grid" red="128" green="128" blue="128">
-        </color>
-      </background_color>
-      <transparent>true</transparent>
-    </widget>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_67</name>
-    <actions>
-      <action type="open_display">
-        <file>TP1.bob</file>
-        <macros>
-          <BE>LN-BI{ACMI:BE}</BE>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>TP1</text>
-    <x>241</x>
-    <y>3</y>
-    <width>66</width>
-    <height>29</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <tooltip>$(actions)</tooltip>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-    <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_375</name>
@@ -1059,5 +671,511 @@
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <border_width>1</border_width>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group</name>
+    <width>754</width>
+    <height>35</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="group" version="3.0.0">
+      <name>Group_29</name>
+      <x>608</x>
+      <width>72</width>
+      <height>35</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>Rectangle_99</name>
+        <width>72</width>
+        <height>35</height>
+        <line_width>2</line_width>
+        <line_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </line_color>
+        <background_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_54</name>
+        <actions>
+          <action type="open_display">
+            <description>Open Display</description>
+            <file>PM.bob</file>
+            <target>replace</target>
+          </action>
+        </actions>
+        <text>PM</text>
+        <x>3</x>
+        <y>3</y>
+        <width>66</width>
+        <height>29</height>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Write_Background" red="128" green="255" blue="255">
+          </color>
+        </background_color>
+        <tooltip>$(actions)</tooltip>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Group_30</name>
+      <x>682</x>
+      <width>72</width>
+      <height>35</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>Rectangle_100</name>
+        <width>72</width>
+        <height>35</height>
+        <line_width>2</line_width>
+        <line_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </line_color>
+        <background_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_55</name>
+        <actions>
+          <action type="open_display">
+            <description>Open Display</description>
+            <file>Tail.bob</file>
+            <target>replace</target>
+          </action>
+        </actions>
+        <text>Tail</text>
+        <x>3</x>
+        <y>3</y>
+        <width>66</width>
+        <height>29</height>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Write_Background" red="128" green="255" blue="255">
+          </color>
+        </background_color>
+        <tooltip>$(actions)</tooltip>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Group_31</name>
+      <x>164</x>
+      <width>72</width>
+      <height>35</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>Rectangle_101</name>
+        <width>72</width>
+        <height>35</height>
+        <line_width>2</line_width>
+        <line_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </line_color>
+        <background_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Group_32</name>
+      <x>386</x>
+      <width>72</width>
+      <height>35</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>Rectangle_102</name>
+        <width>72</width>
+        <height>35</height>
+        <line_width>2</line_width>
+        <line_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </line_color>
+        <background_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Group_33</name>
+      <x>312</x>
+      <width>72</width>
+      <height>35</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>Rectangle_103</name>
+        <width>72</width>
+        <height>35</height>
+        <line_width>2</line_width>
+        <line_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </line_color>
+        <background_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Group_34</name>
+      <width>72</width>
+      <height>35</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>Rectangle_104</name>
+        <width>80</width>
+        <height>35</height>
+        <line_width>2</line_width>
+        <line_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </line_color>
+        <background_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_56</name>
+        <actions>
+          <action type="open_display">
+            <description>Open Display</description>
+            <file>Summary.bob</file>
+            <macros>
+              <BE>LN-BI{ACMI:BE}</BE>
+            </macros>
+            <target>replace</target>
+          </action>
+        </actions>
+        <text>Summary</text>
+        <x>3</x>
+        <y>3</y>
+        <width>74</width>
+        <height>29</height>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Write_Background" red="128" green="255" blue="255">
+          </color>
+        </background_color>
+        <tooltip>$(actions)</tooltip>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
+      </widget>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_57</name>
+      <actions>
+        <action type="open_display">
+          <description>Open Display</description>
+          <file>Beam.bob</file>
+          <target>replace</target>
+        </action>
+      </actions>
+      <text>BEAM</text>
+      <x>167</x>
+      <y>3</y>
+      <width>66</width>
+      <height>29</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_58</name>
+      <actions>
+      </actions>
+      <text>TP3</text>
+      <x>389</x>
+      <y>3</y>
+      <width>66</width>
+      <height>29</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_59</name>
+      <actions>
+        <action type="open_display">
+          <description>Open Display</description>
+          <file>TP2.bob</file>
+          <macros>
+            <BE>LN-BI{ACMI:BE}</BE>
+          </macros>
+          <target>replace</target>
+        </action>
+      </actions>
+      <text>TP2</text>
+      <x>315</x>
+      <y>3</y>
+      <width>66</width>
+      <height>29</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Group_35</name>
+      <x>238</x>
+      <width>72</width>
+      <height>35</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>Rectangle_105</name>
+        <width>72</width>
+        <height>35</height>
+        <line_width>2</line_width>
+        <line_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </line_color>
+        <background_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_60</name>
+        <actions>
+          <action type="open_display">
+            <description>Open Display</description>
+            <file>TP1.bob</file>
+            <macros>
+              <BE>LN-BI{ACMI:BE}</BE>
+            </macros>
+            <target>replace</target>
+          </action>
+        </actions>
+        <text>TP1</text>
+        <x>3</x>
+        <y>3</y>
+        <width>66</width>
+        <height>29</height>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Write_Background" red="128" green="255" blue="255">
+          </color>
+        </background_color>
+        <tooltip>$(actions)</tooltip>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Group_36</name>
+      <x>82</x>
+      <width>72</width>
+      <height>35</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>Rectangle_106</name>
+        <width>80</width>
+        <height>35</height>
+        <line_width>2</line_width>
+        <line_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </line_color>
+        <background_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_61</name>
+        <actions>
+          <action type="open_display">
+            <description>Open Display</description>
+            <file>Settings.bob</file>
+            <macros>
+              <BE>LN-BI{ACMI:BE}</BE>
+            </macros>
+            <target>replace</target>
+          </action>
+        </actions>
+        <text>Settings</text>
+        <x>3</x>
+        <y>3</y>
+        <width>74</width>
+        <height>29</height>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Write_Background" red="128" green="255" blue="255">
+          </color>
+        </background_color>
+        <tooltip>$(actions)</tooltip>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Group_37</name>
+      <x>460</x>
+      <width>72</width>
+      <height>35</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>Rectangle_107</name>
+        <width>72</width>
+        <height>35</height>
+        <line_width>2</line_width>
+        <line_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </line_color>
+        <background_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_62</name>
+        <actions>
+          <action type="open_display">
+            <description>Open Display</description>
+            <file>COW.bob</file>
+            <target>replace</target>
+          </action>
+        </actions>
+        <text>COW</text>
+        <x>3</x>
+        <y>3</y>
+        <width>66</width>
+        <height>29</height>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <background_color>
+          <color name="Write_Background" red="128" green="255" blue="255">
+          </color>
+        </background_color>
+        <tooltip>$(actions)</tooltip>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Group_38</name>
+      <x>534</x>
+      <width>72</width>
+      <height>35</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>Rectangle_108</name>
+        <width>72</width>
+        <height>35</height>
+        <line_width>2</line_width>
+        <line_color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </line_color>
+        <background_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Action Button_63</name>
+        <actions>
+          <action type="open_display">
+            <description>Open Display</description>
+            <file>System.bob</file>
+            <macros>
+              <M>LN-BI{ACMI:BE}</M>
+            </macros>
+            <target>replace</target>
+          </action>
+        </actions>
+        <text>System</text>
+        <x>3</x>
+        <y>3</y>
+        <width>66</width>
+        <height>29</height>
+        <font>
+          <font family="Liberation Sans" style="REGULAR" size="16.0">
+          </font>
+        </font>
+        <background_color>
+          <color red="255" green="216" blue="0">
+          </color>
+        </background_color>
+        <tooltip>$(actions)</tooltip>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <confirm_message>Reseting will delete the SA History Buffers.  Continue?</confirm_message>
+      </widget>
+    </widget>
   </widget>
 </display>

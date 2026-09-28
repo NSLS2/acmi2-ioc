@@ -125,7 +125,7 @@ record(compress, "$(P){ACMI2:$(NO)}PM:Fault-Wfm"){
 
 record(longout,"$(P){ACMI2:$(NO)}PM:Status-I") {
   field(DTYP,"Soft Channel")
-  field(VAL,0)
+  field(VAL,1)
   field(UDF,0)
 }
 
@@ -133,7 +133,21 @@ record(longout,"$(P){ACMI2:$(NO)}PM:Process-I") {
   field(DTYP,"Soft Channel")
   field(VAL,0)
   field(UDF,0)
-  field(FLNK,"$(P){ACMI2:$(NO)}PM:TP1-Sub.PROC")
+  field(FLNK,"$(P){ACMI2:$(NO)}PM:Trigger-I.PROC")
+}
+
+record(longout,"$(P){ACMI2:$(NO)}PM:Triggered-I") {
+  field(DTYP,"Soft Channel")
+  field(DESC,"PM trigger state tracking")
+  field(VAL,0)
+  field(UDF,0)
+}
+
+record(calcout,"$(P){ACMI2:$(NO)}PM:Trigger-I") {
+  field(INPA,"$(P){ACMI2:$(NO)}PM:Process-I NPP")
+  field(CALC,"A=1")
+  field(OOPT,"Transition To Non-zero")
+  field(OUT,"$(P){ACMI2:$(NO)}PM:TP1-Sub.PROC PP")
 }
 
 record(longin,"$(P){ACMI2:$(NO)}PM:header-I") {
